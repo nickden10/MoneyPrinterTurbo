@@ -1,0 +1,14 @@
+/* Ayna Arkası: tek kaynak marka token'ları. HyperFrames kompozisyonları bu dosyayı kullanır. */
+@font-face{font-family:"Charm";src:url("fonts/Charm-Bold.ttf");font-weight:700}
+@font-face{font-family:"Be Vietnam Pro";src:url("fonts/BeVietnamPro-Bold.ttf");font-weight:700}
+@font-face{font-family:"Be Vietnam Pro";src:url("fonts/BeVietnamPro-Medium.ttf");font-weight:500}
+:root{
+  --plum:#1C1424;        /* zemin (koyu) */
+  --toz-pembe:#E8B4B8;   /* ANA MARKA RENGİ */
+  --toz-pembe-acik:#F6E1E3; /* açık zemin */
+  --ink:#F7EFF3;         /* koyu zeminde metin */
+  --berry:#8E3B5A;       /* açık zeminde vurgu metni */
+  --gold:#E9C46A;        /* dönem/tarih etiketi */
+  --mint:#7FC8C2;        /* "gerçek/filtresiz" vurgusu */
+  --muted:#A89BB0;       /* kaynak, eksen */
+}

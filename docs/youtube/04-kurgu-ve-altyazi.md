@@ -37,8 +37,8 @@ Altyazı zorunludur, çünkü izleyicilerin önemli bir kısmı Shorts'u sessiz 
 | Boyut | 80px (A) · 72px (B, C) |
 | Satır | **en fazla 2 satır**, satırda en fazla 18 karakter |
 | Gruplama | 2–4 kelimelik öbekler, anlam bütünlüğüne göre bölünür ("3,4 milyon" ve "kişi başı" bölünmez) |
-| Konum | Ekranın **%62–70** yüksekliği (y ≈ 1200–1340). Alt UI'nin üstünde, grafik alanının altında |
-| Renk | A: `#2B2D42`, aktif kelime `#E5484D` · B: `#F7EFF3`, aktif kelime `#E8A0BF` · C: `#1E2A2F`, aktif kelime `#0F7A60` |
+| Konum | Yazı bandının altı: **y ≈ 1140–1320** (1330px altına inmez). Grafik alanının altında |
+| Renk | A: `#2B2D42`, aktif kelime `#E5484D` · B: `#F7EFF3`, aktif kelime `#E8B4B8` (toz pembe) · C: `#1E2A2F`, aktif kelime `#0F7A60` |
 | Kontur/gölge | B: 6px `#000` kontur (%70) · A, C: kontur yok, zemin renginde %90 hap şeklinde arka plan |
 | Animasyon | Öbek girişi: 4 karede %92→%100 ölçek ve opaklık. Aktif kelime renk değiştirir. Zıplama veya sallanma kullanılmaz |
 | Yazım | Rakamlar rakamla yazılır ("SPF 30", "1920'ler"). Vurgu için BÜYÜK HARF yerine renk kullanılır. Emoji yok |
@@ -54,7 +54,7 @@ stroke_color       = "#000000"
 stroke_width       = 0
 text_background_color = "#F7F7F4"
 subtitle_position  = "custom"
-custom_position    = 66     # % yükseklik
+custom_position    = 62     # % yükseklik (altyazı 1330px'i geçmesin)
 video_aspect       = "9:16"
 video_clip_duration = 3
 voice_name         = "tr-TR-EmelNeural"   # veya tr-TR-AhmetNeural

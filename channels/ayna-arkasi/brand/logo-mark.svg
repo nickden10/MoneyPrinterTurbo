@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260">
+  <!-- Ayna Arkası işareti: bir ayna ovali. Sol yarı = ön yüz (çizgi), sağ yarı = arka yüz (dolgu, toz pembe). -->
+  <defs><clipPath id="r"><rect x="100" y="0" width="100" height="260"/></clipPath></defs>
+  <ellipse cx="100" cy="110" rx="78" ry="98" fill="none" stroke="#E8B4B8" stroke-width="12"/>
+  <ellipse cx="100" cy="110" rx="78" ry="98" fill="#E8B4B8" clip-path="url(#r)"/>
+  <rect x="88" y="206" width="24" height="46" rx="12" fill="#E8B4B8"/>
+</svg>

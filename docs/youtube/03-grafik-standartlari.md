@@ -35,7 +35,7 @@
 
 | Sıra | A · Minik Merak (krem) | B · Ayna Arkası (erik) | C · Etiketi Oku (açık) |
 |---|---|---|---|
-| 1 | `#E5484D` + ink kontur | `#E8A0BF` (8.7) | `#0F7A60` (4.9) |
+| 1 | `#E5484D` + ink kontur | `#E8B4B8` toz pembe (9.9) | `#0F7A60` (4.9) |
 | 2 | `#2F6FDB` + ink kontur | `#E9C46A` (10.7) | `#6A4C9C` (6.3) |
 | 3 | `#0E8C7F` + ink kontur | `#7FC8C2` (9.3) | `#B5452B` (5.1) |
 | 4 | `#F2A900` + ink kontur | `#56B4E9` (7.8) | `#1E2A2F` kesikli (13.7) |
@@ -51,7 +51,7 @@
 ## 4. Ölçüler (1080×1920)
 | Öğe | Değer |
 |---|---|
-| Grafik alanı | x: 60–940 (880px), y: 520–1400 |
+| Grafik alanı | x: 60–940 (880px), y: 300–1100 (altyazı için 1140–1320 boş kalır) |
 | Eksen etiketi | 40px Medium, `--muted` |
 | Veri etiketi | 48px Bold, serinin rengi |
 | Kahraman rakam | 220–320px Bold |

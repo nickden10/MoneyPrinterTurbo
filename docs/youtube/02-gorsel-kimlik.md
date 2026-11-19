@@ -6,7 +6,7 @@
   - Ağırlıklar: Bold (başlık, altyazı), Medium (gövde, etiket).
   - ❌ `UTM Kabel KT.ttf` **Türkçe karakter desteklemiyor**, kullanılmaz.
 - **Kontrast tabanı:** Metin/zemin ≥ 4.5:1, büyük metin (≥ 60px) ve grafik ≥ 3:1 (WCAG). Aşağıdaki oranlar ölçülmüştür.
-- **Güvenli alan (1080×1920):** üst 220px ve alt 380px (YouTube arayüzü), sağ 140px (beğen/yorum butonları). Kritik içerik **x: 60–940, y: 220–1540** aralığında kalır.
+- **Güvenli alan (1080×1920, HyperFrames vertical rehberi):** üst 168px boş (durum ve arama çubuğu). Tüm yazı ve ana öğe **y: 168–1330** bandında kalır, 1330px altına yalnızca doku ve dekor girer. Sağ 140px'te (beğen/yorum rayı) yazı olmaz.
 - **Logo:** Üç kanalda da **yazı karakterli logo** kullanılır (wordmark, ikon ya da maskot yok). Taklit ve tescil riskini azaltır.
 
 ---
@@ -54,15 +54,20 @@
 **Kişilik:** Zeki arkadaş · samimi · eleştirel ama yargılamayan · zarif.
 **Marka vaadi:** "Seçim senin, ama arkasını bil."
 
-### Renk token'ları (koyu erik zemin, gece sohbeti hissi)
+### Renk token'ları (revize: **toz pembe ana renk**)
 | Token | Hex | Kullanım | Kontrast |
 |---|---|---|---|
-| `--bg` | `#1C1424` | Zemin | — |
-| `--ink` | `#F7EFF3` | Ana metin | 15.8:1 ✅ |
-| `--rose` | `#E8A0BF` | Ana vurgu, aktif kelime | 8.7:1 ✅ |
-| `--gold` | `#E9C46A` | Tarih/dönem etiketi, 2. seri | 10.7:1 ✅ |
-| `--mint` | `#7FC8C2` | "Gerçek" / filtresiz tarafı gösteren vurgu | 9.3:1 ✅ |
+| `--plum` | `#1C1424` | Video zemini (koyu) | — |
+| `--toz-pembe` | `#E8B4B8` | **ANA MARKA RENGİ**: logo, aktif kelime, vurgu | 9.9:1 (erik üstü) ✅ |
+| `--toz-pembe-acik` | `#F6E1E3` | Açık zemin (açık logo, kapak varyantı) | — |
+| `--ink` | `#F7EFF3` | Koyu zeminde metin | 15.8:1 ✅ |
+| `--berry` | `#8E3B5A` | Açık zeminde vurgu metni | 5.8:1 (açık pembe üstü) ✅ |
+| `--gold` | `#E9C46A` | Dönem/tarih etiketi | 10.7:1 ✅ |
+| `--mint` | `#7FC8C2` | "Gerçek/filtresiz" vurgusu | 9.3:1 ✅ |
 | `--muted` | `#A89BB0` | Kaynak, eksen | 6.8:1 ✅ |
+
+- ❌ **Beyaz metin toz pembe zemin üstünde yasak** (1.8:1). Toz pembe zeminde metin her zaman `--plum` olur.
+- Tek kaynak: `channels/ayna-arkasi/brand/brand.css`.
 
 ### Tipografi
 - Başlık: **Charm Bold** 96px (OFL, Türkçe ✅). Yalnızca dönem adı ve başlık kartında, en fazla 4 kelime.

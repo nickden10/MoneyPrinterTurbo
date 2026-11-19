@@ -7,5 +7,6 @@
 | [02-gorsel-kimlik.md](02-gorsel-kimlik.md) | Renk, font, ton (Brand Guardian) | 1 |
 | [03-grafik-standartlari.md](03-grafik-standartlari.md) | Grafik standartları (Data Visualization Engineer) | 1 |
 | [04-kurgu-ve-altyazi.md](04-kurgu-ve-altyazi.md) | Kurgu ve altyazı (Short-Video Editing Coach) | 1 |
-| 05-… | İlk video (öneri: Ayna Arkası): HyperFrames önizleme ve render | 2 (sırada) |
+| [05-marka-kiti-ayna-arkasi.md](05-marka-kiti-ayna-arkasi.md) | Ayna Arkası marka kiti (logo, avatar, banner, filigran, metinler) | 2 |
+| [../../channels/ayna-arkasi/videos/001-filtre/STORYLINES.md](../../channels/ayna-arkasi/videos/001-filtre/STORYLINES.md) | İlk video: 3 hikâye seçeneği + kaynaklar | 2 (seçim bekliyor) |
 | 06-… | Günlük üretim hattı, metrikler, A/B planı | 3 |
