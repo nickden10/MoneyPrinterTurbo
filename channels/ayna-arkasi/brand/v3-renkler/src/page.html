@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Ayna Arkası — Renk yönleri</title>
+<style>
+  @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400;
+    src: url(fonts/instrument-serif-latin-400-normal.woff2) format('woff2');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400;
+    src: url(fonts/instrument-serif-latin-ext-400-normal.woff2) format('woff2');
+    unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F; }
+  @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400;
+    src: url(fonts/instrument-serif-latin-400-italic.woff2) format('woff2');
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400;
+    src: url(fonts/instrument-serif-latin-ext-400-italic.woff2) format('woff2');
+    unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F; }
+  @font-face { font-family: 'Be Vietnam Pro'; font-weight: 700; src: url(fonts/BeVietnamPro-Bold.ttf); }
+  @font-face { font-family: 'Be Vietnam Pro'; font-weight: 500; src: url(fonts/BeVietnamPro-Medium.ttf); }
+
+  :root { --page: #FAFAF8; --ink: #1F1F1E; --quiet: #6E6D69; --hair: rgba(0,0,0,.07); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--page); color: var(--ink); }
+  body { font-family: 'Be Vietnam Pro', sans-serif; font-weight: 500;
+         -webkit-font-smoothing: antialiased; font-kerning: normal; text-rendering: geometricPrecision; }
+
+  /* ---------- board ---------- */
+  body.board { width: 3000px; height: 2400px; padding: 190px 100px 0; }
+  .board .head { display: flex; justify-content: space-between; align-items: baseline;
+                 font-size: 22px; color: var(--quiet); margin-bottom: 110px; }
+  .board .head b { font-weight: 500; color: var(--ink); }
+  .board .grid { display: grid; grid-template-columns: repeat(3, 860px); column-gap: 110px; row-gap: 200px; }
+
+  .card { display: grid; }
+  .board .card { width: 860px;
+    grid-template-columns: 566px 270px; column-gap: 24px;
+    grid-template-rows: auto 280px 190px 120px 126px; row-gap: 22px;
+    grid-template-areas: "label label" "hero hero" "alt frame" "av frame" "chips frame"; }
+  .board .card .hero { margin-bottom: 2px; }
+  .board .wm.big { font-size: 118px; }
+  .board .wm.small { font-size: 80px; }
+
+  /* ---------- single (1500×1100) ---------- */
+  body.single { width: 1500px; height: 1100px; display: flex; align-items: center; justify-content: center; }
+  .single .card {
+    grid-template-columns: 860px 405px; column-gap: 90px;
+    grid-template-rows: auto 300px 200px 150px; row-gap: 22px;
+    grid-template-areas: "label label" "hero frame" "alt frame" "low frame"; }
+  .single .frame { zoom: 1.5; }
+  .single .wm.big { font-size: 128px; }
+  .single .wm.small { font-size: 92px; }
+  .single .low { grid-area: low; display: flex; justify-content: space-between; align-items: flex-start; }
+  .single .chips { width: 610px; }
+
+  /* ---------- parts ---------- */
+  .label { grid-area: label; font-size: 21px; color: var(--quiet); display: flex; gap: 14px; align-items: baseline; padding-bottom: 6px; }
+  .label .n { color: var(--ink); font-variant-numeric: tabular-nums; }
+  .label .nm { color: var(--ink); }
+
+  .panel, .frame { outline: 1px solid var(--hair); outline-offset: -1px; }
+  .panel { display: flex; align-items: center; justify-content: center; }
+  .hero { grid-area: hero; }
+  .alt { grid-area: alt; }
+  .wm { font-family: 'Instrument Serif', serif; font-weight: 400; line-height: 1; letter-spacing: -0.005em;
+        white-space: nowrap; transform: translateY(-0.04em); }
+  .wm i { font-style: italic; }
+
+  .av { grid-area: av; display: flex; align-items: center; gap: 28px; }
+  .avatar { border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-family: 'Instrument Serif', serif; line-height: 1; flex: none; }
+  .avatar span { transform: translateY(-0.02em); letter-spacing: -0.01em; }
+  .avatar i { font-style: italic; }
+  .avatar.a120 { width: 120px; height: 120px; font-size: 62px; }
+  .avatar.a48 { width: 48px; height: 48px; font-size: 25px; }
+
+  .chips { grid-area: chips; display: grid; grid-template-columns: repeat(5, 1fr); column-gap: 14px; align-content: start; }
+  .chip .sw { height: 78px; outline: 1px solid var(--hair); outline-offset: -1px; }
+  .chip .hx { margin-top: 10px; font-size: 14px; color: var(--ink); letter-spacing: .02em; }
+  .chip .nm { margin-top: 3px; font-size: 12.5px; color: var(--quiet); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  .frame { grid-area: frame; width: 270px; height: 480px; position: relative; overflow: hidden; }
+  .frame .band { position: absolute; left: 0; right: 0; top: 156px; height: 176px; }
+  .frame .hl { position: absolute; left: 0; right: 0; top: 52px; text-align: center;
+               font-family: 'Instrument Serif', serif; font-size: 32px; line-height: 1.04; letter-spacing: -0.005em; }
+  .frame .hl i { font-style: italic; }
+  .frame svg { position: absolute; left: 67px; top: 176px; width: 136px; height: 136px; overflow: visible; }
+  .frame .cap { position: absolute; left: 0; right: 0; top: 376px; text-align: center;
+                font-family: 'Be Vietnam Pro', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.01em; }
+</style>
+</head>
+<body>
+<script src="palettes.js"></script>
+<script>
+const q = new URLSearchParams(location.search);
+const one = q.get('d');
+document.body.className = one ? 'single' : 'board';
+const C = (p, k) => p.colors[k].hex;
+
+function face(color) {
+  return `<svg viewBox="-68 -68 136 136" fill="none" stroke="${color}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="0" r="67"/>
+    <path d="M-29 -9 q9 6 18 0 M11 -9 q9 6 18 0"/>
+    <path d="M1 -2 L-4 19 L3 21"/>
+    <path d="M-13 35 q13 8 26 0"/>
+  </svg>`;
+}
+
+function card(p) {
+  const f = p.frame;
+  const wm = (cls, m) => `<div class="wm ${cls}"><span style="color:${C(p, m.ayna)}">Ayna</span> <i style="color:${C(p, m.arkasi)}">Arkası</i></div>`;
+  const chips = ['pink', 'n1', 'n2', 'text', 'accent'].map(k =>
+    `<div class="chip"><div class="sw" style="background:${C(p, k)}"></div>
+      <div class="hx">${C(p, k)}</div><div class="nm">${p.colors[k].name}</div></div>`).join('');
+  const av = `<div class="av">
+      <div class="avatar a120" style="background:${C(p, p.avatar.bg)};color:${C(p, p.avatar.fg)}"><span>A<i>a</i></span></div>
+      <div class="avatar a48" style="background:${C(p, p.avatar.bg)};color:${C(p, p.avatar.fg)}"><span>A<i>a</i></span></div>
+    </div>`;
+  const ch = `<div class="chips">${chips}</div>`;
+  return `<section class="card">
+    <div class="label"><span class="n">0${p.id}</span><span class="nm">${p.name}</span></div>
+    <div class="panel hero" style="background:${C(p, p.hero.bg)}">${wm('big', p.hero)}</div>
+    <div class="panel alt" style="background:${C(p, p.alt.bg)}">${wm('small', p.alt)}</div>
+    ${one ? `<div class="low">${av}${ch}</div>` : av + ch}
+    <div class="frame" style="background:${C(p, f.bg)}">
+      ${f.band ? `<div class="band" style="background:${C(p, f.band)}"></div>` : ''}
+      <div class="hl" style="color:${C(p, f.headline)}">Filtre bir yüzü<br><i>nasıl hesaplar?</i></div>
+      ${face(C(p, f.face))}
+      <div class="cap" style="color:${C(p, f.caption)}">gözenekler, <span style="color:${C(p, f.active)}">çiller</span></div>
+    </div>
+  </section>`;
+}
+
+const fails = [];
+for (const p of AA.PALETTES) for (const x of AA.pairs(p)) if (!x.pass) fails.push(p.id + ' ' + x.label);
+if (fails.length) document.title = 'FAIL ' + fails.join('; ');
+
+if (one) {
+  document.body.innerHTML = card(AA.PALETTES[+one - 1]);
+} else {
+  document.body.innerHTML = `<div class="head"><span><b>Ayna Arkası</b> · Toz pembe renk yönleri</span><span>v3 · 6 palet · Kasım 2026</span></div>
+    <div class="grid">${AA.PALETTES.map(card).join('')}</div>`;
+}
+document.fonts.ready.then(() => { document.body.dataset.ready = '1'; });
+</script>
+</body>
+</html>
