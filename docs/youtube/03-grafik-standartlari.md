@@ -12,7 +12,9 @@
 | "Ne kadar büyük?" (ölçek, tek rakam) | **Kahraman rakam + gündelik kıyas** ("= 4 futbol sahası") | Soyut balon/alan |
 | "Nerede?" | **Basit sınır haritası + nokta/renk** | 3B küre, uydu görüntüsü |
 | "Kaç kat?" | **Yan yana birim ikon dizisi** (ör. 1 vs 12 kutu) | Ölçeği yanlış alanlı ikon |
-| "Nasıl çalışır?" (Kanal B) | **Kesit diyagramı + numaralı adımlar** | Fotoğraf üstü ok yığını |
+| "Nasıl çalışır?" (Kanal C: cilt katmanı, molekül) | **Kesit diyagramı + numaralı adımlar** | Fotoğraf üstü ok yığını |
+| "Zamanla ideal nasıl değişti?" (Kanal B) | **Yatay zaman şeridi + dönem kartları** | Yoğun metinli tablo |
+| "Kaç tane?" (Kanal A, sayma) | **Tek tek beliren nesneler + büyük rakam** | Çubuk grafik (3–6 yaş okuyamaz) |
 
 ## 2. Dürüstlük kontrol listesi (render öncesi zorunlu, K-11)
 ```
@@ -23,7 +25,7 @@
 □ Ortalama dağılımı gizlemiyor ("ortalama" diyorsak medyanı da kontrol ettik)
 □ Yuvarlama tutarlı, yüzdeler toplamı 100 (±0,1 notlu)
 □ Birim her rakamın yanında (TL, km, ton, kişi). Nominal mi reel mi belirtildi
-□ Başlık eğilimi söylüyor: ❌ "Çay tüketimi" → ✅ "Türkiye kişi başı çayda dünya 1.si"
+□ Başlık eğilimi söylüyor: ❌ "SPF değerleri" → ✅ "SPF 30 ile 50 arasındaki fark sanıldığından küçük"
 □ Ekranda kaynak etiketi: "Kaynak: Kurum, Yıl" (K-09)
 □ Karşılaştırılan veriler aynı yıl, aynı tanım ve aynı kaynaktan. Değilse açıkça yazılı
 ```
@@ -31,14 +33,16 @@
 ## 3. Renk: veri olarak renk
 - **Kategorik (renk körlüğüne uygun, Okabe-Ito alt kümesi).** Shorts'ta **en fazla 4 seri** kullanılır. Sıra:
 
-| Sıra | Kanal A (koyu zemin) | Kontrast | Kanal B (kâğıt zemin) | Kontrast |
-|---|---|---|---|---|
-| 1 | `#FFB000` (marka amber) | 10.3 | `#D93A0B` (marka turuncu) | 4.1 |
-| 2 | `#56B4E9` | 8.2 | `#2B59C3` | 5.6 |
-| 3 | `#009E73` | 5.5 | `#0072B2` | 4.6 |
-| 4 | `#CC79A7` | 6.2 | `#1A1A1A` (kesikli çizgi) | 15.4 |
+| Sıra | A · Minik Merak (krem) | B · Ayna Arkası (erik) | C · Etiketi Oku (açık) |
+|---|---|---|---|
+| 1 | `#E5484D` + ink kontur | `#E8A0BF` (8.7) | `#0F7A60` (4.9) |
+| 2 | `#2F6FDB` + ink kontur | `#E9C46A` (10.7) | `#6A4C9C` (6.3) |
+| 3 | `#0E8C7F` + ink kontur | `#7FC8C2` (9.3) | `#B5452B` (5.1) |
+| 4 | `#F2A900` + ink kontur | `#56B4E9` (7.8) | `#1E2A2F` kesikli (13.7) |
 
-  - ❌ `#F0E442` sarı kâğıt zeminde 1.2:1 kontrast verir, **Kanal B'de yasak**.
+  - Kanal A'da grafik yerine **sayılabilir nesne** kullanılır. Renk yalnızca dolgudur, metin her zaman `--ink` olur.
+  - ❌ `#F0E442` sarı Kanal C'nin açık zemininde 1.2:1 kontrast verir, **yasak**.
+  - Kanal B/C'de hassas veri (ör. "kadınların %X'i görünüşünden memnun değil") **yalnızca hakemli/resmî ankete** dayanır. Örneklem ve yıl ekranda yazılır, rakam dramatize edilmez (G-07).
 - **Vurgu kuralı:** Bir grafikte tek bir hikâye öğesi renkli olur, geri kalanı `--muted` (gri) kalır. "Türkiye" çubuğu amber, diğer ülkeler gri.
 - **Sıralı (sequential) harita/ısı:** tek ton açık → koyu (viridis veya marka renginin %20–100 tonları). Gökkuşağı (rainbow/jet) **yasak**.
 - **Iraksak (diverging):** yalnızca anlamlı bir orta nokta varsa (0, ortalama) kullanılır. Mavi ↔ turuncu.
