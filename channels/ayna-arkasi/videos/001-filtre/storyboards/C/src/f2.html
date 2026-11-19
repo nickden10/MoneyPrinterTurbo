@@ -41,6 +41,6 @@ while(pts.length<478&&guard++<20000){const x=88+r()*226,y=80+r()*336;const q=svg
 facep.remove();
 let h='';pts.forEach(([x,y])=>h+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="1.9" fill="#E8B4B8"/>`);
 // taşıyıcı nokta (yanak)
-h+=`<circle cx="150" cy="284" r="9" fill="none" stroke="#E8B4B8" stroke-opacity=".35" stroke-width="5"/><circle cx="150" cy="284" r="4.2" fill="#E8B4B8"/>`;
+h+=`<circle cx="150" cy="284" r="12" fill="none" stroke="#E8B4B8" stroke-opacity=".4" stroke-width="5"/><circle cx="150" cy="284" r="6.5" fill="#E8B4B8"/>`;
 svg.innerHTML+=h;document.body.dataset.count=pts.length;console.log('points',pts.length);
 </script></body></html>

@@ -1,6 +1,6 @@
 // node render.js [guides]  -> ../f1.png … ../f4.png
 const { chromium } = require('playwright'); const path = require('path');
-(async () => {
+if (process.argv[2] !== 'sheet') (async () => {
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
   for (const f of ['f1', 'f2', 'f3', 'f4']) {
     await p.goto('file://' + path.join(__dirname, f + '.html')); await p.evaluate(() => document.fonts.ready);
@@ -10,4 +10,10 @@ const { chromium } = require('playwright'); const path = require('path');
     await p.screenshot({ path: path.join(__dirname, '..', f + (process.argv[2] === 'guides' ? '-guides' : '') + '.png') });
   }
   await b.close();
+})();
+// contact sheet (run after frames): node render.js sheet
+if (process.argv[2] === 'sheet') (async () => {
+  const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 2480, height: 1000 } });
+  await p.goto('file://' + path.join(__dirname, 'sheet.html')); await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(200);
+  await p.screenshot({ path: path.join(__dirname, '..', 'storyboard.png'), fullPage: true }); await b.close();
 })();

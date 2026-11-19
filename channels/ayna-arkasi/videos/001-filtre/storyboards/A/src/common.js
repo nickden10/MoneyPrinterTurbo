@@ -155,7 +155,7 @@
       const band = el('g', { 'clip-path': 'url(#faceclip)' }, g);
       el('rect', { x: o.sweepX - 70, y: -260, width: 70, height: 520, fill: 'var(--toz-pembe)', opacity: 0.22, filter: 'url(#soft)' }, band);
       el('line', { x1: o.sweepX, y1: -250, x2: o.sweepX, y2: 250, stroke: 'var(--toz-pembe)', 'stroke-width': 4, 'stroke-dasharray': '2 12', 'stroke-linecap': 'round' }, band);
-      el('path', { d: `M${o.sweepX + 14},-190 l26,0 m-10,-10 l10,10 l-10,10`, stroke: 'var(--toz-pembe)', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, g);
+      el('path', { d: `M${o.sweepX + 16},-200 l48,0 m-18,-18 l18,18 l-18,18`, stroke: 'var(--toz-pembe)', 'stroke-width': 7, fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, g);
     }
 
     // landmark mesh + dots
