@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240"><title>Ayna Arkası — işaret (koyu zemin)</title><defs><clipPath id="mkL"><rect x="-10" y="-10" width="110.5" height="260"/></clipPath><clipPath id="mkR"><rect x="100.5" y="-10" width="120" height="260"/></clipPath></defs>
+
+<path d="M92.5 182 H107.5 L104.6 219 H95.4Z" fill="#E8B4B8"/><circle cx="100" cy="223" r="6.4" fill="#E8B4B8"/>
+<ellipse cx="100" cy="185" rx="11" ry="4.6" fill="#E8B4B8"/>
+<ellipse cx="100" cy="96" rx="70" ry="86" fill="#E8B4B8"/>
+<g clip-path="url(#mkL)"><ellipse cx="100" cy="96" rx="61" ry="77" fill="#1C1424"/>
+<path d="M58 66 L68 50" stroke="#E9C46A" stroke-width="2.8" stroke-linecap="round"/><path d="M57.5 79 L60.5 74" stroke="#E9C46A" stroke-width="2.8" stroke-linecap="round"/>
+<path d="M92 48 L110 48 L138.8 128 Q142 137 154 137 L156 137 L156 142 L108 142 L108 137 L110 137 Q122 137 119 128 L111.2 105 L77 105 L68.7 128 Q67.5 137 80 137 L82 137 L82 142 L48 142 L48 137 L50 137 Q61 137 63.2 128 Z M94.66 55.9 L109.5 100 L78.8 100 Z" fill-rule="evenodd" transform="translate(100 101) scale(0.84) translate(-101 -95)" fill="#E8B4B8"/></g>
+<g clip-path="url(#mkR)"><ellipse cx="100" cy="96" rx="61" ry="77" fill="none" stroke="#1C1424" stroke-width="1.6" stroke-opacity="0.55"/>
+<path d="M92 48 L110 48 L138.8 128 Q142 137 154 137 L156 137 L156 142 L108 142 L108 137 L110 137 Q122 137 119 128 L111.2 105 L77 105 L68.7 128 Q67.5 137 80 137 L82 137 L82 142 L48 142 L48 137 L50 137 Q61 137 63.2 128 Z M94.66 55.9 L109.5 100 L78.8 100 Z" fill-rule="evenodd" transform="translate(100 101) scale(0.84) translate(-101 -95)" fill="#1C1424"/></g></svg>
