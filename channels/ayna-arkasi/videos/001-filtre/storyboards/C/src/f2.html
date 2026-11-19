@@ -4,16 +4,18 @@
 html,body,.frame{background:#110B16}
 .count{position:absolute;left:60px;top:236px;width:880px;display:flex;align-items:baseline;gap:22px}
 .count .n{font:700 150px/1 "Be Vietnam Pro";color:var(--toz-pembe)}
-.count .t{font:700 48px/1.2 "Be Vietnam Pro";color:var(--ink)}
-.stage{position:absolute;left:220px;top:420px;width:560px;height:672px}
-.stage canvas,.stage svg{position:absolute;left:0;top:0;width:560px;height:672px}
+.count .t{font:700 64px/1 "Be Vietnam Pro";color:var(--ink)}
+.sub{position:absolute;left:60px;top:396px;width:880px;font:500 38px "Be Vietnam Pro";color:var(--ink);opacity:.85}
+.stage{position:absolute;left:240px;top:466px;width:520px;height:624px}
+.stage canvas,.stage svg{position:absolute;left:0;top:0;width:520px;height:624px}
 .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(168,155,176,.07) 2px,transparent 2px),linear-gradient(90deg,rgba(168,155,176,.07) 2px,transparent 2px);background-size:28px 28px}
 .tag{position:absolute;font:500 28px "Be Vietnam Pro";color:var(--muted)}
 </style></head><body><div class="frame">
 <div class="grid"></div>
 <div class="crumbs">telefon<i>›</i>piksel<i>›</i><b>nokta</b><i>›</i>yumuşatma<i>›</i>esnetme<i>›</i>geri</div>
-<div class="count"><span class="n">478</span><span class="t">nokta:<br>bir yüz modelinin gördüğü</span></div>
-<div class="stage"><canvas id="px" width="560" height="672"></canvas><svg id="pts" viewBox="40 52 320 384"></svg></div>
+<div class="count"><span class="n">478</span><span class="t">nokta</span></div>
+<div class="sub">Bir yüz modeli, bir yüzde bunu görüyor.</div>
+<div class="stage"><canvas id="px" width="520" height="624"></canvas><svg id="pts" viewBox="40 52 320 384"></svg></div>
 <div class="src" style="top:1096px">Kaynak: Google MediaPipe Face Landmarker</div>
 <div class="cap"><div>bu piksellerde</div><div><span class="on">478</span> nokta işaretler.</div></div>
 </div>
@@ -22,8 +24,8 @@ const VB=[40,52,320,384];
 // 1) piksel katmanı: çizgi-portre küçük çözünürlükte çizilip büyütülür
 const img=new Image();
 img.onload=()=>{const sm=document.createElement('canvas');sm.width=40;sm.height=48;const c=sm.getContext('2d');c.drawImage(img,0,0,40,48);
-  const big=document.getElementById('px').getContext('2d');big.imageSmoothingEnabled=false;big.globalAlpha=.55;big.drawImage(sm,0,0,560,672);
-  big.globalAlpha=1;big.strokeStyle='rgba(17,11,22,.55)';big.lineWidth=2;for(let x=0;x<=560;x+=14){big.beginPath();big.moveTo(x,0);big.lineTo(x,672);big.stroke()}for(let y=0;y<=672;y+=14){big.beginPath();big.moveTo(0,y);big.lineTo(560,y);big.stroke()}
+  const big=document.getElementById('px').getContext('2d');big.imageSmoothingEnabled=false;big.globalAlpha=.55;big.drawImage(sm,0,0,520,624);
+  big.globalAlpha=1;big.strokeStyle='rgba(17,11,22,.55)';big.lineWidth=2;for(let x=0;x<=520;x+=13){big.beginPath();big.moveTo(x,0);big.lineTo(x,624);big.stroke()}for(let y=0;y<=624;y+=13){big.beginPath();big.moveTo(0,y);big.lineTo(520,y);big.stroke()}
   document.body.dataset.ready=1;};
 img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(faceSVG({w:320,h:384,viewBox:VB.join(' ')}));
 // 2) 478 nokta: yüz hatlarından örneklenir + iç bölge doldurulur

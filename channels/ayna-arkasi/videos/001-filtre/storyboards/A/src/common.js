@@ -89,7 +89,7 @@
     el('ellipse', { cx: 0, cy: -60, rx: 215, ry: 240, fill: HAIR }, hairG);
 
     // shoulders + neck
-    el('path', { d: 'M-330,470 C-322,392 -210,350 -92,330 C-60,372 60,372 92,330 C210,350 322,392 330,470 Z', fill: '#3A2A46', stroke: 'var(--muted)', 'stroke-width': 3, 'stroke-linejoin': 'round' }, g);
+    el('path', { d: 'M-320,440 C-312,386 -210,350 -92,330 C-60,372 60,372 92,330 C210,350 312,386 320,440 Z', fill: '#3A2A46', stroke: 'var(--muted)', 'stroke-width': 3, 'stroke-linejoin': 'round' }, g);
     el('path', { d: 'M-60,150 C-60,240 -64,290 -70,330 C-40,352 40,352 70,330 C64,290 60,240 60,150 Z', fill: SKIN, stroke: LINE, 'stroke-width': 4 }, g);
     if (o.shadows !== false) el('ellipse', { cx: 0, cy: 205, rx: 90, ry: 40, fill: SKIN_SHADE, opacity: 0.75, 'clip-path': 'url(#neckclip)' }, g);
     el('path', { d: 'M-92,330 C-60,372 60,372 92,330', fill: 'none', stroke: 'var(--muted)', 'stroke-width': 3 }, g);
@@ -123,15 +123,15 @@
     if (o.texture !== 'none') {
       const T = el('g', {}, texParent); const rt = rng(42);
       const tcol = o.mintTexture ? 'var(--mint)' : FRECKLE;
-      for (let i = 0; i < 70; i++) { // freckles across nose bridge + cheeks
+      for (let i = 0; i < 95; i++) { // freckles across nose bridge + cheeks
         const side = rt() < 0.5 ? -1 : 1; const x = side * (10 + rt() * 120), y = -8 + rt() * 70 - Math.abs(x) * 0.12;
         if (Math.abs(x) < 24 && y > 20) continue;
-        el('circle', { cx: x, cy: y, r: 1.8 + rt() * 2.4, fill: FRECKLE, opacity: 0.85 }, T);
+        el('circle', { cx: x, cy: y, r: 2.2 + rt() * 2.8, fill: FRECKLE, opacity: 0.9 }, T);
       }
       for (let i = 0; i < 160; i++) { // pores
         const x = (rt() - 0.5) * 300, y = -160 + rt() * 320; const pt = new DOMPoint(x, y);
         if (Math.abs(x) < 125 && y > -60 && y < -10) continue; if (Math.abs(x) < 64 && y > 104 && y < 150) continue;
-        el('circle', { cx: x, cy: y, r: 1.1, fill: '#4A2C20', opacity: 0.55 }, T);
+        el('circle', { cx: x, cy: y, r: 1.4, fill: '#4A2C20', opacity: 0.7 }, T);
       }
       for (let i = 0; i < 26; i++) { // fine hairs at temples/sideburns
         const side = i % 2 ? 1 : -1; const y = -150 + (i / 26) * 200; const x = side * (150 + rt() * 14 - Math.max(0, y + 40) * 0.05);
@@ -154,7 +154,8 @@
     if (o.texture === 'sweep') {
       const band = el('g', { 'clip-path': 'url(#faceclip)' }, g);
       el('rect', { x: o.sweepX - 70, y: -260, width: 70, height: 520, fill: 'var(--toz-pembe)', opacity: 0.22, filter: 'url(#soft)' }, band);
-      el('line', { x1: o.sweepX, y1: -250, x2: o.sweepX, y2: 250, stroke: 'var(--toz-pembe)', 'stroke-width': 3, 'stroke-dasharray': '2 10', 'stroke-linecap': 'round' }, band);
+      el('line', { x1: o.sweepX, y1: -250, x2: o.sweepX, y2: 250, stroke: 'var(--toz-pembe)', 'stroke-width': 4, 'stroke-dasharray': '2 12', 'stroke-linecap': 'round' }, band);
+      el('path', { d: `M${o.sweepX + 14},-190 l26,0 m-10,-10 l10,10 l-10,10`, stroke: 'var(--toz-pembe)', 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, g);
     }
 
     // landmark mesh + dots
@@ -172,15 +173,15 @@
       if (o.dots) {
         const D = el('g', { fill: 'var(--toz-pembe)', opacity: o.dotOpacity ?? 1 }, g); const rr = rng(3);
         pts.forEach(([x, y], i) => {
-          if (o.trails && rr() < 0.16) {
-            const len = 40 + rr() * 110;
+          if (o.trails && rr() < 0.09) {
+            const len = 30 + rr() * 80;
             el('line', { x1: x, y1: y - len, x2: x, y2: y - 4, stroke: 'var(--toz-pembe)', 'stroke-width': 2.2 / o.s, 'stroke-linecap': 'round', opacity: 0.45 }, D);
           }
           el('circle', { cx: x, cy: y, r: 3.4 / o.s }, D);
         });
-        if (o.rain) for (let i = 0; i < 46; i++) { // still falling
-          const x = (rr() - 0.5) * 360, y = -330 - rr() * 120;
-          el('line', { x1: x, y1: y - 60, x2: x, y2: y, stroke: 'var(--toz-pembe)', 'stroke-width': 2.2 / o.s, 'stroke-linecap': 'round', opacity: 0.4 }, D);
+        if (o.rain) for (let i = 0; i < 30; i++) { // still falling
+          const x = (rr() - 0.5) * 380, y = -300 - rr() * 60;
+          el('line', { x1: x, y1: y - 40, x2: x, y2: y, stroke: 'var(--toz-pembe)', 'stroke-width': 2.2 / o.s, 'stroke-linecap': 'round', opacity: 0.4 }, D);
           el('circle', { cx: x, cy: y, r: 3.4 / o.s }, D);
         }
         if (o.drift) for (let i = 0; i < 70; i++) { // rewind: dots leaving upward
