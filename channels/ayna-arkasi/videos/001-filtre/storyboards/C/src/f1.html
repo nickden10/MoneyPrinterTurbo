@@ -1,0 +1,29 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>C · f1 kanca</title>
+<link rel="stylesheet" href="common.css"><script src="face.js"></script>
+<style>
+.hook{position:absolute;left:60px;top:250px;width:880px;font:700 60px/1.2 "Be Vietnam Pro";color:var(--ink)}
+.hook em{font-style:normal;color:var(--toz-pembe)}
+.calc{position:absolute;left:60px;top:476px;width:880px;font:500 32px "Be Vietnam Pro";color:var(--muted)}
+.calc span{color:var(--gold)}
+.phone{position:absolute;left:330px;top:560px;width:340px;height:560px;border-radius:52px;background:#0E0912;border:3px solid rgba(232,180,184,.45);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.screen{position:absolute;left:14px;top:14px;right:14px;bottom:14px;border-radius:40px;overflow:hidden;background:#2A2033}
+.notch{position:absolute;left:50%;top:12px;width:70px;height:18px;margin-left:-35px;border-radius:10px;background:#0E0912;z-index:3}
+.ms{position:absolute;right:16px;top:42px;z-index:4;font:700 30px "Be Vietnam Pro";color:var(--plum);background:var(--toz-pembe);padding:4px 14px 6px;border-radius:20px}
+.shutter{position:absolute;left:50%;bottom:18px;width:56px;height:56px;margin-left:-28px;border-radius:50%;border:5px solid var(--ink);z-index:4;opacity:.9}
+.reticle{position:absolute;left:446px;top:828px;width:60px;height:60px;border:3px solid var(--toz-pembe);border-radius:10px}
+.reticle::before,.reticle::after{content:"";position:absolute;background:var(--toz-pembe)}
+.zoomhint{position:absolute;left:520px;top:900px;width:0;height:0}
+.ticks{position:absolute;left:60px;top:1110px;width:880px;height:0}
+.deco{position:absolute;left:0;right:0;top:1360px;bottom:0;background:radial-gradient(ellipse at 50% 0%,rgba(232,180,184,.10),transparent 60%)}
+</style></head><body><div class="frame">
+<div class="crumbs"><b>telefon</b><i>›</i>piksel<i>›</i>nokta<i>›</i>yumuşatma<i>›</i>esnetme<i>›</i>geri</div>
+<div class="hook">Canlı filtrenin bir kareyi bitirmek için <em>33 milisaniyeden</em> az vakti var.</div>
+<div class="calc"><span>Hesap:</span> 30 kare/sn → 1000 ÷ 30 ≈ 33 ms (ölçüm değil)</div>
+<div class="phone"><div class="screen" id="scr"></div><div class="notch"></div><div class="ms">33 ms</div><div class="shutter"></div></div>
+<div class="reticle"></div>
+<div class="dot" style="left:459px;top:841px"></div>
+<div class="cap"><div>yaklaşık <span class="on">33</span></div><div>milisaniye demek.</div></div>
+<div class="deco"></div>
+</div>
+<script>document.getElementById('scr').innerHTML=faceSVG({w:312,h:532,viewBox:'40 60 320 545',lineW:5});</script>
+</body></html>

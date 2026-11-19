@@ -1,0 +1,23 @@
+@import url("../../../../../brand/brand.css");
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--plum)}
+.frame{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:"Be Vietnam Pro",sans-serif;color:var(--ink)}
+.abs{position:absolute}
+/* breadcrumb: zoom derinliği göstergesi (y 190) */
+.crumbs{position:absolute;left:60px;top:186px;width:880px;display:flex;gap:14px;align-items:center;font:500 27px "Be Vietnam Pro";color:var(--muted);letter-spacing:.01em}
+.crumbs b{font-weight:700;color:var(--toz-pembe)}
+.crumbs i{font-style:normal;opacity:.55}
+.light .crumbs{color:#7A6680}.light .crumbs b{color:var(--berry)}
+/* kaynak etiketi */
+.src{position:absolute;left:60px;width:880px;font:500 32px/1.3 "Be Vietnam Pro";color:var(--muted)}
+.light .src{color:#6E5A74}
+/* yakılmış altyazı: Kanal B, 72px, maks. 2 satır, y 1150-1320, x 60-940 */
+.cap{position:absolute;left:60px;top:1150px;width:880px;height:170px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;
+  font:700 72px/1.18 "Be Vietnam Pro";color:var(--ink);-webkit-text-stroke:6px rgba(0,0,0,.7);paint-order:stroke fill}
+.cap .on{color:var(--toz-pembe)}
+/* tek toz pembe taşıyıcı nokta */
+.dot{position:absolute;width:34px;height:34px;border-radius:50%;background:var(--toz-pembe);box-shadow:0 0 0 10px rgba(232,180,184,.22),0 0 0 22px rgba(232,180,184,.09)}
+/* güvenli alan kılavuzu (yalnızca ?guides) */
+.guides{position:absolute;inset:0;pointer-events:none}
+.guides .band{position:absolute;left:0;right:0;top:168px;height:1162px;outline:2px dashed #0f0}
+.guides .rail{position:absolute;right:0;top:0;width:140px;height:1920px;background:rgba(255,0,0,.18)}
