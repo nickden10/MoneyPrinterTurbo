@@ -86,5 +86,5 @@ bgm_volume         = 0.12
 □ Telaffuz dinlendi: rakam, kısaltma, özel ad
 □ -14 LUFS / -1 dBTP ölçüldü
 □ Son cümle döngüyü kuruyor
-□ 01-degismez-kurallar.md F bölümü geçildi
+□ 01-degismez-kurallar.md H bölümü (yayın öncesi kapı) geçildi
 ```

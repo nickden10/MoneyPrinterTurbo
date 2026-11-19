@@ -11,94 +11,108 @@
 
 ---
 
-## Kanal A · **Rakamla** 🇹🇷
-**Amaç:** Rakamların ardındaki hikâyeyi herkes için anlaşılır kılmak.
-**Kişilik:** Meraklı · net · hafif esprili · asla bilgiç değil.
-**Marka vaadi:** "Kaynaklı, doğru, 30 saniye."
+## Kanal A · **Minik Merak** 🧒 (3–6 yaş)
+**Amaç:** Küçük çocuklara temel kavramları sakin, doğru ve sevgiyle öğretmek.
+**Kişilik:** Şefkatli · sabırlı · neşeli ama gürültüsüz.
+**Marka vaadi:** "Yavaş, net, güvenli." Ebeveyne verilen söz: "Gönül rahatlığıyla açabilirsin."
 
-### Renk token'ları (koyu tema)
+### Renk token'ları (açık, sıcak krem zemin)
 | Token | Hex | Kullanım | Kontrast (zemine) |
 |---|---|---|---|
-| `--bg` | `#0E1116` | Zemin | — |
-| `--ink` | `#F4F1EA` | Ana metin | 16.8:1 ✅ |
-| `--accent` | `#FFB000` | Vurgu rakam, ana seri | 10.3:1 ✅ |
-| `--accent-2` | `#4DA8FF` | Karşılaştırma serisi | 7.5:1 ✅ |
-| `--muted` | `#8A93A3` | Eksen, kaynak etiketi | 6.1:1 ✅ |
-| `--grid` | `#232A35` | Izgara çizgisi | dekoratif |
+| `--bg` | `#FFF6E5` | Zemin | — |
+| `--ink` | `#2B2D42` | **Tüm metin**, şekil konturu (4px) | 12.6:1 ✅ |
+| `--coral` | `#E5484D` | Şekil dolgusu | 3.7:1 (yalnız dolgu + kontur) |
+| `--teal` | `#0E8C7F` | Şekil dolgusu | 3.9:1 (yalnız dolgu + kontur) |
+| `--sky` | `#2F6FDB` | Şekil dolgusu | 4.4:1 (yalnız dolgu + kontur) |
+| `--sun` | `#F2A900` | Şekil dolgusu | 1.9:1 ⚠️ **mutlaka `--ink` konturla** |
+| `--plum` | `#6B5B95` | Şekil dolgusu, ikincil metin | 5.5:1 ✅ |
+
+- Renkler doygun ama "neon" değil. Floresan ve yanıp sönen gradyan kullanılmaz (F-05).
+- Renk öğretilirken renk adı **her zaman yazıyla ve sesle** de verilir (renk körü çocuklar için).
 
 ### Tipografi
-| Rol | Font | Boyut (px @1080) |
+| Rol | Font | Boyut |
 |---|---|---|
-| Kahraman rakam | Be Vietnam Pro Bold | 220–320 |
-| Başlık | Be Vietnam Pro Bold | 84 |
-| Altyazı | Be Vietnam Pro Bold | 72 |
-| Etiket/eksen | Be Vietnam Pro Medium | 40 |
-| Kaynak etiketi | Be Vietnam Pro Medium | 32 |
+| Öğretilen kelime/sayı | Be Vietnam Pro Bold | 200–260px |
+| Altyazı | Be Vietnam Pro Bold | 80px, cümle düzeni (BÜYÜK HARF yok, harf tanımayı bozar) |
+
+### Karakterler
+- 3 sabit karakter, hepsi geometrik SVG: **Top** (yuvarlak, merakçı), **Kare** (sakin, düşünür), **Üçgen** (hareketli, şakacı).
+- Cinsiyetsiz, insan olmayan karakterler (F-07). Göz ve ağız basit, ifade yalnızca 4 duyguyla sınırlı (mutlu, şaşkın, üzgün, sakin).
+- Hiçbir mevcut çizgi film karakterine benzemez (F-04, K-12).
 
 ### Ton ve dil
-- Konuşma Türkçesi kullanılır, "siz" değil **"sen"** hitabı. Cümleler kısa, ortalama 10 kelimeyi geçmez.
-- ✅ "Türkiye'de günde 3,4 milyon simit… bir bakalım nereden çıktı bu rakam."
-- ❌ "İNANAMAYACAKSINIZ!!!", "Kimse bunu bilmiyor", korku ve öfke dili (K-18).
-- Ondalık ayırıcı **virgül** (3,4), binlik ayırıcı **nokta** (1.250.000). Birimler her zaman yazılır.
-- **Slogan:** "Rakamla anlatalım."
+- Kısa ve somut cümleler kurulur (en fazla 6 kelime). Doğrudan, sıcak hitap edilir: "Haydi sayalım!"
+- Yeni kelime 3 kez tekrarlanır (öğrenme). Soru sorulduktan sonra **2 sn sessizlik** bırakılır (çocuk cevap verir).
+- ❌ "Sakın kaçırma!", "Annene söyle alsın!" (F-06)
+- **Slogan:** "Birlikte merak edelim."
 
 ---
 
-## Kanal B · **Inside Things** 🌍
-**Amaç:** Gündelik nesnelerin içindeki zekâyı göstermek.
-**Kişilik:** Meraklı mühendis · sakin · kesin · zarif.
-**Marka vaadi:** "One object. One mechanism. 40 seconds."
+## Kanal B · **Ayna Arkası** 🪞 (Kadın 18+)
+**Amaç:** Güzellik algısının arkasındaki tarihi, teknolojiyi ve pazarlamayı göstermek.
+**Kişilik:** Zeki arkadaş · samimi · eleştirel ama yargılamayan · zarif.
+**Marka vaadi:** "Seçim senin, ama arkasını bil."
 
-### Renk token'ları (açık tema, "blueprint on paper")
+### Renk token'ları (koyu erik zemin, gece sohbeti hissi)
 | Token | Hex | Kullanım | Kontrast |
 |---|---|---|---|
-| `--bg` | `#F5F1E8` | Kâğıt zemin | — |
-| `--ink` | `#1A1A1A` | Çizgi, metin | 15.4:1 ✅ |
-| `--accent` | `#D93A0B` | Hareket eden parça, ok | 4.1:1 (yalnız büyük metin/grafik) ⚠️ |
-| `--blue` | `#2B59C3` | Kesit, akış | 5.6:1 ✅ |
-| `--muted` | `#5C5C5C` | Ölçü çizgisi, etiket | 5.9:1 ✅ |
+| `--bg` | `#1C1424` | Zemin | — |
+| `--ink` | `#F7EFF3` | Ana metin | 15.8:1 ✅ |
+| `--rose` | `#E8A0BF` | Ana vurgu, aktif kelime | 8.7:1 ✅ |
+| `--gold` | `#E9C46A` | Tarih/dönem etiketi, 2. seri | 10.7:1 ✅ |
+| `--mint` | `#7FC8C2` | "Gerçek" / filtresiz tarafı gösteren vurgu | 9.3:1 ✅ |
+| `--muted` | `#A89BB0` | Kaynak, eksen | 6.8:1 ✅ |
 
 ### Tipografi
-Be Vietnam Pro: başlık Bold 88px, etiket Medium 40px. Teknik etiketler BÜYÜK HARF yazılır ve harf aralığı +4% olur.
+- Başlık: **Charm Bold** 96px (OFL, Türkçe ✅). Yalnızca dönem adı ve başlık kartında, en fazla 4 kelime.
+- Altyazı/gövde: Be Vietnam Pro Bold 72px / Medium 40px.
+
+### Görsel kurallar
+- Yüzler **illüstrasyon** (çizgi portre, siluet) ya da **kamu malı tarihî eser** olarak gösterilir. Gerçek kişinin fotoğrafı ve AI ile üretilmiş yüz kullanılmaz (G-02, K-06).
+- Filtre/rötuş anlatımı şematik yapılır: "ışık kaynağı → gölge → yumuşatma katmanı" diyagramı.
+- Farklı ten renklerinden çizim örnekleri dengeli dağıtılır (G-08).
 
 ### Ton ve dil
-- Basit İngilizce (B1–B2 seviyesi) kullanılır, jargon ilk geçtiği yerde açıklanır.
-- ✅ "This tiny spring is why your pen clicks."
-- ❌ "You won't BELIEVE what's inside…"
-- **Slogan:** "See how it works."
+- ✅ "1920'lerde ince kaş moda oldu. Peki neden? Cevap sinema ışıklarında."
+- ✅ "Bu fotoğraftaki cilt dokusu 4 katmanla siliniyor. Gerçek ciltte doku vardır, olmalı da."
+- ❌ "Kusurlarını gizlemenin 5 yolu", "Erkekler bunu fark ediyor" (G-01, G-07)
+- **Slogan:** "Aynanın arkasına bak."
 
 ---
 
-## Kanal C · **Tabağın Hikâyesi** 🇹🇷
-**Amaç:** Yemeğin arkasındaki yolculuğu, coğrafyayı ve bilimi anlatmak.
-**Kişilik:** Sıcak · anlatıcı · saygılı · iştah açıcı.
-**Marka vaadi:** "Her tabağın bir yolu var."
+## Kanal C · **Etiketi Oku** 🧴 (Kadın 18+)
+**Amaç:** Kozmetik etiketlerini anlaşılır kılmak, kaynakla ve tavsiye vermeden.
+**Kişilik:** Titiz · açık sözlü · laboratuvar sakinliği · sade.
+**Marka vaadi:** "Pazarlama değil, içerik listesi."
 
-### Renk token'ları (sıcak koyu, stok görüntü üstü kartlar)
+### Renk token'ları (açık, temiz "laboratuvar" zemin)
 | Token | Hex | Kullanım | Kontrast |
 |---|---|---|---|
-| `--card` | `#1F1A17` | Başlık kartı, alt bant (%85 opak) | — |
-| `--cream` | `#FFF8EE` | Metin | 16.3:1 ✅ |
-| `--saffron` | `#F2C14E` | Vurgu kelime, harita rotası | 10.3:1 ✅ |
-| `--paprika` | `#E4572E` | Nokta, pin, ikincil vurgu | 4.7:1 ✅ |
+| `--bg` | `#F7F7F4` | Zemin | — |
+| `--ink` | `#1E2A2F` | Metin, etiket | 13.7:1 ✅ |
+| `--green` | `#0F7A60` | Etken madde vurgusu | 4.9:1 ✅ |
+| `--lilac` | `#6A4C9C` | 2. kategori (nemlendirici, koruyucu…) | 6.3:1 ✅ |
+| `--rust` | `#B5452B` | "Mit" etiketi / dikkat | 5.1:1 ✅ |
+| `--muted` | `#5E6B70` | Kaynak, INCI listesi | 5.1:1 ✅ |
 
 ### Tipografi
-- Başlık: **Charm Bold** 96px (OFL, Türkçe ✅). **Yalnızca** başlık kartında ve en fazla 5 kelimeyle kullanılır.
-- Altyazı/gövde: Be Vietnam Pro Bold 70px.
+Be Vietnam Pro: başlık Bold 84px, madde adı Bold 96px, INCI listesi Medium 36px.
 
-### Görüntü kuralları
-- Sıcak renk düzeltme (+300K), doygunluk en fazla +10. Yemek "gerçek" görünür, aşırı filtre kullanılmaz.
-- Yalnız lisanslı stok kullanılır (K-12). Aynı klip bir kanalda **30 gün içinde iki kez** kullanılmaz (K-16).
+### Görsel kurallar
+- Ürün ambalajı **markasız** olur (beyaz şişe illüstrasyonu ya da logosuz stok görsel) (G-05).
+- "Mit/gerçek" kartı kullanılır: üst kısımda `--rust` "MİT", altta `--green` "KAYNAĞA GÖRE".
+- Her videonun son karesi sabittir: "Cilt sorunun varsa bir dermatoloğa danış." (G-04)
 
 ### Ton ve dil
-- ✅ "Kaynaklara göre bu tatlının ilk izleri 15. yüzyıl saray mutfağına uzanıyor."
-- ❌ "Bu yemek aslında bizim!" (K-07)
-- **Slogan:** "Her tabağın bir yolu var."
+- ✅ "Niasinamid, B3 vitamininin bir formu. Kozmetikte bariyer desteği için kullanılıyor (kaynak: …)."
+- ❌ "Sivilceyi 3 günde yok eder", "En iyi serum bu" (G-04, G-05)
+- **Slogan:** "Önce etiketi oku."
 
 ---
 
 ## Marka koruma ve denetim
 1. **Token tek kaynaktan gelir:** HyperFrames kompozisyonları renkleri CSS değişkenlerinden okur, kodda serbest hex yazılmaz.
-2. **Haftalık denetim:** Yayınlanan son 7 videonun kapakları yan yana konur. Renk, font veya güvenli alan sapması varsa işaretlenir.
-3. **Kanallar arası ayrım:** A koyu/amber, B açık kâğıt, C sıcak/kart. Paletler karıştırılmaz.
-4. **Çakışma kontrolü (K-14):** Kanal adları ve el adları (@handle) açılmadan önce TÜRKPATENT ve YouTube aramasıyla kontrol edilir. Çakışma çıkarsa yedek ad listesi: A → "Sayıyla", "Rakam Rakam"; B → "How It Clicks", "Mechanism Minute"; C → "Tabak Yolu", "Lezzetin Kökü".
+2. **Haftalık denetim:** Son 7 videonun ilk kareleri yan yana konur. Renk, font ve güvenli alan sapmasıyla birlikte **ton denetimi** de yapılır: B/C'de yargılayıcı kelime var mı (G-01), A'da tempo kurala uyuyor mu (F-05)?
+3. **Kanallar arası ayrım:** A krem/geometrik, B koyu erik/zarif, C açık/laboratuvar. Paletler karıştırılmaz. A'nın çocuk paleti B/C'de **asla** kullanılmaz (çocuk-yetişkin kitle karışmasın).
+4. **Çakışma kontrolü (K-14):** Adlar açılmadan önce TÜRKPATENT ve YouTube aramasıyla kontrol edilir. Yedek adlar: A → "Merak Kutusu", "Minik Adımlar"; B → "Filtresiz", "Ayna Ayna"; C → "İçindekiler", "Şişenin Arkası".
