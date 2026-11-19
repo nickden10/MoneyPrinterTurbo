@@ -21,3 +21,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--plum)}
 .guides{position:absolute;inset:0;pointer-events:none}
 .guides .band{position:absolute;left:0;right:0;top:168px;height:1162px;outline:2px dashed #0f0}
 .guides .rail{position:absolute;right:0;top:0;width:140px;height:1920px;background:rgba(255,0,0,.18)}
+.strip{position:absolute;left:60px;top:1440px;width:880px;display:flex;gap:6px;opacity:.5}
+.strip i{flex:1;height:84px;border:2px solid var(--muted);border-radius:6px}
+.strip i.cur{border-color:var(--toz-pembe);background:rgba(232,180,184,.25)}
+.light .strip i{border-color:#B79AAE}.light .strip i.cur{border-color:var(--berry);background:rgba(142,59,90,.2)}

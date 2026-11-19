@@ -8,8 +8,7 @@ html,body,.frame{background:var(--toz-pembe-acik)}
 .lab{position:absolute;top:1004px;font:700 30px "Be Vietnam Pro";color:var(--berry)}
 .light .src{font-size:29px;line-height:1.3}
 .cap{-webkit-text-stroke:0;gap:0}
-.cap div{background:rgba(28,20,36,.92);padding:0 26px;border-radius:24px;line-height:1.12}
-.cap div:first-child{border-radius:24px 24px 0 0;padding-top:6px}.cap div:last-child{border-radius:0 0 24px 24px;padding-bottom:10px}
+.cap .pill{background:rgba(28,20,36,.92);padding:6px 34px 12px;border-radius:28px;line-height:1.14}
 .ring{position:absolute;inset:-60px;border:2px solid rgba(142,59,90,.18);border-radius:80px}
 </style></head><body><div class="frame light">
 <div class="crumbs">telefon<i>›</i>piksel<i>›</i>nokta<i>›</i><b>yumuşatma</b><i>›</i>esnetme<i>›</i>geri</div>
@@ -18,7 +17,9 @@ html,body,.frame{background:var(--toz-pembe-acik)}
 <div class="lab" style="left:60px">← doku silindi</div>
 <div class="lab" style="left:560px;width:380px;text-align:right">doku henüz duruyor →</div>
 <div class="src" style="top:1052px">Yumuşatma · Kaynak: Tomasi &amp; Manduchi 1998<br>Esnetme (warp) · Kaynak: Schaefer vd. 2006; US 10152778</div>
-<div class="cap"><div>ince tüyler,</div><div>hepsi <span class="on">silinir.</span></div></div>
+<div class="strip" id="strip"></div>
+<script>(function(n){let h="";for(let i=0;i<30;i++)h+="<i"+(i<=n&&i>=n?" class=\"cur\"":"")+"></i>";document.getElementById("strip").innerHTML=h})(17)</script>
+<div class="cap"><div class="pill">ince tüyler,<br>hepsi <span class="on">silinir.</span></div></div>
 </div>
 <script>
 const BX=166; // pencerenin geçtiği sınır (yüz koordinatı)

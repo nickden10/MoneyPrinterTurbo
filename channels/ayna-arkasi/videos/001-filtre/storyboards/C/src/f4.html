@@ -1,0 +1,28 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>C · f4 geri çekilme ve kapanış</title>
+<link rel="stylesheet" href="common.css"><script src="face.js"></script>
+<style>
+.line{position:absolute;left:60px;top:246px;width:880px;font:700 58px/1.2 "Be Vietnam Pro";color:var(--ink)}
+.line em{font-style:normal;color:var(--toz-pembe)}
+.trail{position:absolute;left:500px;top:655px;border:2px solid rgba(232,180,184,.16);border-radius:64px;transform:translate(-50%,-50%)}
+.phone{position:absolute;left:360px;top:420px;width:280px;height:470px;border-radius:44px;background:#0E0912;border:3px solid rgba(232,180,184,.5);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.screen{position:absolute;left:12px;top:12px;right:12px;bottom:12px;border-radius:34px;overflow:hidden;background:#2A2033}
+.notch{position:absolute;left:50%;top:10px;width:60px;height:16px;margin-left:-30px;border-radius:9px;background:#0E0912;z-index:3}
+.mint{position:absolute;left:24px;top:40px;z-index:4;font:700 24px "Be Vietnam Pro";color:var(--plum);background:var(--mint);padding:3px 12px 5px;border-radius:16px}
+.word{position:absolute;left:60px;top:930px;width:880px;text-align:center;font:700 104px/1.1 "Charm";color:var(--toz-pembe)}
+.more{position:absolute;left:60px;top:1074px;width:880px;text-align:center;font:500 32px "Be Vietnam Pro";color:var(--muted)}
+.shutter{position:absolute;left:50%;bottom:22px;width:46px;height:46px;margin-left:-23px;border-radius:50%;border:4px solid var(--ink);z-index:4;opacity:.9}
+.strip i{border-color:var(--toz-pembe)}
+</style></head><body><div class="frame">
+<div class="crumbs">telefon<i>›</i>piksel<i>›</i>nokta<i>›</i>yumuşatma<i>›</i>esnetme<i>›</i><b>geri</b></div>
+<div class="line">Saniyede <em>30 kez</em>,<br>her karede yeniden.</div>
+<div class="trail" style="width:400px;height:520px;border-color:rgba(232,180,184,.18)"></div>
+<div class="trail" style="width:336px;height:500px;border-color:rgba(232,180,184,.3)"></div>
+<div class="phone"><div class="screen" id="scr"></div><div class="notch"></div><div class="mint">Filtresiz</div><div class="shutter"></div></div>
+<div class="word">Ayna Arkası</div>
+<div class="more">Kaynaklar açıklamada</div>
+<div class="strip" id="strip"></div>
+<script>let h='';for(let i=0;i<30;i++)h+='<i class="cur"></i>';document.getElementById('strip').innerHTML=h;</script>
+<div class="cap"><div>Gerçek ciltte <span class="on">doku</span></div><div>vardır, olmalı da.</div></div>
+</div>
+<script>document.getElementById('scr').innerHTML=faceSVG({w:250,h:440,viewBox:'40 40 320 563',lineW:5,extra:'<circle cx="150" cy="284" r="9" fill="#E8B4B8"/><circle cx="150" cy="284" r="16" fill="none" stroke="#E8B4B8" stroke-opacity=".35" stroke-width="5"/>'});</script>
+</body></html>

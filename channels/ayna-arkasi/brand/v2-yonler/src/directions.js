@@ -12,8 +12,8 @@ const DIRECTIONS = [
   {
     no: '02', name: 'Editoryal', font: 'Instrument Serif',
     cls: 'd2', width: 0.64, trim: 'cap',
-    html: `Ayna <i>Arkası</i>`,
-    avatar: { html: 'A<i>a</i>', cls: 'a2', size: 0.56, trim: 'cap' },
+    html: `Ayna${k(" ", 0.07)}<i>Arkası</i>`,
+    avatar: { html: 'A<i>a</i>', cls: 'a2', size: 0.62, trim: 'cap' },
   },
   {
     no: '03', name: 'Modern sans', font: 'Manrope',
@@ -31,12 +31,12 @@ const DIRECTIONS = [
     no: '05', name: 'Monogram', font: 'Josefin Sans',
     cls: 'd5', width: 0.66, trim: 'none',
     html: `<span class="ring"><span class="aa">AA</span></span><span class="wm5">AYNA ARKASI</span>`,
-    avatar: { html: '<span class="aa">AA</span>', cls: 'a5', size: 0.40, trim: 'cap' },
+    avatar: { html: '<span class="aa">AA</span>', cls: 'a5', size: 0.44, trim: 'cap' },
   },
   {
     no: '06', name: 'Yumuşak çağdaş', font: 'Fraunces (Soft)',
-    cls: 'd6', width: 0.60, trim: 'ex',
-    html: `ayna arkası`,
-    avatar: { html: 'a', cls: 'a6', size: 0.66, trim: 'ex' },
+    cls: 'd6', width: 0.62, trim: 'cap',
+    html: `Ayna Arkası`,
+    avatar: { html: 'A', cls: 'a6', size: 0.56, trim: 'cap' },
   },
 ];

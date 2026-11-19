@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Ayna Arkası — Yazı yönleri</title>
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+  :root {
+    --pink: #E8B4B8; --plum: #1C1424; --light: #F6E1E3; --berry: #8E3B5A;
+    --paper: #F4F1EE; --muted: rgba(28, 20, 36, .52);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--plum); }
+  body { font-family: 'Manrope Variable', sans-serif; -webkit-font-smoothing: antialiased;
+         font-kerning: normal; text-rendering: geometricPrecision; }
+
+  /* ---------- layout: board ---------- */
+  body.board { width: 3000px; height: 2200px; padding: 132px 160px 0; }
+  .board .head { display: flex; justify-content: space-between; align-items: baseline;
+                 font-size: 22px; font-weight: 500; letter-spacing: .01em; color: var(--muted);
+                 margin-bottom: 104px; }
+  .board .head b { font-weight: 600; color: var(--plum); }
+  .board .grid { display: grid; grid-template-columns: repeat(3, 840px); column-gap: 80px; row-gap: 130px; }
+  .board .card { width: 840px; }
+  .board .panels { display: grid; grid-template-rows: 330px 330px; row-gap: 12px; }
+
+  /* ---------- layout: single ---------- */
+  body.single { width: 1600px; height: 1000px; padding: 112px 96px 0; }
+  .single .panels { display: grid; grid-template-columns: 688px 688px; column-gap: 32px; height: 600px; }
+
+  .panel { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .panel.on-pink { background: var(--pink); color: var(--plum); }
+  .panel.on-plum { background: var(--plum); color: var(--pink); }
+
+  .meta { display: flex; justify-content: space-between; align-items: center; margin-top: 44px; height: 120px; }
+  .single .meta { margin-top: 72px; }
+  .label { font-size: 20px; line-height: 1.55; color: var(--muted); font-weight: 500; letter-spacing: .005em; }
+  .label .no { color: var(--plum); font-weight: 600; font-variant-numeric: tabular-nums; margin-right: 10px; }
+  .label .nm { color: var(--plum); font-weight: 600; }
+  .single .label { font-size: 19px; }
+  .avatars { display: flex; align-items: center; gap: 28px; }
+
+  .avatar { position: relative; border-radius: 50%; background: var(--pink); color: var(--plum);
+            display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .avatar.s120 { width: 120px; height: 120px; }
+  .avatar.s48 { width: 48px; height: 48px; }
+
+  /* ---------- wordmark core ---------- */
+  .wm { display: block; width: max-content; white-space: nowrap; line-height: 1;
+        letter-spacing: var(--ls, 0); margin-right: calc(-1 * var(--ls, 0)); }
+  .trim-cap { text-box: trim-both cap alphabetic; }
+  .trim-ex  { text-box: trim-both ex alphabetic; }
+
+  /* 01 Lüks minimal */
+  .d1, .a1 { font-family: 'Bodoni Moda Variable', serif; font-weight: 500; }
+  .d1 { --ls: .22em; font-variation-settings: 'opsz' 16; }
+  .a1 { font-variation-settings: 'opsz' 8; font-weight: 540; }
+
+  /* 02 Editoryal */
+  .d2, .a2 { font-family: 'Instrument Serif', serif; font-weight: 400; }
+  .d2 { --ls: -.012em; }
+  .d2 i, .a2 i { font-style: italic; }
+  .a2 { letter-spacing: -.04em; margin-right: .04em; }
+
+  /* 03 Modern sans */
+  .d3, .a3 { font-family: 'Manrope Variable', sans-serif; font-weight: 600; }
+  .d3 { --ls: -.036em; font-weight: 500; }
+  .a3 { font-weight: 500; }
+
+  /* 04 İmza */
+  .d4, .a4 { font-family: 'Allura', cursive; font-weight: 400; }
+  .d4 { --ls: 0em; }
+
+  /* 05 Monogram */
+  .d5 { display: flex; align-items: center; gap: .62em; font-family: 'Josefin Sans Variable', sans-serif; }
+  .d5 .ring { width: 2.05em; height: 2.05em; border-radius: 50%; border: .042em solid currentColor;
+              display: flex; align-items: center; justify-content: center; }
+  .aa { font-family: 'Josefin Sans Variable', sans-serif; font-weight: 300; letter-spacing: -.112em;
+        margin-right: -.112em; line-height: 1; text-box: trim-both cap alphabetic; display: block; }
+  .d5 .aa { font-size: .92em; }
+  .wm5 { font-size: .36em; font-weight: 400; letter-spacing: .34em; margin-right: -.34em;
+         line-height: 1; text-box: trim-both cap alphabetic; display: block; }
+  .a5 { font-family: 'Josefin Sans Variable', sans-serif; }
+  .avatar.ring5::after { content: ''; position: absolute; inset: 9%; border-radius: 50%;
+                         border: var(--rw) solid var(--plum); }
+
+  /* 06 Yumuşak çağdaş */
+  .d6, .a6 { font-family: 'Fraunces Variable', serif; font-weight: 600;
+             font-variation-settings: 'SOFT' 100, 'WONK' 0, 'opsz' 144; }
+  .a6 { font-weight: 620; }
+  .d6 { --ls: -.018em; }
+</style>
+</head>
+<body>
+<script src="directions.js"></script>
+<script>
+  const q = new URLSearchParams(location.search);
+  const single = q.get('d');
+  document.body.className = single ? 'single' : 'board';
+
+  const trimCls = t => t === 'cap' ? 'trim-cap' : t === 'ex' ? 'trim-ex' : '';
+
+  function card(d) {
+    const el = document.createElement('section');
+    el.className = 'card';
+    el.innerHTML = `
+      <div class="panels">
+        <div class="panel on-pink"><div class="wm ${d.cls} ${trimCls(d.trim)}" data-w="${d.width}">${d.html}</div></div>
+        <div class="panel on-plum"><div class="wm ${d.cls} ${trimCls(d.trim)}" data-w="${d.width}">${d.html}</div></div>
+      </div>
+      <div class="meta">
+        <div class="label"><span class="no">${d.no}</span><span class="nm">${d.name}</span><br>${d.font}</div>
+        <div class="avatars">
+          ${[120, 48].map(s => `<div class="avatar s${s} ${d.no === '05' ? 'ring5' : ''}" style="--rw:${Math.max(1, s * 0.016)}px">
+              <div class="wm ${d.avatar.cls} ${trimCls(d.avatar.trim)}" style="font-size:${s * d.avatar.size}px">${d.avatar.html}</div>
+            </div>`).join('')}
+        </div>
+      </div>`;
+    return el;
+  }
+
+  if (single) {
+    document.body.appendChild(card(DIRECTIONS[+single - 1]));
+  } else {
+    document.body.innerHTML += `<header class="head"><span><b>Ayna Arkası</b> &nbsp;·&nbsp; Logo yazı yönleri</span><span>v2 &nbsp;·&nbsp; 6 yön &nbsp;·&nbsp; Kasım 2026</span></header><div class="grid"></div>`;
+    const g = document.querySelector('.grid');
+    DIRECTIONS.forEach(d => g.appendChild(card(d)));
+  }
+
+  // Fit each wordmark to a share of its panel width (measured after fonts load).
+  document.fonts.ready.then(() => {
+    document.querySelectorAll('.panel .wm').forEach(wm => {
+      wm.style.fontSize = '100px';
+      const w = wm.getBoundingClientRect().width;
+      const boost = document.body.classList.contains('single') ? 1.1 : 1;
+      const target = wm.parentElement.clientWidth * parseFloat(wm.dataset.w) * boost;
+      wm.style.fontSize = (100 * target / w) + 'px';
+    });
+    document.body.dataset.ready = '1';
+  });
+</script>
+</body>
+</html>

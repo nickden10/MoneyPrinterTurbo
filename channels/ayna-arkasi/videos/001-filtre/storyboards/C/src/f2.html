@@ -17,7 +17,9 @@ html,body,.frame{background:#110B16}
 <div class="sub">Bir yüz modeli, bir yüzde bunu görüyor.</div>
 <div class="stage"><canvas id="px" width="520" height="624"></canvas><svg id="pts" viewBox="40 52 320 384"></svg></div>
 <div class="src" style="top:1096px">Kaynak: Google MediaPipe Face Landmarker</div>
-<div class="cap"><div>bu piksellerde</div><div><span class="on">478</span> nokta işaretler.</div></div>
+<div class="strip" id="strip"></div>
+<script>(function(n){let h="";for(let i=0;i<30;i++)h+="<i"+(i<=n&&i>=n?" class=\"cur\"":"")+"></i>";document.getElementById("strip").innerHTML=h})(9)</script>
+<div class="cap"><div>piksellerde <span class="on">478</span></div><div>nokta işaretler.</div></div>
 </div>
 <script>
 const VB=[40,52,320,384];
