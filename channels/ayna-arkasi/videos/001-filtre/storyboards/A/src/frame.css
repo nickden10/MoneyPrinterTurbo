@@ -1,0 +1,23 @@
+@import url("../../../../../brand/brand.css");
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--plum)}
+body{position:relative;font-family:"Be Vietnam Pro";color:var(--ink);-webkit-font-smoothing:antialiased}
+svg.art{position:absolute;left:0;top:0;width:1080px;height:1920px}
+/* safe column for all text: x 60–940 (right 140 px rail free), y 168–1330 */
+.t{position:absolute;left:60px;width:880px}
+.head{font-weight:700;font-size:64px;line-height:1.12;text-align:center;letter-spacing:-.01em}
+.head em{font-style:normal;color:var(--toz-pembe)}
+.script{font-family:Charm;font-weight:700;font-size:100px;line-height:1.05;text-align:center;color:var(--toz-pembe)}
+.src{font-weight:500;font-size:34px;color:var(--muted);text-align:left}
+/* burned-in caption · Kanal B: 72px Bold, #F7EFF3, 6px black stroke 70%, active word toz pembe */
+.cap{position:absolute;left:60px;width:880px;bottom:600px;text-align:center;font-weight:700;font-size:72px;line-height:1.14;
+  color:var(--ink);-webkit-text-stroke:12px rgba(0,0,0,.7);paint-order:stroke fill}
+.cap .on{color:var(--toz-pembe)}
+.steps{display:flex;justify-content:center;gap:18px;font-weight:500;font-size:34px}
+.steps span{padding:8px 22px;border-radius:40px;border:2px solid rgba(168,155,176,.45);color:var(--muted)}
+.steps span.on{border-color:var(--toz-pembe);color:var(--plum);background:var(--toz-pembe);font-weight:700}
+.steps span.off{text-decoration:line-through;text-decoration-thickness:3px}
+.pill{display:inline-block;padding:10px 34px;border-radius:60px;border:3px solid var(--mint);color:var(--mint);font-weight:700;font-size:52px}
+.lbl{position:absolute;font-weight:500;font-size:34px;color:var(--mint)}
+body.guides::after{content:"";position:absolute;left:0;top:168px;width:940px;height:1162px;outline:2px dashed #0f0;pointer-events:none}
+body.guides::before{content:"";position:absolute;right:0;top:0;width:140px;height:1920px;background:rgba(255,0,0,.18)}

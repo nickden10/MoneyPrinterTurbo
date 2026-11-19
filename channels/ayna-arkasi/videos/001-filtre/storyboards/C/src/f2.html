@@ -1,0 +1,44 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>C · f2 nokta bulutu</title>
+<link rel="stylesheet" href="common.css"><script src="face.js"></script>
+<style>
+html,body,.frame{background:#110B16}
+.count{position:absolute;left:60px;top:236px;width:880px;display:flex;align-items:baseline;gap:22px}
+.count .n{font:700 150px/1 "Be Vietnam Pro";color:var(--toz-pembe)}
+.count .t{font:700 48px/1.2 "Be Vietnam Pro";color:var(--ink)}
+.stage{position:absolute;left:220px;top:420px;width:560px;height:672px}
+.stage canvas,.stage svg{position:absolute;left:0;top:0;width:560px;height:672px}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(168,155,176,.07) 2px,transparent 2px),linear-gradient(90deg,rgba(168,155,176,.07) 2px,transparent 2px);background-size:28px 28px}
+.tag{position:absolute;font:500 28px "Be Vietnam Pro";color:var(--muted)}
+</style></head><body><div class="frame">
+<div class="grid"></div>
+<div class="crumbs">telefon<i>›</i>piksel<i>›</i><b>nokta</b><i>›</i>yumuşatma<i>›</i>esnetme<i>›</i>geri</div>
+<div class="count"><span class="n">478</span><span class="t">nokta:<br>bir yüz modelinin gördüğü</span></div>
+<div class="stage"><canvas id="px" width="560" height="672"></canvas><svg id="pts" viewBox="40 52 320 384"></svg></div>
+<div class="src" style="top:1096px">Kaynak: Google MediaPipe Face Landmarker</div>
+<div class="cap"><div>bu piksellerde</div><div><span class="on">478</span> nokta işaretler.</div></div>
+</div>
+<script>
+const VB=[40,52,320,384];
+// 1) piksel katmanı: çizgi-portre küçük çözünürlükte çizilip büyütülür
+const img=new Image();
+img.onload=()=>{const sm=document.createElement('canvas');sm.width=40;sm.height=48;const c=sm.getContext('2d');c.drawImage(img,0,0,40,48);
+  const big=document.getElementById('px').getContext('2d');big.imageSmoothingEnabled=false;big.globalAlpha=.55;big.drawImage(sm,0,0,560,672);
+  big.globalAlpha=1;big.strokeStyle='rgba(17,11,22,.55)';big.lineWidth=2;for(let x=0;x<=560;x+=14){big.beginPath();big.moveTo(x,0);big.lineTo(x,672);big.stroke()}for(let y=0;y<=672;y+=14){big.beginPath();big.moveTo(0,y);big.lineTo(560,y);big.stroke()}
+  document.body.dataset.ready=1;};
+img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(faceSVG({w:320,h:384,viewBox:VB.join(' ')}));
+// 2) 478 nokta: yüz hatlarından örneklenir + iç bölge doldurulur
+const NS='http://www.w3.org/2000/svg',svg=document.getElementById('pts');const F=FACE_PATHS;
+function mk(d){const p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('fill','none');svg.appendChild(p);return p}
+const pts=[];function sample(d,n,closed){const p=mk(d),L=p.getTotalLength();for(let i=0;i<n;i++){const q=p.getPointAtLength(L*i/(closed?n:n-1));pts.push([q.x,q.y])}p.remove()}
+sample(F.face,36,true);sample(F.browL,10);sample(F.browR,10);sample(F.eyeL,16,true);sample(F.eyeR,16,true);sample(F.lidL,8);sample(F.lidR,8);
+[[159,229],[241,229]].forEach(([x,y])=>{pts.push([x,y]);for(let k=0;k<4;k++){const a=k*Math.PI/2;pts.push([x+Math.cos(a)*10,y+Math.sin(a)*10])}});
+sample(F.nose,12);sample('M184 296 Q170 314 188 316',8);sample('M216 296 Q230 314 212 316',8);sample(F.lipU,24,true);sample(F.lipL,20,true);
+const facep=mk(F.face);let s=1;const r=()=>((s=(s*16807)%2147483647)/2147483647);let guard=0;
+while(pts.length<478&&guard++<20000){const x=88+r()*226,y=80+r()*336;const q=svg.createSVGPoint();q.x=x;q.y=y;
+  if(!facep.isPointInFill(q))continue; if(pts.some(([a,b])=>(a-x)**2+(b-y)**2<64))continue; pts.push([x,y]);}
+facep.remove();
+let h='';pts.forEach(([x,y])=>h+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="1.9" fill="#E8B4B8"/>`);
+// taşıyıcı nokta (yanak)
+h+=`<circle cx="150" cy="284" r="9" fill="none" stroke="#E8B4B8" stroke-opacity=".35" stroke-width="5"/><circle cx="150" cy="284" r="4.2" fill="#E8B4B8"/>`;
+svg.innerHTML+=h;document.body.dataset.count=pts.length;console.log('points',pts.length);
+</script></body></html>

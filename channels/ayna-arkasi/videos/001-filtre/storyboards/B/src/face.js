@@ -114,7 +114,7 @@ function shadows() {
       t += `<path d="M ${x} ${y} l ${-s * 10} 8" stroke="${LINE}" stroke-width="1.4" opacity=".4" stroke-linecap="round"/>`;
     }
   }
-  for (let k = -4; k <= 4; k++) t += `<path d="M ${300 + k * 9} 562 l 6 8" stroke="${LINE}" stroke-width="1.4" opacity=".45"/>`; // under lower lip
+  t += `<path d="M 278 566 Q 300 574 322 566" fill="none" stroke="${LINE}" stroke-width="2" opacity=".5" stroke-linecap="round"/>`; // under lower lip
   for (let k = -6; k <= 6; k++) t += `<path d="M ${300 + k * 10} 628 l 8 12" stroke="${LINE}" stroke-width="1.6" opacity=".5"/>`; // neck under chin
   return t;
 }
@@ -124,9 +124,9 @@ function glow(id) {
   return `
   <defs><filter id="${id}" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter></defs>
   <g filter="url(#${id})" fill="#FFF3EA">
-    <ellipse cx="300" cy="230" rx="70" ry="30" opacity=".38"/>
-    <ellipse cx="216" cy="430" rx="34" ry="20" opacity=".42"/>
-    <ellipse cx="384" cy="430" rx="34" ry="20" opacity=".42"/>
+    <ellipse cx="300" cy="230" rx="70" ry="30" opacity=".32"/>
+    <ellipse cx="216" cy="430" rx="34" ry="20" opacity=".36"/>
+    <ellipse cx="384" cy="430" rx="34" ry="20" opacity=".36"/>
     <ellipse cx="300" cy="420" rx="11" ry="46" opacity=".45"/>
     <ellipse cx="300" cy="575" rx="22" ry="12" opacity=".35"/>
   </g>`;
@@ -147,7 +147,8 @@ function face(o = {}, id = 'f') {
     <path d="M 414 350 C 440 342 442 400 418 420" fill="${SKIN}" stroke="${LINE}" stroke-width="3"/>
     <!-- face -->
     <path d="${jawPath(jaw)}" fill="${SKIN}" stroke="${LINE}" stroke-width="3.5" stroke-linejoin="round"/>
-    ${light ? glow(id + 'g') : shadows()}
+    <clipPath id="${id}fc"><path d="${jawPath(jaw)}"/></clipPath>
+    ${light ? `<g clip-path="url(#${id}fc)">${glow(id + 'g')}</g>` : shadows()}
     ${tex ? texture() : ''}
     ${brow(244, 324, -1)}${brow(356, 324, 1)}
     ${eye(244, 366, es, 'L' + id)}${eye(356, 366, es, 'R' + id)}
