@@ -88,29 +88,36 @@ marks.push({
 });
 
 /* 04 — Göz ve kirpik */
+const bz = (p, t) => { const u = 1 - t; return [0, 1].map(k => u*u*u*p[0][k] + 3*u*u*t*p[1][k] + 3*u*t*t*p[2][k] + t*t*t*p[3][k]); };
+const bzd = (p, t) => { const u = 1 - t; return [0, 1].map(k => 3*u*u*(p[1][k]-p[0][k]) + 6*u*t*(p[2][k]-p[1][k]) + 3*t*t*(p[3][k]-p[2][k])); };
+const LID = [[64, 206], [132, 116], [270, 108], [336, 194]];
 marks.push({
   id: '04', name: 'Göz ve kirpik',
-  meaning: 'Güzellik bakanın gözünde: irisin içindeki minik ayna, gördüğümüzün hep bir yansıma olduğunu hatırlatır.',
+  meaning: 'Güzellik bakanın gözünde: irisin içindeki minik oval ayna, gördüğümüzün hep bir yansıma olduğunu hatırlatır.',
   draw({ sw = 3, av = false }) {
-    const lashes = av ? '' : [
-      'M122 158 C116 146 114 138 116 128',
-      'M150 140 C147 128 147 120 151 110',
-      'M182 132 C182 120 184 112 190 103',
-      'M216 131 C220 120 224 113 232 106',
-      'M250 139 C258 129 264 124 274 120',
-      'M280 155 C291 148 299 146 310 146',
-    ].map(p => `<path d="${p}" ${L(sw)}/>`).join('');
+    const f = (n) => n.toFixed(1);
+    let lashes = '';
+    if (!av) {
+      [0.30, 0.43, 0.56, 0.68, 0.79, 0.89].forEach((t, i) => {
+        const [x, y] = bz(LID, t), [dx, dy] = bzd(LID, t), m = Math.hypot(dx, dy);
+        const nx = dy / m, ny = -dx / m, tx = dx / m, ty = dy / m; // normal dışa (yukarı)
+        const len = 22 + i * 5, bend = 8 + i * 3;
+        const ex = x + nx * len + tx * bend, ey = y + ny * len + ty * bend;
+        const c1x = x + nx * len * 0.55, c1y = y + ny * len * 0.55;
+        lashes += `<path d="M${f(x)} ${f(y)} Q${f(c1x)} ${f(c1y)} ${f(ex)} ${f(ey)}" ${L(sw)}/>`;
+      });
+    }
+    const lid = `M64 206 C132 116 270 108 336 194`;
     return `
-    <path d="M68 206 C112 150 160 126 206 126 C252 126 296 152 334 196 C312 156 268 100 204 100 C148 100 100 138 68 206 Z" fill="${C.toz}"/>
-    <path d="M90 176 C126 120 172 100 206 100 C252 100 300 130 328 186" ${L(sw)} ${av ? 'opacity="0"' : ''}/>
-    <clipPath id="eye${av ? 'a' : 'm'}"><path d="M66 208 C110 150 160 126 206 126 C254 126 300 154 334 198 C300 248 254 272 204 272 C150 272 102 248 66 208 Z"/></clipPath>
+    <clipPath id="eye${av ? 'a' : 'm'}"><path d="${lid} C292 250 248 276 200 276 C150 276 104 254 64 206 Z"/></clipPath>
     <g clip-path="url(#eye${av ? 'a' : 'm'})">
-      <circle cx="202" cy="196" r="${av ? 62 : 56}" ${F(C.adacayi, sw)}/>
-      <circle cx="202" cy="196" r="${av ? 26 : 22}" fill="${C.murekkep}"/>
-      <ellipse cx="220" cy="178" rx="${av ? 9 : 7}" ry="${av ? 13 : 10}" fill="${C.krem}"/>
+      <circle cx="198" cy="200" r="${av ? 64 : 58}" ${F(C.adacayi, sw)}/>
+      <circle cx="198" cy="200" r="${av ? 28 : 23}" fill="${C.murekkep}"/>
+      <ellipse cx="216" cy="182" rx="${av ? 10 : 7}" ry="${av ? 14 : 10}" fill="${C.krem}" ${av ? '' : `stroke="${C.murekkep}" stroke-width="${sw * 0.6}"`}/>
     </g>
-    <path d="M66 208 C110 150 160 126 206 126 C254 126 300 154 334 198" ${L(sw * 1.2)}/>
-    <path d="M92 222 C126 254 166 272 204 272 C248 272 290 252 320 214" ${L(sw)}/>
+    <path d="${lid}" ${L(sw * 1.25)}/>
+    <path d="M88 226 C122 258 160 276 200 276 C246 276 286 256 318 220" ${L(sw)}/>
+    ${av ? '' : `<path d="M112 118 C150 84 236 78 292 112" ${L(sw)}/>`}
     ${lashes}
     `;
   },
@@ -119,25 +126,24 @@ marks.push({
 /* 05 — Ruj ve yansıması */
 marks.push({
   id: '05', name: 'Ruj ve yansıması',
-  meaning: 'Üstte gerçek, kullanılmış ruj; aynadaki yansıması kusursuz ve hiç dokunulmamış — gerçek ile ideal arasındaki fark.',
+  meaning: 'Üstte gerçek, eğik aşınmış ruj; alttaki yansıması el değmemiş, kusursuz — gerçek ile idealin arasındaki fark.',
   draw({ sw = 3, av = false }) {
     const real = `
-      <path d="M170 156 L170 100 C170 88 178 76 192 66 C206 58 226 62 230 72 L230 156 Z" ${F(C.toz, sw)}/>
-      <rect x="160" y="152" width="80" height="34" rx="3" ${F(C.krem, sw)}/>
-      <rect x="150" y="184" width="100" height="78" rx="4" ${F(C.krem, sw)}/>
-      ${av ? '' : `<path d="M150 206 L250 206" ${L(sw)}/>`}`;
-    const k = C.koyu, s2 = sw * 0.8;
-    const LL = `fill="none" stroke="${k}" stroke-width="${s2}" stroke-linecap="round" stroke-linejoin="round"`;
+      <path d="M182 104 L182 70 C182 66 184 63 188 61 L210 48 C215 45 218 47 218 52 L218 104 Z" ${F(C.toz, sw)}/>
+      <rect x="176" y="102" width="48" height="30" rx="2" ${F(C.krem, sw)}/>
+      <rect x="166" y="130" width="68" height="72" rx="3" ${F(C.krem, sw)}/>
+      ${av ? '' : `<path d="M166 146 L234 146" ${L(sw)}/>`}`;
+    const g = C.adacayi;
     const refl = av ? '' : `
-      <path d="M170 368 L170 412 C170 432 186 448 200 452 C214 448 230 432 230 412 L230 368" ${LL}/>
-      <path d="M160 338 L160 368 L240 368 L240 338" ${LL}/>
-      <path d="M150 266 L150 336 Q150 338 152 338 L248 338 Q250 338 250 336 L250 266" ${LL}/>
-      <path d="M150 318 L250 318" ${LL}/>`;
+      <rect x="166" y="210" width="68" height="70" rx="3" fill="${g}"/>
+      <rect x="176" y="284" width="48" height="26" rx="2" fill="${g}"/>
+      <path d="M182 314 L182 338 C182 352 190 362 200 364 C210 362 218 352 218 338 L218 314 Z" fill="${g}"/>
+      <path d="M166 264 L234 264" stroke="${C.krem}" stroke-width="${sw}"/>`;
     return `
-    <g transform="translate(0 -8)">
+    <g transform="translate(0 ${av ? 50 : 0})">
     ${real}
-    <path d="M${av ? 110 : 96} 262 L${av ? 290 : 304} 262" ${L(sw)}/>
-    ${refl ? `<clipPath id="rf"><rect x="0" y="264" width="400" height="${av ? 0 : 118}"/></clipPath><g clip-path="url(#rf)">${refl}</g>` : ''}
+    <path d="M${av ? 120 : 108} 206 L${av ? 280 : 292} 206" ${L(sw)}/>
+    ${refl}
     </g>
     `;
   },
