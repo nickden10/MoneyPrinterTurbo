@@ -1,48 +1,49 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1080, height=1920" />
-    <title>Ayna Arkası 001 · Bir selfie'nin 33 milisaniyesi</title>
+    <title>Ayna Arkası 001 · 33 milliseconds of a selfie</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
     <script src="assets/lib/data.js"></script>
     <script src="assets/lib/ayna.js"></script>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
-      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #F8F4EC; }
-      #main-bg { position: absolute; inset: 0; background: #F8F4EC; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #2C3A31; }
+      #root { background: #2C3A31; }
+      #main-bg { position: absolute; inset: 0; background: #2C3A31; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="37.5" data-fps="30" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="44.63333333333333" data-fps="30" data-width="1080" data-height="1920">
       <div id="main-bg"></div>
-      <div id="s1" data-composition-id="s1" data-composition-src="compositions/s1.html" data-start="0.0" data-duration="7.897"
+      <div id="s1" data-composition-id="s1" data-composition-src="compositions/s1.html" data-start="0.0" data-duration="10.18"
         data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="position: absolute; inset: 0; z-index: 1"></div>
-      <div id="s2" data-composition-id="s2" data-composition-src="compositions/s2.html" data-start="7.897" data-duration="4.135"
+      <div id="s2" data-composition-id="s2" data-composition-src="compositions/s2.html" data-start="10.18" data-duration="2.29"
         data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="position: absolute; inset: 0; z-index: 1"></div>
-      <div id="s3" data-composition-id="s3" data-composition-src="compositions/s3.html" data-start="12.032" data-duration="2.716"
+      <div id="s3" data-composition-id="s3" data-composition-src="compositions/s3.html" data-start="12.47" data-duration="6.625"
         data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="position: absolute; inset: 0; z-index: 1"></div>
-      <div id="s4" data-composition-id="s4" data-composition-src="compositions/s4.html" data-start="14.748" data-duration="6.853"
+      <div id="s4" data-composition-id="s4" data-composition-src="compositions/s4.html" data-start="19.095" data-duration="7.411"
         data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="position: absolute; inset: 0; z-index: 1"></div>
-      <div id="s5" data-composition-id="s5" data-composition-src="compositions/s5.html" data-start="21.601" data-duration="4.395"
+      <div id="s5" data-composition-id="s5" data-composition-src="compositions/s5.html" data-start="26.506" data-duration="5.078"
         data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="position: absolute; inset: 0; z-index: 1"></div>
-      <div id="s6" data-composition-id="s6" data-composition-src="compositions/s6.html" data-start="25.996" data-duration="2.403"
+      <div id="s6" data-composition-id="s6" data-composition-src="compositions/s6.html" data-start="31.584" data-duration="2.858"
         data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="position: absolute; inset: 0; z-index: 1"></div>
-      <div id="s7" data-composition-id="s7" data-composition-src="compositions/s7.html" data-start="28.399" data-duration="3.105"
+      <div id="s7" data-composition-id="s7" data-composition-src="compositions/s7.html" data-start="34.442" data-duration="3.212"
         data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="position: absolute; inset: 0; z-index: 1"></div>
-      <div id="s8" data-composition-id="s8" data-composition-src="compositions/s8.html" data-start="31.504" data-duration="5.996"
+      <div id="s8" data-composition-id="s8" data-composition-src="compositions/s8.html" data-start="37.654" data-duration="6.979"
         data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="position: absolute; inset: 0; z-index: 1"></div>
-      <div id="altyazi" data-composition-id="altyazi" data-composition-src="compositions/altyazi.html" data-start="0" data-duration="37.5"
+      <div id="altyazi" data-composition-id="altyazi" data-composition-src="compositions/altyazi.html" data-start="0" data-duration="44.63333333333333"
         data-track-index="2" data-track-kind="captions" data-width="1080" data-height="1920" style="position: absolute; inset: 0; z-index: 10"></div>
-      <audio id="voice" class="clip" src="assets/voice.wav" data-start="0" data-duration="37.5" data-track-index="3" data-volume="0.741"></audio>
+      <audio id="voice" class="clip" src="assets/voice-en.wav" data-start="0" data-duration="43.611" data-track-index="3" data-volume="0.741"></audio>
       <!-- S1→S2 dalış kesmesi -->
-      <audio id="sfx-dalis" class="clip" src="assets/sfx/whoosh-cinematic.mp3" data-start="6.99" data-duration="1.6" data-media-start="1.6" data-fade-out="0.5" data-track-index="4" data-volume="0.186"></audio>
+      <audio id="sfx-dalis" class="clip" src="assets/sfx/whoosh-cinematic.mp3" data-start="9.273" data-duration="1.6" data-media-start="1.6" data-fade-out="0.5" data-track-index="4" data-volume="0.186"></audio>
       <!-- sayaç 478'e oturur -->
-      <audio id="sfx-sayac" class="clip" src="assets/sfx/pop.mp3" data-start="13.494" data-duration="0.72" data-track-index="4" data-volume="0.234"></audio>
+      <audio id="sfx-sayac" class="clip" src="assets/sfx/pop.mp3" data-start="16.518" data-duration="0.72" data-track-index="4" data-volume="0.234"></audio>
       <!-- S3→S4 dalış kesmesi -->
-      <audio id="sfx-dalis2" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="14.621" data-duration="0.575" data-track-index="4" data-volume="0.295"></audio>
+      <audio id="sfx-dalis2" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="18.968" data-duration="0.575" data-track-index="4" data-volume="0.295"></audio>
       <!-- telefon oturur (ters) -->
-      <audio id="sfx-geri" class="clip" src="assets/sfx/whoosh-short-ters.mp3" data-start="29.032" data-duration="0.575" data-track-index="4" data-volume="0.186"></audio>
+      <audio id="sfx-geri" class="clip" src="assets/sfx/whoosh-short-ters.mp3" data-start="35.075" data-duration="0.575" data-track-index="4" data-volume="0.186"></audio>
     </div>
     <script>
       window.__timelines = window.__timelines || {};

@@ -1,0 +1,72 @@
+[
+ {
+  "text": "Önce",
+  "start": 0.0,
+  "end": 0.29
+ },
+ {
+  "text": "bir",
+  "start": 0.348,
+  "end": 0.453
+ },
+ {
+  "text": "yüz",
+  "start": 0.488,
+  "end": 0.72
+ },
+ {
+  "text": "modeli",
+  "start": 0.801,
+  "end": 1.242
+ },
+ {
+  "text": "örneğin",
+  "start": 1.335,
+  "end": 1.741
+ },
+ {
+  "text": "MediaPipe",
+  "start": 1.823,
+  "end": 2.659
+ },
+ {
+  "text": "yüzün",
+  "start": 2.961,
+  "end": 3.251
+ },
+ {
+  "text": "üstünde",
+  "start": 3.32,
+  "end": 3.785
+ },
+ {
+  "text": "dört",
+  "start": 3.855,
+  "end": 4.133
+ },
+ {
+  "text": "yüz",
+  "start": 4.18,
+  "end": 4.331
+ },
+ {
+  "text": "yetmiş",
+  "start": 4.389,
+  "end": 4.748
+ },
+ {
+  "text": "sekiz",
+  "start": 4.818,
+  "end": 5.166
+ },
+ {
+  "text": "nokta",
+  "start": 5.224,
+  "end": 5.631
+ },
+ {
+  "text": "işaretler",
+  "start": 5.7,
+  "end": 6.513
+ }
+]

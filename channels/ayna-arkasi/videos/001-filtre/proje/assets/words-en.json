@@ -1,0 +1,744 @@
+[
+ {
+  "beat": "B1",
+  "text": "A",
+  "start": 0.2,
+  "end": 0.281,
+  "id": "w0"
+ },
+ {
+  "beat": "B1",
+  "text": "live",
+  "start": 0.374,
+  "end": 0.572,
+  "id": "w1"
+ },
+ {
+  "beat": "B1",
+  "text": "filter",
+  "start": 0.618,
+  "end": 0.931,
+  "id": "w2"
+ },
+ {
+  "beat": "B1",
+  "text": "has",
+  "start": 0.978,
+  "end": 1.106,
+  "id": "w3"
+ },
+ {
+  "beat": "B1",
+  "text": "less",
+  "start": 1.198,
+  "end": 1.407,
+  "id": "w4"
+ },
+ {
+  "beat": "B1",
+  "text": "than",
+  "start": 1.431,
+  "end": 1.582,
+  "id": "w5"
+ },
+ {
+  "beat": "B1",
+  "text": "thirty-three",
+  "start": 1.628,
+  "end": 2.116,
+  "id": "w6"
+ },
+ {
+  "beat": "B1",
+  "text": "milliseconds",
+  "start": 2.162,
+  "end": 2.766,
+  "id": "w7"
+ },
+ {
+  "beat": "B1",
+  "text": "to",
+  "start": 2.824,
+  "end": 2.905,
+  "id": "w8"
+ },
+ {
+  "beat": "B1",
+  "text": "finish",
+  "start": 2.975,
+  "end": 3.277,
+  "id": "w9"
+ },
+ {
+  "beat": "B1",
+  "text": "one",
+  "start": 3.358,
+  "end": 3.532,
+  "id": "w10"
+ },
+ {
+  "beat": "B1",
+  "text": "frame",
+  "start": 3.59,
+  "end": 3.915,
+  "id": "w11"
+ },
+ {
+  "beat": "B2",
+  "text": "Thirty",
+  "start": 5.264,
+  "end": 5.507,
+  "id": "w12"
+ },
+ {
+  "beat": "B2",
+  "text": "frames",
+  "start": 5.576,
+  "end": 5.82,
+  "id": "w13"
+ },
+ {
+  "beat": "B2",
+  "text": "a",
+  "start": 5.867,
+  "end": 5.89,
+  "id": "w14"
+ },
+ {
+  "beat": "B2",
+  "text": "second",
+  "start": 5.948,
+  "end": 6.273,
+  "id": "w15"
+ },
+ {
+  "beat": "B2",
+  "text": "means",
+  "start": 6.366,
+  "end": 6.668,
+  "id": "w16"
+ },
+ {
+  "beat": "B2",
+  "text": "about",
+  "start": 6.714,
+  "end": 7.016,
+  "id": "w17"
+ },
+ {
+  "beat": "B2",
+  "text": "thirty-three",
+  "start": 7.074,
+  "end": 7.562,
+  "id": "w18"
+ },
+ {
+  "beat": "B2",
+  "text": "milliseconds",
+  "start": 7.596,
+  "end": 8.235,
+  "id": "w19"
+ },
+ {
+  "beat": "B2",
+  "text": "per",
+  "start": 8.293,
+  "end": 8.467,
+  "id": "w20"
+ },
+ {
+  "beat": "B2",
+  "text": "frame",
+  "start": 8.537,
+  "end": 8.781,
+  "id": "w21"
+ },
+ {
+  "beat": "B3",
+  "text": "Look",
+  "start": 10.24,
+  "end": 10.484,
+  "id": "w22"
+ },
+ {
+  "beat": "B3",
+  "text": "closer",
+  "start": 10.507,
+  "end": 10.913,
+  "id": "w23"
+ },
+ {
+  "beat": "B3",
+  "text": "pixels",
+  "start": 10.995,
+  "end": 11.529,
+  "id": "w24"
+ },
+ {
+  "beat": "B4",
+  "text": "First",
+  "start": 12.53,
+  "end": 12.878,
+  "id": "w25"
+ },
+ {
+  "beat": "B4",
+  "text": "a",
+  "start": 12.925,
+  "end": 12.948,
+  "id": "w26"
+ },
+ {
+  "beat": "B4",
+  "text": "face",
+  "start": 13.018,
+  "end": 13.25,
+  "id": "w27"
+ },
+ {
+  "beat": "B4",
+  "text": "model",
+  "start": 13.296,
+  "end": 13.563,
+  "id": "w28"
+ },
+ {
+  "beat": "B4",
+  "text": "for",
+  "start": 13.621,
+  "end": 13.749,
+  "id": "w29"
+ },
+ {
+  "beat": "B4",
+  "text": "example",
+  "start": 13.784,
+  "end": 14.225,
+  "id": "w30"
+ },
+ {
+  "beat": "B4",
+  "text": "MediaPipe",
+  "start": 14.26,
+  "end": 14.875,
+  "id": "w31"
+ },
+ {
+  "beat": "B4",
+  "text": "marks",
+  "start": 14.956,
+  "end": 15.293,
+  "id": "w32"
+ },
+ {
+  "beat": "B4",
+  "text": "four",
+  "start": 15.363,
+  "end": 15.549,
+  "id": "w33"
+ },
+ {
+  "beat": "B4",
+  "text": "hundred",
+  "start": 15.607,
+  "end": 15.909,
+  "id": "w34"
+ },
+ {
+  "beat": "B4",
+  "text": "seventy-eight",
+  "start": 15.967,
+  "end": 16.547,
+  "id": "w35"
+ },
+ {
+  "beat": "B4",
+  "text": "points",
+  "start": 16.605,
+  "end": 16.895,
+  "id": "w36"
+ },
+ {
+  "beat": "B4",
+  "text": "on",
+  "start": 16.953,
+  "end": 17.035,
+  "id": "w37"
+ },
+ {
+  "beat": "B4",
+  "text": "the",
+  "start": 17.081,
+  "end": 17.151,
+  "id": "w38"
+ },
+ {
+  "beat": "B4",
+  "text": "face",
+  "start": 17.22,
+  "end": 17.546,
+  "id": "w39"
+ },
+ {
+  "beat": "B5",
+  "text": "Then",
+  "start": 19.125,
+  "end": 19.322,
+  "id": "w40"
+ },
+ {
+  "beat": "B5",
+  "text": "a",
+  "start": 19.38,
+  "end": 19.404,
+  "id": "w41"
+ },
+ {
+  "beat": "B5",
+  "text": "filter",
+  "start": 19.462,
+  "end": 19.752,
+  "id": "w42"
+ },
+ {
+  "beat": "B5",
+  "text": "like",
+  "start": 19.81,
+  "end": 19.984,
+  "id": "w43"
+ },
+ {
+  "beat": "B5",
+  "text": "a",
+  "start": 20.007,
+  "end": 20.031,
+  "id": "w44"
+ },
+ {
+  "beat": "B5",
+  "text": "bilateral",
+  "start": 20.089,
+  "end": 20.599,
+  "id": "w45"
+ },
+ {
+  "beat": "B5",
+  "text": "filter",
+  "start": 20.658,
+  "end": 20.971,
+  "id": "w46"
+ },
+ {
+  "beat": "B5",
+  "text": "scans",
+  "start": 21.017,
+  "end": 21.343,
+  "id": "w47"
+ },
+ {
+  "beat": "B5",
+  "text": "the",
+  "start": 21.377,
+  "end": 21.459,
+  "id": "w48"
+ },
+ {
+  "beat": "B5",
+  "text": "skin",
+  "start": 21.505,
+  "end": 21.853,
+  "id": "w49"
+ },
+ {
+  "beat": "B5",
+  "text": "edges",
+  "start": 22.306,
+  "end": 22.62,
+  "id": "w50"
+ },
+ {
+  "beat": "B5",
+  "text": "stay",
+  "start": 22.643,
+  "end": 22.933,
+  "id": "w51"
+ },
+ {
+  "beat": "B5",
+  "text": "texture",
+  "start": 22.991,
+  "end": 23.363,
+  "id": "w52"
+ },
+ {
+  "beat": "B5",
+  "text": "is",
+  "start": 23.386,
+  "end": 23.444,
+  "id": "w53"
+ },
+ {
+  "beat": "B5",
+  "text": "wiped",
+  "start": 23.525,
+  "end": 23.85,
+  "id": "w54"
+ },
+ {
+  "beat": "B5",
+  "text": "Pores",
+  "start": 23.943,
+  "end": 24.338,
+  "id": "w55"
+ },
+ {
+  "beat": "B5",
+  "text": "freckles",
+  "start": 24.419,
+  "end": 24.918,
+  "id": "w56"
+ },
+ {
+  "beat": "B5",
+  "text": "fine",
+  "start": 24.988,
+  "end": 25.243,
+  "id": "w57"
+ },
+ {
+  "beat": "B5",
+  "text": "hairs",
+  "start": 25.29,
+  "end": 25.615,
+  "id": "w58"
+ },
+ {
+  "beat": "B6",
+  "text": "Next",
+  "start": 27.082,
+  "end": 27.384,
+  "id": "w59"
+ },
+ {
+  "beat": "B6",
+  "text": "the",
+  "start": 27.43,
+  "end": 27.512,
+  "id": "w60"
+ },
+ {
+  "beat": "B6",
+  "text": "points",
+  "start": 27.581,
+  "end": 27.871,
+  "id": "w61"
+ },
+ {
+  "beat": "B6",
+  "text": "are",
+  "start": 27.918,
+  "end": 28.022,
+  "id": "w62"
+ },
+ {
+  "beat": "B6",
+  "text": "shifted",
+  "start": 28.057,
+  "end": 28.464,
+  "id": "w63"
+ },
+ {
+  "beat": "B6",
+  "text": "and",
+  "start": 28.51,
+  "end": 28.591,
+  "id": "w64"
+ },
+ {
+  "beat": "B6",
+  "text": "the",
+  "start": 28.638,
+  "end": 28.707,
+  "id": "w65"
+ },
+ {
+  "beat": "B6",
+  "text": "image",
+  "start": 28.777,
+  "end": 29.091,
+  "id": "w66"
+ },
+ {
+  "beat": "B6",
+  "text": "stretches",
+  "start": 29.125,
+  "end": 29.671,
+  "id": "w67"
+ },
+ {
+  "beat": "B6",
+  "text": "eyes",
+  "start": 29.764,
+  "end": 30.019,
+  "id": "w68"
+ },
+ {
+  "beat": "B6",
+  "text": "grow",
+  "start": 30.101,
+  "end": 30.321,
+  "id": "w69"
+ },
+ {
+  "beat": "B6",
+  "text": "the",
+  "start": 30.391,
+  "end": 30.472,
+  "id": "w70"
+ },
+ {
+  "beat": "B6",
+  "text": "jaw",
+  "start": 30.542,
+  "end": 30.739,
+  "id": "w71"
+ },
+ {
+  "beat": "B6",
+  "text": "narrows",
+  "start": 30.809,
+  "end": 31.227,
+  "id": "w72"
+ },
+ {
+  "beat": "B7",
+  "text": "Last",
+  "start": 31.644,
+  "end": 31.957,
+  "id": "w73"
+ },
+ {
+  "beat": "B7",
+  "text": "light",
+  "start": 32.016,
+  "end": 32.178,
+  "id": "w74"
+ },
+ {
+  "beat": "B7",
+  "text": "is",
+  "start": 32.248,
+  "end": 32.341,
+  "id": "w75"
+ },
+ {
+  "beat": "B7",
+  "text": "added",
+  "start": 32.41,
+  "end": 32.724,
+  "id": "w76"
+ },
+ {
+  "beat": "B7",
+  "text": "and",
+  "start": 32.77,
+  "end": 32.863,
+  "id": "w77"
+ },
+ {
+  "beat": "B7",
+  "text": "shadows",
+  "start": 32.909,
+  "end": 33.269,
+  "id": "w78"
+ },
+ {
+  "beat": "B7",
+  "text": "soften",
+  "start": 33.304,
+  "end": 33.745,
+  "id": "w79"
+ },
+ {
+  "beat": "B8",
+  "text": "It",
+  "start": 34.582,
+  "end": 34.733,
+  "id": "w80"
+ },
+ {
+  "beat": "B8",
+  "text": "does",
+  "start": 34.791,
+  "end": 34.965,
+  "id": "w81"
+ },
+ {
+  "beat": "B8",
+  "text": "this",
+  "start": 35.0,
+  "end": 35.151,
+  "id": "w82"
+ },
+ {
+  "beat": "B8",
+  "text": "thirty",
+  "start": 35.197,
+  "end": 35.499,
+  "id": "w83"
+ },
+ {
+  "beat": "B8",
+  "text": "times",
+  "start": 35.546,
+  "end": 35.789,
+  "id": "w84"
+ },
+ {
+  "beat": "B8",
+  "text": "a",
+  "start": 35.836,
+  "end": 35.871,
+  "id": "w85"
+ },
+ {
+  "beat": "B8",
+  "text": "second",
+  "start": 35.952,
+  "end": 36.312,
+  "id": "w86"
+ },
+ {
+  "beat": "B8",
+  "text": "fresh",
+  "start": 36.37,
+  "end": 36.625,
+  "id": "w87"
+ },
+ {
+  "beat": "B8",
+  "text": "on",
+  "start": 36.672,
+  "end": 36.741,
+  "id": "w88"
+ },
+ {
+  "beat": "B8",
+  "text": "every",
+  "start": 36.834,
+  "end": 37.09,
+  "id": "w89"
+ },
+ {
+  "beat": "B8",
+  "text": "frame",
+  "start": 37.159,
+  "end": 37.519,
+  "id": "w90"
+ },
+ {
+  "beat": "B9a",
+  "text": "The",
+  "start": 37.971,
+  "end": 38.122,
+  "id": "w91"
+ },
+ {
+  "beat": "B9a",
+  "text": "face",
+  "start": 38.215,
+  "end": 38.517,
+  "id": "w92"
+ },
+ {
+  "beat": "B9a",
+  "text": "in",
+  "start": 38.551,
+  "end": 38.633,
+  "id": "w93"
+ },
+ {
+  "beat": "B9a",
+  "text": "the",
+  "start": 38.679,
+  "end": 38.749,
+  "id": "w94"
+ },
+ {
+  "beat": "B9a",
+  "text": "filter",
+  "start": 38.819,
+  "end": 39.202,
+  "id": "w95"
+ },
+ {
+  "beat": "B9a",
+  "text": "is",
+  "start": 39.26,
+  "end": 39.364,
+  "id": "w96"
+ },
+ {
+  "beat": "B9a",
+  "text": "a",
+  "start": 39.411,
+  "end": 39.445,
+  "id": "w97"
+ },
+ {
+  "beat": "B9a",
+  "text": "calculated",
+  "start": 39.492,
+  "end": 40.119,
+  "id": "w98"
+ },
+ {
+  "beat": "B9a",
+  "text": "face",
+  "start": 40.177,
+  "end": 40.56,
+  "id": "w99"
+ },
+ {
+  "beat": "B9b",
+  "text": "Real",
+  "start": 41.073,
+  "end": 41.305,
+  "id": "w100"
+ },
+ {
+  "beat": "B9b",
+  "text": "skin",
+  "start": 41.363,
+  "end": 41.595,
+  "id": "w101"
+ },
+ {
+  "beat": "B9b",
+  "text": "has",
+  "start": 41.653,
+  "end": 41.77,
+  "id": "w102"
+ },
+ {
+  "beat": "B9b",
+  "text": "texture",
+  "start": 41.839,
+  "end": 42.292,
+  "id": "w103"
+ },
+ {
+  "beat": "B9b",
+  "text": "It",
+  "start": 42.35,
+  "end": 42.443,
+  "id": "w104"
+ },
+ {
+  "beat": "B9b",
+  "text": "should",
+  "start": 42.501,
+  "end": 42.78,
+  "id": "w105"
+ }
+]
