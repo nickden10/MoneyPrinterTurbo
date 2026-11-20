@@ -1,5 +1,5 @@
 <template id="s3-template">
-  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920" data-composition-variables='[{"id": "unit", "type": "string", "label": "Sayaç birimi", "default": "points"}, {"id": "sub", "type": "string", "label": "Alt satır", "default": "468 face + 10 iris points"}, {"id": "src", "type": "string", "label": "Kaynak", "default": "Source: Google MediaPipe Face Landmarker"}]'>
+  <div id="root" data-composition-id="s3" data-width="1080" data-height="1920" data-composition-variables='[{"id": "unit", "type": "string", "label": "Sayaç birimi", "default": "nokta"}, {"id": "sub", "type": "string", "label": "Alt satır", "default": "468 yüz + 10 iris noktası"}, {"id": "src", "type": "string", "label": "Kaynak", "default": "Kaynak: Google MediaPipe Face Landmarker"}]'>
     <style>
       @font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: block;
         src: url("assets/fonts/fraunces-latin-full-normal.woff2") format("woff2");
@@ -33,9 +33,9 @@
     </style>
     <div id="s3-cam"></div>
     <div id="s3-scrim" data-layout-ignore></div>
-    <div id="s3-head" class="clip tx" data-start="0" data-duration="6.357"><p class="fr hero acc"><span class="n" id="s3-n">0</span><span class="u" data-var-text="unit">points</span></p></div>
-    <div id="s3-sub" class="clip tx" data-start="5.203" data-duration="1.154"><p class="note"><span id="s3-sub-t" data-var-text="sub">468 face + 10 iris points</span></p></div>
-    <div id="s3-src" class="clip tx" data-start="2.219" data-duration="4.138"><p class="src"><span id="s3-src-t" data-var-text="src">Source: Google MediaPipe Face Landmarker</span></p></div>
+    <div id="s3-head" class="clip tx" data-start="0" data-duration="6.357"><p class="fr hero acc"><span class="n" id="s3-n">0</span><span class="u" data-var-text="unit">nokta</span></p></div>
+    <div id="s3-sub" class="clip tx" data-start="5.076" data-duration="1.281"><p class="note"><span id="s3-sub-t" data-var-text="sub">468 yüz + 10 iris noktası</span></p></div>
+    <div id="s3-src" class="clip tx" data-start="1.836" data-duration="4.521"><p class="src"><span id="s3-src-t" data-var-text="src">Kaynak: Google MediaPipe Face Landmarker</span></p></div>
     <script>
       (function () {
         const A = window.AYNA, C = A.C;
@@ -67,22 +67,22 @@
           at += gap; gap *= 0.84; }); };
 
         const DATA = window.AYNA_DATA;
-        document.getElementById("s3-sub-t").textContent = "{F} face + {I} iris points".replace("{F}", DATA.FACE).replace("{I}", DATA.IRIS);
+        document.getElementById("s3-sub-t").textContent = "{F} yüz + {I} iris noktası".replace("{F}", DATA.FACE).replace("{I}", DATA.IRIS);
         document.getElementById("s3-cam").innerHTML = A.face({ id: "s3f", viewBox: "41.2 -65.1 317.647 564.706", w: 1080, h: 1920, bg: C.murekkep,
           pixel: { cell: 10, line: 0.588 }, dot: { px: 3.4, ring: C.keten },
           points: { r: 1.471, fill: C.toz } });
         document.getElementById("s3f-content").setAttribute("opacity", "0.35");
         document.getElementById("s3f-pgr").setAttribute("opacity", "0.35");
         // 478 landmarks stamp on, contour first; the hero counter is the visual of the beat
-        const pts = Q("#s3f-pts circle"), N = pts.length, LAND = 4.843, STAMP = 0.133;
+        const pts = Q("#s3f-pts circle"), N = pts.length, LAND = 4.716, STAMP = 0.133;
         pts.forEach((c, i) => tl.fromTo(c, { scale: 0 }, { scale: 1, duration: STAMP, ease: "back.out(1.4)", transformOrigin: "50% 50%" }, ((LAND - STAMP) * i) / (N - 1)));
         const cnt = { n: 0 }, nEl = document.getElementById("s3-n");
         tl.fromTo(cnt, { n: 0 }, { n: N, duration: LAND, ease: "power1.in", onUpdate: () => (nEl.textContent = Math.round(cnt.n)) }, 0);
         cIn("#s3-head .n, #s3-head .u", 0);
         tl.fromTo("#s3-head .n", { scale: 1 }, { scale: 1.08, duration: 0.12, ease: "power2.out", transformOrigin: "0% 100%", immediateRender: false }, LAND);
-        tl.to("#s3-head .n", { scale: 1, duration: 0.3, ease: "power2.out" }, 4.963);
-        wipe("#s3-src-t", 2.219, 0.3);
-        wipe("#s3-sub-t", 5.203, 0.3);
+        tl.to("#s3-head .n", { scale: 1, duration: 0.3, ease: "power2.out" }, 4.836);
+        wipe("#s3-src-t", 1.836, 0.3);
+        wipe("#s3-sub-t", 5.076, 0.3);
         // the second dive: push into the cheek, into the skin
         const O = "369.9px 1186.9px";
         tl.to("#s3-cam", { scale: 4, duration: 0.6, ease: "power3.in", transformOrigin: O }, 5.757);
