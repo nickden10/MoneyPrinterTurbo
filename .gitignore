@@ -46,3 +46,4 @@ htmlcov/
 # Claude Code 订阅令牌（docker compose 自动读取），禁止提交
 .env
 channels/ayna-arkasi/videos/*/onizleme/work-*/
+channels/ayna-arkasi/videos/*/proje/.hyperframes/video-state.json
