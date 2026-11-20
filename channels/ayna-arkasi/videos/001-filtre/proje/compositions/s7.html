@@ -1,5 +1,5 @@
 <template id="s7-template">
-  <div id="root" data-composition-id="s7" data-width="1080" data-height="1920" data-composition-variables='[{"id": "k", "type": "string", "label": "Üst satır", "default": "Per second"}, {"id": "u", "type": "string", "label": "Birim", "default": "times"}]'>
+  <div id="root" data-composition-id="s7" data-width="1080" data-height="1920" data-composition-variables='[{"id": "k", "type": "string", "label": "Üst satır", "default": "Saniyede"}, {"id": "u", "type": "string", "label": "Birim", "default": "kez"}]'>
     <style>
       @font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: block;
         src: url("assets/fonts/fraunces-latin-full-normal.woff2") format("woff2");
@@ -42,7 +42,7 @@
     <div id="s7-svgwrap"></div>
     <div id="s7-ui" data-layout-ignore><div id="s7-status"><div id="s7-hole"></div><div id="s7-ms">33 ms</div></div><div id="s7-shutter"></div></div>
     <div id="s7-strip" data-layout-ignore><i id="s7-c0"></i><i id="s7-c1"></i><i id="s7-c2"></i><i id="s7-c3"></i><i id="s7-c4"></i><i id="s7-c5"></i><i id="s7-c6"></i><i id="s7-c7"></i><i id="s7-c8"></i><i id="s7-c9"></i><i id="s7-c10"></i><i id="s7-c11"></i><i id="s7-c12"></i><i id="s7-c13"></i><i id="s7-c14"></i><i id="s7-c15"></i><i id="s7-c16"></i><i id="s7-c17"></i><i id="s7-c18"></i><i id="s7-c19"></i><i id="s7-c20"></i><i id="s7-c21"></i><i id="s7-c22"></i><i id="s7-c23"></i><i id="s7-c24"></i><i id="s7-c25"></i><i id="s7-c26"></i><i id="s7-c27"></i><i id="s7-c28"></i><i id="s7-c29"></i></div></div>
-    <div id="s7-g" class="clip tx g" data-start="0" data-duration="3.465"><p class="fr kick"><span class="w" data-var-text="k">Per second</span></p><p class="fr hero acc"><span class="n w" id="s7-fps">30</span><span class="u w" data-var-text="u">times</span></p></div>
+    <div id="s7-g" class="clip tx g" data-start="0" data-duration="3.465"><p class="fr kick"><span class="w" data-var-text="k">Saniyede</span></p><p class="fr hero acc"><span class="n w" id="s7-fps">30</span><span class="u w" data-var-text="u">kez</span></p></div>
     <script>
       (function () {
         const A = window.AYNA, C = A.C;
@@ -85,10 +85,10 @@
         tl.fromTo(svg, { clipPath: "inset(560px 0px 0px 0px round 0px)" }, { clipPath: "inset(640px 180px 80px 180px round 70px)", duration: 1.0, ease: "power3.out" }, 0);
                 tl.fromTo("#s7-phone", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, duration: 0.5, ease: "power3.out", transformOrigin: "50% 50%" }, 0.45);
         tl.fromTo("#s7-ui", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 0.85);
-        wf("#s7-g .kick .w", 0.662);
-        wf("#s7-g .hero .w", 0.894, 90);
+        wf("#s7-g .kick .w", 0.361);
+        wf("#s7-g .hero .w", 0.918, 90);
         tl.fromTo("#s7-strip i", { scale: 0 }, { scale: 1, duration: 0.133, ease: "back.out(1.4)", stagger: 0.0333 }, 0.8);
-        for (let i = 0; i < 30; i++) tl.fromTo("#s7-c" + i, { backgroundColor: "rgba(77,106,85,0)" }, { backgroundColor: "rgba(77,106,85,1)", duration: 0.033, ease: "none", immediateRender: false }, 0.894 + i / 30);
+        for (let i = 0; i < 30; i++) tl.fromTo("#s7-c" + i, { backgroundColor: "rgba(77,106,85,0)" }, { backgroundColor: "rgba(77,106,85,1)", duration: 0.033, ease: "none", immediateRender: false }, 0.918 + i / 30);
         document.getElementById("s7-ms").textContent = Math.round(window.AYNA_DATA.FRAME_MS) + " ms";
 
         window.__timelines["s7"] = tl;

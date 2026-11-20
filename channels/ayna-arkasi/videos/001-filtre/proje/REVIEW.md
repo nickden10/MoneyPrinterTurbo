@@ -1,4 +1,4 @@
-# REVIEW · 001 · v3 · "Bir selfie'nin 33 milisaniyesi" (TR + EN)
+# REVIEW · 001 · v4 · "Bir selfie'nin 33 milisaniyesi" (TR + EN)
 
 Durum: **iki dilde taslak önizleme hazır, teslim render'ı YAPILMADI** (müşteri onayı bekleniyor).
 
@@ -11,6 +11,20 @@ Durum: **iki dilde taslak önizleme hazır, teslim render'ı YAPILMADI** (müşt
 | `../onizleme/kareler-v3.png` (TR), `kareler-v3-en.png` | 8 kare: 0 · 6,5 · 11,6 · 17,6 · 24,5 · 29 · 37 · 45 sn |
 
 v2 dosyaları (`001-taslak-v2-*.mp4`, `kareler-v2*.png`) ve v1 (`001-taslak.mp4`) karşılaştırma için duruyor.
+
+## v4 · Altyazı yüzden çıktı (müşteri: "altyazı yüzün ortasında")
+
+- Önizleme: `../onizleme/001-taslak-v4-tr.mp4`, `001-taslak-v4-en.mp4` (ikisi de 46,400 sn, −14,0 LUFS / −2,5 dBTP) · `kareler-v4.png`, `kareler-v4-en.png` · `001-ses-en.m4a` v4 EN'den yeniden çıkarıldı (46,400 sn). Ses, karakter, zamanlama ve SRT v3 ile aynı.
+- **Altyazı hapı artık çenenin altında, boyun/gömlek üstünde:** öbek kutusu y 1430–1600, hap ≈ y 1500–1600 (alt kenar ≤ 1600), x 60–940 içinde ortalı, sağdaki 140 px ray boş.
+- Hapın gözlere, burna ve ağıza değmemesi için yüzler yukarı alındı:
+  - S1–S3 portre 57 px yukarı (ağız biter y ≈ 1470).
+  - S6 bütün yüz kadrajı (VB6 y −10 → 10, ağız ≈ 1475).
+  - Telefon ekranı yüzü (VB_SCR y −90 → 2,2: gözler 1139, ağız ≈ 1480). v3'te hapın gözlere değmesi de böylece çözüldü.
+  - Gömlek çizimi aşağı uzatıldı, kadraj altında boşluk kalmıyor.
+  - S1 yüz-takip çerçevesi hapın üstünde bitecek şekilde kısaltıldı (y 640–1470).
+- Sahne sahne bakıldı (TR + EN snapshot): S1 kanca/hesap, S2 piksel, S3 478 nokta, S4 yumuşatma, S5 esnetme, S6 ışık, S7/S8 telefon. Hepsinde hap ağzın altında, çene/boyun üzerinde. Hap S4/S5'te alt dudağa en çok yaklaşıyor (≈ 30 px boşluk).
+- `check`: iki dilde ok: true. TR kontrast 29/29. EN 24/27, 3 bulgu "texture is wiped." öbeği. Bu öbek 23,186'da başlıyor, kontrol 23,2'de, hap girerken ölçüyor.
+- `outside_safe_zone` uyarısı artık hap için de çıkıyor (y > 1330). Müşterinin istediği yerleşim bu, hap alt sınırı 1600 tutuldu.
 
 ## 0. v3 müşteri revizyonu (v2'nin üstüne)
 
