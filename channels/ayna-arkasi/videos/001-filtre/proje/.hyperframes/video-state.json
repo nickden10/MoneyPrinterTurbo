@@ -132,13 +132,13 @@
       "hash": "ef5ab00f761c85d52279a014824c6c59769fd90ec97af07628e3c7846e3eb58a",
       "content": "/root/.cache/hyperframes/history/50474a18-c63d-42ed-8cd9-edb74ca3fdfb/blobs/ef/ef5ab00f761c85d52279a014824c6c59769fd90ec97af07628e3c7846e3eb58a"
     },
-    "assets/words-en.json": {
-      "hash": "dc9b3277ac38fc06219b12084e438ad95b4bcc1e664adf89520ac71defa3312d",
-      "content": "/root/.cache/hyperframes/history/50474a18-c63d-42ed-8cd9-edb74ca3fdfb/blobs/dc/dc9b3277ac38fc06219b12084e438ad95b4bcc1e664adf89520ac71defa3312d"
-    },
     "assets/voice-en.wav": {
       "hash": "478d811a6d9607824a82c48c0efe92b636b52ddae176d4fcf7eacd118e933f2f",
       "content": "/root/.cache/hyperframes/history/50474a18-c63d-42ed-8cd9-edb74ca3fdfb/blobs/47/478d811a6d9607824a82c48c0efe92b636b52ddae176d4fcf7eacd118e933f2f"
+    },
+    "assets/words-en.json": {
+      "hash": "dc9b3277ac38fc06219b12084e438ad95b4bcc1e664adf89520ac71defa3312d",
+      "content": "/root/.cache/hyperframes/history/50474a18-c63d-42ed-8cd9-edb74ca3fdfb/blobs/dc/dc9b3277ac38fc06219b12084e438ad95b4bcc1e664adf89520ac71defa3312d"
     }
   },
   "revisions": {
@@ -502,8 +502,8 @@
   },
   "snapshots": {
     "latest": {
-      "revision": "60639c3f-4ca0-473b-b92a-34268e1b1a62",
-      "id": "d6d037a9-20f7-44ab-b691-74af556fc924-23"
+      "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+      "id": "30a73b6b-f526-4e94-86b8-46da538e657f-11"
     },
     "revisions": {
       "5b808756-c7fb-4d2e-b67a-f52016c29b04": [
@@ -2517,6 +2517,248 @@
           "contentHash": "f515d5bf1c70cc9c345ac5f4cd23ab86f883708dbc7ff25474ee2162ca8ce804",
           "revision": "60639c3f-4ca0-473b-b92a-34268e1b1a62",
           "inputFingerprint": "d6e684a79d9843b7cb1e964e07deb6a3afc05255afdb70b06b56285a7b5b0bd3",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06": [
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-0",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-00-at-0s.png",
+          "time": 0,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595404,
+          "contentHash": "7c0a5bba2d781eccc19b6587e0ca5300879dfa0b5c5f1f2d364f86074032c86a",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-1",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-01-at-6.5s.png",
+          "time": 6.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595405,
+          "contentHash": "6b7e69141c4c472104b6fcf779db4820ee0d3d6202c719fd04758c99583ed1c7",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-2",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-02-at-8.8s.png",
+          "time": 8.8,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595405,
+          "contentHash": "74a52486c38ffbf7e6f5dd63b170328d3e394a9cca2574b11d8b207a56a47e0e",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-3",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-03-at-11.6s.png",
+          "time": 11.6,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595405,
+          "contentHash": "21655537f6fca12aad40adc4fee73bac2b0677b237424f32355d4cf4fbcdba0e",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-4",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-04-at-17.5s.png",
+          "time": 17.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595405,
+          "contentHash": "8742ae8198dfde09a1376114a8682f9defca5dfa77563f33292fd6a38916a9a5",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-5",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-05-at-24.5s.png",
+          "time": 24.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595405,
+          "contentHash": "271391c5132d51d1a46de123dd64f2770dccf595c130f81d667be909a30be53a",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-6",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-06-at-29s.png",
+          "time": 29,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595406,
+          "contentHash": "9efb7d3f020fe8d627f10afffc0d9d759b320bc4728abc0b31c0c946b67e6ec2",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-7",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-07-at-36s.png",
+          "time": 36,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595406,
+          "contentHash": "bf1dc5bb6db2334f56eb805b2c5716af3fd2529a7a4709df3901d37e0306e76a",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-8",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-08-at-39.5s.png",
+          "time": 39.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595406,
+          "contentHash": "0505a0ddc5b35a3473b986b507c8db422332091198f9fa84262047e2b27764a3",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-9",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-09-at-42.6s.png",
+          "time": 42.6,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595406,
+          "contentHash": "ec3f9e4a0b7f998c646175512b9c38595e43e8cdb1fbbf6f4c67b48255a153b7",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-10",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-10-at-44.5s.png",
+          "time": 44.5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595406,
+          "contentHash": "14d4fdb1a6442cb6e93cbff4af0b6a65544923471d8fdaaaea6b6eb1a2a55222",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "30a73b6b-f526-4e94-86b8-46da538e657f-11",
+          "image": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/snapshots/3a8607c7-e9f2-471d-9969-d0e85a1ce877/frame-11-at-44.383s.png",
+          "time": 44.383,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1795170595407,
+          "contentHash": "14d4fdb1a6442cb6e93cbff4af0b6a65544923471d8fdaaaea6b6eb1a2a55222",
+          "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
+          "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
           "inputScope": "local-project-files",
           "attribution": "recorded-revision"
         }
