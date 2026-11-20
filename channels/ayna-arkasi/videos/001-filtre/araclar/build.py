@@ -794,8 +794,9 @@ def index():
         ("sfx-dalis2", "assets/sfx/whoosh-short.mp3", S["s4"] + fr - 0.16, 0, 0.575, 0.398, "S3→S4 dalış kesmesi"),
         ("sfx-geri", "assets/sfx/whoosh-short-ters.mp3", S["s7"] + 1.0 + fr - 0.40, 0, 0.575, 0.251, "telefon oturur (ters)"),
     ]
-    # voice.wav is -14 LUFS mono; the stereo mix measured -11.4 LUFS at gain 1, so every clip is trimmed by 2.6 dB
-    MIX = 0.741
+    # mono voice at about -14.7 LUFS opens up in the stereo mix: gain set from the measured draft renders
+    # (v2 TR at 0.741 -> -14.3 LUFS, so +0.3 dB; EN voice is 0.1 dB quieter than TR) -> -14.0 LUFS integrated
+    MIX = {"tr": 0.767, "en": 0.776}[LANG]
     vdur = r2(min(TOTAL, VOICE_LEN))
     aud = [f'''      <audio id="voice" class="clip" src="assets/{VOICE_FILE}" data-start="0" data-duration="{vdur}" data-track-index="3" data-volume="{MIX}"></audio>''']
     for sid, src, st, ms, du, vol, note in sfx:

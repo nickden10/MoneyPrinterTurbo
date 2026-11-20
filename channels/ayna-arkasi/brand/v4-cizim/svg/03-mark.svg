@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400"><title>Ayna Arkası — Parfüm şişesi</title>
+    <clipPath id="pfm"><path d="M200 176 C252 176 290 214 290 270 C290 326 252 364 200 364 C148 364 110 326 110 270 C110 214 148 176 200 176 Z"/></clipPath>
+    <path d="M200 176 C252 176 290 214 290 270 C290 326 252 364 200 364 C148 364 110 326 110 270 C110 214 148 176 200 176 Z" fill="#F8F4EC"/>
+    <g clip-path="url(#pfm)">
+      <path d="M100 252 C150 249 250 249 300 252 L300 380 L100 380 Z" fill="#F2D3D1"/>
+      <path d="M100 252 C150 249 250 249 300 252" fill="none" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path d="M200 176 C252 176 290 214 290 270 C290 326 252 364 200 364 C148 364 110 326 110 270 C110 214 148 176 200 176 Z" fill="none" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="182" y="154" width="36" height="24" fill="#F8F4EC" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="170" y="144" width="60" height="14" rx="4" fill="#F8F4EC" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M200 44 C230 62 240 104 220 144 L180 144 C160 104 170 62 200 44 Z" fill="#BCC5B0" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M200 50 L200 142" fill="none" stroke="#2C3A31" stroke-width="2.0999999999999996" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="200" cy="284" rx="36" ry="46" fill="#F8F4EC" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="200" cy="284" rx="27" ry="37" fill="none" stroke="#2C3A31" stroke-width="2.0999999999999996" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>

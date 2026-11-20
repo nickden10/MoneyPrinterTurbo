@@ -22,8 +22,7 @@ marks.push({
     <ellipse cx="200" cy="296" rx="122" ry="44" ${F(C.krem, sw)}/>
     <ellipse cx="200" cy="298" rx="96" ry="31" ${F(C.toz, sw)}/>
     ${av ? '' : `<path d="M150 300 C150 282 172 274 200 274 C228 274 250 282 250 300 C250 312 228 318 200 318 C172 318 150 312 150 300 Z" ${F(C.krem, sw)}/>
-    <path d="M162 290 C180 283 220 283 238 290" ${L(sw)}/>
-    <path d="M246 296 C256 292 266 294 268 302 C262 306 254 306 248 304" ${F(C.krem, sw)}/>`}
+    <path d="M162 290 C180 283 220 283 238 290" ${L(sw)}/>`}
     `;
   },
 });
@@ -32,23 +31,22 @@ marks.push({
 function peony(cx, cy, s, sw, av) {
   // 3/4 görünüşte çanak şakayık: arka fırfır, iki yan yaprak, ön yaprak
   const T = (d) => d.replace(/(-?\d+(?:\.\d+)?) (-?\d+(?:\.\d+)?)/g, (_, x, y) => `${(cx + (x - 200) * s).toFixed(1)} ${(cy + (y - 150) * s).toFixed(1)}`);
-  const sil = 'M138 132 C142 104 166 94 182 106 C188 90 212 88 220 104 C236 94 260 104 262 132 C274 154 264 188 230 198 C214 208 186 208 170 198 C136 188 126 154 138 132 Z';
-  let o = `<path d="${T(sil)}" ${F(C.toz, sw)}/>`;
-  if (av) return o;
-  [
-    'M138 132 C150 128 166 132 174 142',
-    'M262 132 C250 128 234 132 226 142',
-    'M170 198 C172 176 184 160 200 158 C216 160 228 176 230 198',
-    'M174 142 C182 128 194 128 200 138 C206 128 218 128 226 142',
-    'M182 106 C186 116 192 122 200 124 C208 122 214 116 220 104',
-    'M150 160 C156 174 162 186 170 198',
-    'M250 160 C244 174 238 186 230 198',
-  ].forEach(p => (o += `<path d="${T(p)}" ${L(sw)}/>`));
+  const petals = [
+    'M200 84 C226 98 232 136 220 168 L180 168 C168 136 174 98 200 84 Z',
+    'M146 108 C176 108 196 136 198 174 L160 178 C144 158 138 132 146 108 Z',
+    'M254 108 C224 108 204 136 202 174 L240 178 C256 158 262 132 254 108 Z',
+    'M118 146 C150 136 186 156 198 192 C168 204 136 194 124 174 C119 164 117 155 118 146 Z',
+    'M282 146 C250 136 214 156 202 192 C232 204 264 194 276 174 C281 164 283 155 282 146 Z',
+    'M162 174 C176 158 224 158 238 174 C236 196 220 208 200 208 C180 208 164 196 162 174 Z',
+  ];
+  let o = '';
+  (av ? [petals[0], petals[3], petals[4], petals[5]] : petals).forEach(p => (o += `<path d="${T(p)}" ${F(C.toz, sw)}/>`));
+  if (!av) o += `<path d="${T('M200 168 C196 182 196 194 200 206')}" ${L(sw * 0.7)}/>`;
   return o;
 }
 marks.push({
-  id: '02', name: 'El aynası ve şakayık',
-  meaning: 'Aynayı arkasından görüyoruz: yüzü değil, ardındaki hikâyeyi — kanalın adı birebir.',
+  id: '02', name: 'El aynası ve nilüfer',
+  meaning: 'Aynayı arkasından görüyoruz: sırtına işlenmiş bir çiçek — yüzü değil, ardındaki hikâyeyi gösteren kanal adının birebir çizimi.',
   draw({ sw = 3, av = false }) {
     return `
     <path d="M186 262 C186 276 182 284 182 292 L218 292 C218 284 214 276 214 262" ${F(C.krem, sw)}/>
@@ -57,32 +55,34 @@ marks.push({
     <circle cx="200" cy="378" r="9" ${F(C.krem, sw)}/>
     <ellipse cx="200" cy="148" rx="104" ry="122" ${F(C.krem, sw)}/>
     ${av ? '' : `<ellipse cx="200" cy="148" rx="90" ry="108" ${L(sw)}/>`}
-    ${av ? '' : `<path d="M200 204 C196 220 194 234 196 246" ${L(sw)}/>
-    <path d="M178 202 C156 206 140 220 134 238 C156 240 172 226 178 202 Z" ${F(C.adacayi, sw)}/>
-    <path d="M222 202 C244 206 260 220 266 238 C244 240 228 226 222 202 Z" ${F(C.adacayi, sw)}/>`}
-    ${peony(200, av ? 150 : 140, av ? 1.25 : 1, sw, av)}
+    ${av ? '' : `<path d="M182 200 C160 202 140 214 132 234 C158 236 176 224 182 200 Z" ${F(C.adacayi, sw)}/>
+    <path d="M218 200 C240 202 260 214 268 234 C242 236 224 224 218 200 Z" ${F(C.adacayi, sw)}/>
+    <path d="M180 206 C166 216 150 226 136 232 M220 206 C234 216 250 226 264 232" ${L(sw * 0.7)}/>`}
+    ${peony(200, av ? 136 : 130, av ? 1.1 : 1, sw, av)}
     `;
   },
 });
 
-/* 03 — Tek çizgi: profil aynanın kenarı olur */
+/* 03 — Parfüm şişesi (tek çizgi profil 3 denemede amatör kaldı; yerine) */
 marks.push({
-  id: '03', name: 'Tek çizgi profil',
-  meaning: 'Tek bir çizgi bir kadının profilini çizip kesilmeden karşısındaki aynaya dönüşüyor: bakan ile bakılan aynı çizgi.',
+  id: '03', name: 'Parfüm şişesi',
+  meaning: 'Şişede satılan güzellik: etiketi bir ayna ovali — güzellik pazarlamasının ambalajını açıp içine bakıyoruz.',
   draw({ sw = 3, av = false }) {
+    const body = 'M200 176 C252 176 290 214 290 270 C290 326 252 364 200 364 C148 364 110 326 110 270 C110 214 148 176 200 176 Z';
     return `
-    <path d="M302 172 m-62 0 a62 86 0 1 0 124 0 a62 86 0 1 0 -124 0" fill="${C.toz}"/>
-    <path d="M86 332 C86 300 82 276 72 258
-      ${av ? 'C56 240 54 214 62 190' : 'C52 252 42 230 52 212 C62 196 86 198 92 214 C96 230 78 240 70 228 C58 210 58 196 62 186'}
-      C68 146 92 108 128 96 C160 86 186 98 194 124
-      C198 136 196 146 200 156
-      C206 168 214 180 220 192 C222 198 218 202 210 202
-      C214 208 214 212 210 216 C206 220 214 224 212 230
-      C210 236 206 238 206 244
-      C206 254 200 260 190 262
-      C178 264 172 268 170 280 C168 300 168 318 172 336
-      C180 356 236 358 270 352 C292 348 302 340 302 320 L302 258
-      C268 258 240 220 240 172 C240 124 268 86 302 86 C336 86 364 124 364 172 C364 220 336 258 302 258" ${L(sw)}/>
+    <clipPath id="pf${av ? 'a' : 'm'}"><path d="${body}"/></clipPath>
+    <path d="${body}" fill="${C.krem}"/>
+    <g clip-path="url(#pf${av ? 'a' : 'm'})">
+      <path d="M100 252 C150 249 250 249 300 252 L300 380 L100 380 Z" fill="${C.toz}"/>
+      ${av ? '' : `<path d="M100 252 C150 249 250 249 300 252" ${L(sw)}/>`}
+    </g>
+    <path d="${body}" ${L(sw)}/>
+    <rect x="182" y="154" width="36" height="24" ${F(C.krem, sw)}/>
+    <rect x="170" y="144" width="60" height="14" rx="4" ${F(C.krem, sw)}/>
+    <path d="M200 44 C230 62 240 104 220 144 L180 144 C160 104 170 62 200 44 Z" ${F(C.adacayi, sw)}/>
+    ${av ? '' : `<path d="M200 50 L200 142" ${L(sw * 0.7)}/>`}
+    <ellipse cx="200" cy="284" rx="${av ? 40 : 36}" ry="${av ? 50 : 46}" ${F(C.krem, sw)}/>
+    ${av ? '' : `<ellipse cx="200" cy="284" rx="27" ry="37" ${L(sw * 0.7)}/>`}
     `;
   },
 });
@@ -109,6 +109,7 @@ marks.push({
     }
     const lid = `M64 206 C132 116 270 108 336 194`;
     return `
+    ${av ? '' : `<path d="M78 188 C136 86 270 76 328 184 C262 114 136 118 78 188 Z" fill="${C.toz}"/>`}
     <clipPath id="eye${av ? 'a' : 'm'}"><path d="${lid} C292 250 248 276 200 276 C150 276 104 254 64 206 Z"/></clipPath>
     <g clip-path="url(#eye${av ? 'a' : 'm'})">
       <circle cx="198" cy="200" r="${av ? 64 : 58}" ${F(C.adacayi, sw)}/>
@@ -117,7 +118,6 @@ marks.push({
     </g>
     <path d="${lid}" ${L(sw * 1.25)}/>
     <path d="M88 226 C122 258 160 276 200 276 C246 276 286 256 318 220" ${L(sw)}/>
-    ${av ? '' : `<path d="M112 118 C150 84 236 78 292 112" ${L(sw)}/>`}
     ${lashes}
     `;
   },

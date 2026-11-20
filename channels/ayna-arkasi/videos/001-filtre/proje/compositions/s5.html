@@ -1,5 +1,5 @@
 <template id="s5-template">
-  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920" data-composition-variables='[{"id": "t1", "type": "string", "label": "Başlık", "default": "Esnetme"}, {"id": "t2", "type": "string", "label": "Alt başlık", "default": "(warp)"}, {"id": "src", "type": "string", "label": "Kaynak", "default": "Kaynak: Schaefer vd. 2006 · US 10152778"}]'>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920" data-composition-variables='[{"id": "t1", "type": "string", "label": "Başlık", "default": "Warping"}, {"id": "t2", "type": "string", "label": "Alt başlık", "default": "(points shift)"}, {"id": "src", "type": "string", "label": "Kaynak", "default": "Source: Schaefer et al. 2006 · US 10152778"}]'>
     <style>
       @font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: block;
         src: url("assets/fonts/fraunces-latin-full-normal.woff2") format("woff2");
@@ -28,8 +28,8 @@
       #root .bandt .sub { color: var(--koyu-adacayi); }
       #root .bsrc { top: 470px; color: var(--murekkep); }
     </style>
-    <div id="s5-title" class="clip tx bandt" data-start="0" data-duration="5.078"><p class="fr big"><span class="w" data-var-text="t1">Esnetme</span></p><p class="fr sub"><span class="w" data-var-text="t2">(warp)</span></p></div>
-    <div id="s5-src" class="clip tx bsrc" data-start="0" data-duration="5.078"><p class="src"><span data-var-text="src">Kaynak: Schaefer vd. 2006 · US 10152778</span></p></div>
+    <div id="s5-title" class="clip tx bandt" data-start="0" data-duration="5.078"><p class="fr big"><span class="w" data-var-text="t1">Warping</span></p><p class="fr sub"><span class="w" data-var-text="t2">(points shift)</span></p></div>
+    <div id="s5-src" class="clip tx bsrc" data-start="0" data-duration="5.078"><p class="src"><span data-var-text="src">Source: Schaefer et al. 2006 · US 10152778</span></p></div>
     <div id="s5-box"></div>
     <script>
       (function () {
@@ -70,12 +70,12 @@
         tl.fromTo(cam, { x: 70, y: 165, w: 260, h: 327.407 }, { ...{ x: 50, y: 130, w: 300, h: 377.778 }, duration: 0.9, ease: "power2.inOut", onUpdate: () => A.cam("s5f", cam, 1080) }, 0.1);
         cIn("#s5-title .w, #s5-src p", 0);
         const pts = Q("#s5f-pts circle"), N = pts.length;
-        pts.forEach((c, i) => tl.fromTo(c, { scale: 0 }, { scale: 1, duration: 0.133, ease: "back.out(1.4)", transformOrigin: "50% 50%" }, 1.133 + (0.4 * i) / (N - 1)));
-        tl.fromTo("#s5f-gcr", { attr: { height: 0 } }, { attr: { height: 190 }, duration: 0.6, ease: "power2.inOut" }, 1.994);
-        tl.fromTo("#s5f-arrows", { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "power2.out" }, 3.48);
+        pts.forEach((c, i) => tl.fromTo(c, { scale: 0 }, { scale: 1, duration: 0.133, ease: "back.out(1.4)", transformOrigin: "50% 50%" }, 1.075 + (0.4 * i) / (N - 1)));
+        tl.fromTo("#s5f-gcr", { attr: { height: 0 } }, { attr: { height: 190 }, duration: 0.6, ease: "power2.inOut" }, 1.971);
+        tl.fromTo("#s5f-arrows", { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "power2.out" }, 3.295);
         const k = { eye: 0, jaw: 0 };
-        tl.fromTo(k, { eye: 0 }, { eye: 1, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s5f", { eye: k.eye }) }, 3.48);
-        tl.fromTo(k, { jaw: 0 }, { jaw: 1, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s5f", { jaw: k.jaw }) }, 4.169);
+        tl.fromTo(k, { eye: 0 }, { eye: 1, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s5f", { eye: k.eye }) }, 3.295);
+        tl.fromTo(k, { jaw: 0 }, { jaw: 1, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s5f", { jaw: k.jaw }) }, 4.053);
         cOut("#s5-title .w, #s5-src p", 5.078);
 
         window.__timelines["s5"] = tl;

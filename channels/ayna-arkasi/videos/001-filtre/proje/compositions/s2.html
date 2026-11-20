@@ -1,5 +1,5 @@
 <template id="s2-template">
-  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920" data-composition-variables='[{"id": "t2", "type": "string", "label": "Başlık", "default": "pikseller."}]'>
+  <div id="root" data-composition-id="s2" data-width="1080" data-height="1920" data-composition-variables='[{"id": "t2", "type": "string", "label": "Başlık", "default": "pixels."}]'>
     <style>
       @font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: block;
         src: url("assets/fonts/fraunces-latin-full-normal.woff2") format("woff2");
@@ -30,7 +30,7 @@
       #s2-t .big { font-size: 190px; }
     </style>
     <div id="s2-cam"><div id="s2-px"></div><div id="s2-smooth"></div></div>
-    <div id="s2-t" class="clip tx" data-start="0" data-duration="2.29"><p class="fr kick"><span class="w">Yakından</span> <span class="w">bak:</span></p><p class="fr big acc"><span class="w" data-var-text="t2">pikseller.</span></p></div>
+    <div id="s2-t" class="clip tx" data-start="0" data-duration="2.29"><p class="fr kick"><span class="w">Look</span> <span class="w">closer:</span></p><p class="fr big acc"><span class="w" data-var-text="t2">pixels.</span></p></div>
     <script>
       (function () {
         const A = window.AYNA, C = A.C;
@@ -70,9 +70,9 @@
         tl.fromTo("#s2-cam", { scale: 0.8, filter: "blur(18px)" }, { scale: 1, filter: "blur(0px)", duration: 0.6, ease: "expo.out", transformOrigin: O }, 0);
         wf("#s2-t .kick .w", 0.06);
         // "pikseller": the smooth layer drops away, the 10-unit pixel grid shows
-        tl.fromTo("#s2-smooth", { opacity: 1 }, { opacity: 0, duration: 0.25, ease: "power2.in", immediateRender: false }, 0.866);
-        tl.fromTo("#s2f-pgr", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power2.out" }, 0.866);
-        wf("#s2-t .big .w", 0.966, 90);
+        tl.fromTo("#s2-smooth", { opacity: 1 }, { opacity: 0, duration: 0.25, ease: "power2.in", immediateRender: false }, 0.715);
+        tl.fromTo("#s2f-pgr", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power2.out" }, 0.715);
+        wf("#s2-t .big .w", 0.815, 90);
         // the picture dims for the landmark pass; the title leaves on the film's current (LEFT)
         tl.fromTo(["#s2f-content", "#s2f-pgr"], { opacity: 1 }, { opacity: 0.35, duration: 0.6, ease: "power2.inOut", immediateRender: false }, 1.69);
         cOut("#s2-t .w", 2.29);

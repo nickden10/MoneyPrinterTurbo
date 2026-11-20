@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400"><title>Ayna Arkası — Pudra kutusu</title>
+    <circle cx="200" cy="132" r="100" fill="#F8F4EC" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="200" cy="132" r="82" fill="#BCC5B0" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M146 104 C156 84 172 70 192 64" fill="none" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#F8F4EC"/>
+    <path d="M186 228 L186 248 M214 228 L214 248" fill="none" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M78 296 L78 312 C78 337 133 356 200 356 C267 356 322 337 322 312 L322 296" fill="#F8F4EC" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="200" cy="296" rx="122" ry="44" fill="#F8F4EC" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="200" cy="298" rx="96" ry="31" fill="#F2D3D1" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M150 300 C150 282 172 274 200 274 C228 274 250 282 250 300 C250 312 228 318 200 318 C172 318 150 312 150 300 Z" fill="#F8F4EC" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M162 290 C180 283 220 283 238 290" fill="none" stroke="#2C3A31" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>

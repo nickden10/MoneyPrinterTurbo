@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400"><title>Ayna Arkası — Ruj ve yansıması (avatar)</title><circle cx="200" cy="200" r="200" fill="#F2D3D1"/><g transform="translate(40 40) scale(0.8)">
+    <g transform="translate(0 50)">
+    
+      <path d="M182 104 L182 70 C182 66 184 63 188 61 L210 48 C215 45 218 47 218 52 L218 104 Z" fill="#F2D3D1" stroke="#2C3A31" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="176" y="102" width="48" height="30" rx="2" fill="#F8F4EC" stroke="#2C3A31" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="166" y="130" width="68" height="72" rx="3" fill="#F8F4EC" stroke="#2C3A31" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+      
+    <path d="M120 206 L280 206" fill="none" stroke="#2C3A31" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    </g>
+    </g></svg>

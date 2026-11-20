@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400"><title>Ayna Arkası — Göz ve kirpik (avatar)</title><circle cx="200" cy="200" r="200" fill="#F2D3D1"/><g transform="translate(40 40) scale(0.8)">
+    
+    <clipPath id="eyea"><path d="M64 206 C132 116 270 108 336 194 C292 250 248 276 200 276 C150 276 104 254 64 206 Z"/></clipPath>
+    <g clip-path="url(#eyea)">
+      <circle cx="198" cy="200" r="64" fill="#BCC5B0" stroke="#2C3A31" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="198" cy="200" r="28" fill="#2C3A31"/>
+      <ellipse cx="216" cy="182" rx="10" ry="14" fill="#F8F4EC" />
+    </g>
+    <path d="M64 206 C132 116 270 108 336 194" fill="none" stroke="#2C3A31" stroke-width="13.75" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M88 226 C122 258 160 276 200 276 C246 276 286 256 318 220" fill="none" stroke="#2C3A31" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    </g></svg>
