@@ -1,62 +1,81 @@
-# REVIEW · 001 · C · "Bir selfie'nin 33 milisaniyesi"
+# REVIEW · 001 · v2 · "Bir selfie'nin 33 milisaniyesi" (TR + EN)
 
-Durum: **taslak önizleme hazır, teslim render'ı YAPILMADI** (müşteri onayı bekleniyor).
-Önizleme: `../onizleme/001-taslak.mp4` (draft kalite, 1080×1920, 30 fps, **37,50 sn**, 1125 kare, AAC 48 kHz) · 8 kare: `../onizleme/kareler.png`.
+Durum: **iki dilde taslak önizleme hazır, teslim render'ı YAPILMADI** (müşteri onayı bekleniyor).
 
-## 1. Ne yapıldı
+| Dosya | Ne |
+|---|---|
+| `../onizleme/001-taslak-v2-tr.mp4` | TR, draft, 1080×1920, 30 fps, **44,633 sn** (1339 kare), AAC 48 kHz stereo |
+| `../onizleme/001-taslak-v2-en.mp4` | EN, aynı resim, EN ses + EN yazılar + EN altyazı, 44,633 sn |
+| `../onizleme/001-ses-en.m4a` | YouTube çok dilli ses izi (EN miks), 44,633 sn, TR videoya hizalı |
+| `../onizleme/001-tr.srt`, `../onizleme/001-en.srt` | Kelime saatlerinden altyazı |
+| `../onizleme/kareler-v2.png` (TR), `kareler-v2-en.png` (EN) | 8 kare: 0 · 6,5 · 11,6 · 17,5 · 24,5 · 29 · 36 · 43,5 sn |
 
-- **Ses:** edge-tts taslak, `tr-TR-EmelNeural`, +12 %. Vuruş vuruş üretildi, plandaki nefes aralarıyla birleştirildi. Konuşma 0,20–35,90 sn. Ayrıntı: `../SES-NOTLARI.md`.
-- **Kompozisyon:** `index.html` (kök, 37,5 sn) + 8 sahne (`compositions/s1…s8.html`) + altyazı izi (`compositions/altyazi.html`). Bütün kesmeler gerçek kelime saatine bağlı. Dosyalar `../araclar/build.py` ile `assets/words.json`'dan üretilir. Yeni ses gelince betik yeniden çalıştırılır. ⚠️ Studio'da elle yapılan değişiklikler betik yeniden çalışınca silinir.
-- **Ortak çizim:** `assets/lib/ayna.js`. Storyboard C'nin `face.js` çizgi portresi parçalara ayrıldı (doku, gözler, çene, ışık, gölge, 478 nokta, esnetme ızgarası) ve yeni palete boyandı. Gömlek `#4D6A55`. Ten `#8A5A3E` hiçbir karede değişmez: ışık ayrı bir katman. `assets/lib/data.js`: FPS, 33 ms, 478 = 468 + 10 (SPEC §6). 478 üretilemezse sahne hata verir.
-- **Sahneler (mutlak sn):** S1 telefon/kanca 0–7,90 · S2 piksel 7,90–12,03 · S3 478 nokta 12,03–14,75 · S4 yumuşatma 14,75–21,60 · S5 esnetme 21,60–26,00 · S6 ışık 26,00–28,40 · S7 geri çekilme 28,40–31,50 · S8 kapanış + bitiş kartı 31,50–37,50 (`data-beat="bitis"` 35,34'te).
-- **Altyazı:** marka hapı (Be Vietnam Pro Bold 72 px, `rgba(44,58,49,.92)`, metin `#F8F4EC`, aktif kelime `#F2D3D1`). 28 öbek, 1–4 kelime, tek satır, y ≈ 1203–1320. B1 ve B9b'de altyazı yok (ekrandaki başlık sesin aynısı). "33 milisaniye", "478 nokta" ve "MediaPipe" bölünmedi.
-- **SFX (4):** whoosh-cinematic (7,93'teki kesme), pop (13,61'de sayaç 478), whoosh-short (14,78'deki kesme), ters whoosh-short (29,43'te telefon oturur). Her birinin tepesi resimden 1 kare sonra. Müzik yok.
+v1 (edge-tts sesi, eski düzen): `../onizleme/001-taslak.mp4`, `kareler.png`, üretici `../araclar/_v1/build-v1.py`.
+
+## 1. Ne değişti
+
+### Ses
+- edge-tts taslağı çıktı. Yerine **müşterinin kendi ElevenLabs ses klonu** geldi ("deno tr", `eleven_multilingual_v2`, stability 0,5 / similarity 0,8 / style 0,2 / speed 1,0). Ayrıntı: `../SES-NOTLARI.md`.
+- Doğal tempo korundu: konuşma 0,20–42,73 sn, video 37,5 → **44,63 sn**. Bütün kesmeler yeni kelime saatine bağlandı (`../araclar/build.py`, `assets/words.json`).
+- İngilizce ses aynı klonla (`assets/voice-en.wav`, `assets/words-en.json`). Metin: `../SCRIPT-EN.md`.
+
+### Görsel (müşteri: "alt %40 boş, kahraman küçük, slayt gibi")
+1. **Tam kadraj:** Yüz artık çerçevenin %74'ü (genişlik 800 px). Gözler y 1000'de, yani gerçek dikey merkezde. Saç üst bandı dolduruyor, gömlek alt kenardan taşıyor. Boş bant kalmadı. S4–S6'da üstte toz pembe başlık bandı (0–560), altında kenardan kenara deri yakın planı (560–1920).
+2. **Kahraman tipografi:** Fraunces 600 SOFT 100. Sayılar resmin kendisi: "33 ms", "30 kare", "478 nokta", "30 kez" 330 px. Başlıklar 150–190 px, üst satırlar 88 px. Sayılar `data.js`'ten geliyor (FPS, 1000/30, 478 = 468 + 10).
+3. **Kare 0 = kapak:** koyu mürekkep zemin, toz pembe dev "33 ms", sıcak yüz. 0,5 sn'de okunuyor.
+4. **Kesintisiz kamera** (motion-doctrine / cut-the-curve):
+   - S1→S2: yanak noktasına itme. Çıkış ölçek 1→7 power3.in + 18 px bulanıklık, giriş 0,8→1 expo.out. İki taraf da büyüyor (Z işareti +).
+   - S2→S3: aynı resim kararıyor. Başlık SOLA kelime kelime çıkıyor, sayaç sağdan giriyor (cut-the-curve LEFT).
+   - S3→S4: ikinci itme (1→4), deri planı daha geniş viewBox'tan içeri itiyor (Z +).
+   - S4→S5→S6: aynı zemin. Başlıklar SOLA kelime kelime (waterfall cut).
+   - S6→S7: geri çekilme (pull). Pencere telefon ekranına dönüşüyor (varış).
+   - B2'de sayı değişimleri: zoom-through. B9b kapanışı: ters zoom-through (varış/ödül).
+   - Bitiş: telefon 3 evreli nudge eğrisiyle (10/65/25) geri ve aşağı çekiliyor, yazı logosu üstte açılıyor.
+5. **Her 1–2 sn'de görünür değişim:** yüz takip çerçevesi (0,4), "otuz üç milisaniyeden"de yüzü tarayan çizgi, 30 kare hücresi, piksel kırılması ("pikseller"), 478 nokta + sayaç, yumuşatma penceresi, ızgara/oklar/esnetme, ışık, telefonun oluşması, geri sarma. Boşta salınım yok. Kapanıştan önceki 0,3 sn'lik ara korundu.
+6. **Altyazı = katman** (captions-overlay): marka hapı, tek satır, y 1230–1330, x 60–940 (sağ ray boş). Artık B1'de de var (kapak başlığı konuşmanın birebir aynısı değil). B9b'de yok (başlık = konuşma).
+7. **İki dil:** Ekrandaki bütün yazılar `build.py` içindeki `T` tablosundan geliyor, tek değişkenle seçiliyor: `python3 ../araclar/build.py --lang tr|en`. Altyazı öbekleri TR'de `GROUPS`, EN'de `GROUPS_EN`. Sahne kesmeleri ve video süresi iki dilde aynı (TR saati). Sahne içi açılışlar o dilin kelimelerine bağlı. EN bitişte "Look behind the mirror." sloganı var. Yazı logosu "Ayna Arkası" olduğu gibi kaldı. **Proje klasörü şu an TR durumunda.** EN'i Studio'da görmek için önce `--lang en` ile yeniden üretmek gerekiyor.
 
 ## 2. Ölçülenler
 
-| Kontrol | Sonuç |
-|---|---|
-| `lint` | 0 hata · 3 uyarı (`timeline_track_too_dense`, aşağıda) |
-| `check --json` | **ok: true** · 0 hata · kontrast 29/29 geçti · craft (line_unread, dead_stretch, text_below_floor, first_frame_empty, film_silent) **temiz** · ses denetimi temiz |
-| Süre | ffprobe 37,500 sn = kök `data-duration` · 1125 kare |
-| Ses (render edilmiş dosya) | **−14,0 LUFS** entegre · gerçek tepe **−2,9 dBTP** · kırpılma yok. İlk render −11,4 LUFS ölçüldü (mono ses stereo'ya açılıyor), tüm kazançlar 0,741 ile düşürüldü |
-| 478 | DOM'da `#s3f-pts[data-count="478"]`, sayaç 13,58'de 478'e oturuyor ("nokta" kelimesi) |
-| Kelime senkronu | Kelime sınırları ses dalgasıyla ±10 ms içinde (hedef ±80 ms) |
+| Kontrol | TR | EN |
+|---|---|---|
+| `lint` | 0 hata · 3 uyarı (`timeline_track_too_dense`) | aynı |
+| `check --json` | **ok: true** · kontrast 25/25 · craft temiz (line_unread, dead_stretch, text_below_floor, first_frame_empty yok) · motion/runtime/audio temiz | **ok: true** · kontrast 24/24 · craft temiz |
+| Süre (ffprobe) | 44,633 sn = kök `data-duration` (44,633) | 44,633 sn |
+| Miks | **−14,0 LUFS**, tepe −2,9 dBTP | **−14,0 LUFS**, tepe −2,3 dBTP |
+| m4a | — | 44,633 sn, AAC 48 kHz stereo |
+| Kelime senkronu | ElevenLabs karakter hizalaması. İç sessizliklere göre yaklaşık +20 ms kayma (hedef ±80 ms) | aynı yöntem |
 
-**Bakılan ama ölçülmeyenler:** her sahnenin başı ve ortası, 7 kesme şeridi, telefon genişliğinde (360 px) sayfa, render'dan çözülmüş 8 kare. **Kimsenin kontrol etmediği:** ses **duyulmadı** (telaffuz, "Midiya Payp", "bilateral" vurgusu, tempo, SFX seviyesinin kulağa nasıl geldiği). SFX'lerin konuşmaya göre seviyesi yalnızca RMS ile ölçüldü. pop, konuşmanın birkaç dB üstünde.
+**Bakılanlar:** kare 0, her sahnenin ortası, 7 kesmenin ikisi (9,9 dalış, 18,9 ikinci dalış), bitiş, iki dilde ve render'dan çözülmüş 8 kare. **Kimsenin kontrol etmediği:** ses **duyulmadı** (telaffuz, "Midiya Payp" arasındaki 0,1 sn'lik sessizlik, "bilateral" vurgusu, SFX'in kulağa nasıl geldiği). Seam-gate betiği (`motion-doctrine/scripts/seam-gate.mjs`) ve `ledger.json` **çalıştırılmadı**. Kesmeler gözle ve tasarımla eşlendi, sayısal hız eşleşmesi doğrulanmadı.
 
 ## 3. Bilerek tutulan uyarılar
 
-- **`outside_safe_zone` (29 uyarı):** CLI'nin YouTube Shorts bandı y 288–1248 / x 48–888. Kanalın kuralı (SPEC §1.5, vertical.md) ise y 168–1330 / x 60–940. Başlıklar y 228'de, altyazı hapının altı 1320'de. Kanal kuralına uyuldu. TikTok/Reels uyarıları bu film için geçerli değil. **Müşteri kararı:** Shorts'un yeni arayüzüne göre daha sıkı bir alan istenirse başlık bandı yaklaşık 290'a, altyazı yaklaşık 1248'e çekilmeli. Bunun için kaynak satırları da yukarı taşınmalı.
-- **`timeline_track_too_dense`** (altyazı 28, S4 4, S8 6 zamanlı öğe): Altyazının tek bir host'ta toplanması kuralın gereği (captions.md). S4/S8 küçük. Bölmek kurgu okunurluğu açısından bir şey kazandırmaz.
-- **`container_overflow` (info):** dalış ve kırpım kutuları amaçlı.
+- **`outside_safe_zone` (29 TR / 30 EN):** CLI'nin sıkı Shorts bandı (y 288–1248). Başlıklar y 176'dan, altyazı hapının altı 1330'da. Kanal kuralına (y 168–1330, x 60–940) ve vertical.md'ye uyuldu.
+- **`container_overflow` (#s1f-content, uyarı):** SVG yüz çizimi çerçeveden büyük, kamera bu yüzden tam kadraj alabiliyor. Bilinçli.
+- **`text_box_overflow` / `canvas_overflow` (info, 12,398 sn):** S2 başlığı kesmede sola doğru hareket hâlinde (cut-the-curve çıkışı). Kare kesmeden 1 kare önce.
+- **`timeline_track_too_dense`:** altyazı tek host'ta (kural gereği), S4/S8 küçük.
 
-## 4. Yaratıcı kararlar ve SPEC'ten sapmalar (SPEC/SENARYO değiştirilmedi)
+## 4. Yaratıcı kararlar ve sapmalar
 
-1. **Hız +12 %** (SENARYO §4 en fazla +8 % diyor). +8 % ile konuşma 37,4 sn'de bitiyor. Ayrıntı SES-NOTLARI §1'de. Tempo 162 kelime/dk, 04-kurgu'daki aralığın içinde.
-2. **Gerçek ses planın ~0,4–1,5 sn önünde.** Bütün kesmeler gerçek saate kaydı (ör. S1→S2 kesmesi 10,30 değil 7,90). Bitiş kartı 35,34'te başlıyor, son satır 2,0 sn tutuluyor.
-3. **Altyazı:** SPEC §3'teki "dünyaya göre renk, hap yok" yerine brief'teki **final marka hapı** kullanıldı (brand.css, 04-kurgu §3 ile aynı). "Yakından bak: pikseller." 72 px'te 880 px'e sığmadığı için iki öbeğe bölündü (harf küçültülmedi). "Ardından noktalar kaydırılır," da ikiye bölündü.
-4. **Piksel/nokta resmi (S2–S3):** Tam genişlikte, y 470–1090 arasında, yüzün tamamı görünüyor. Yüz kendisi genişliğin ~%36'sı. Resim adaçayı zeminiyle birlikte tüm genişliği doldurduğu için "boşlukta yüzen küçük öğe" kalıbına düşmüyor. Pikselleme bir SVG filtresi (10 birimlik hücre + 2 px mürekkep ızgara).
-5. **S2 girişi:** Dalıştan sonra piksel resim 1,45×'ten 1×'e "oturuyor" (0,6 sn, expo.out). SPEC'te S2'de yalnızca opaklık vardı.
-6. **S1 dalışı:** Kanca, hesap satırı ve şerit dalışla birlikte bulanıklaşıp çıkıyor (0,25 sn). SPEC "sert kesme" diyor, ama büyüyen telefonun üstünde yazı okunmuyordu.
-7. **Esnetme (S5):** Izgara opaklığı %28 yerine %50 ve yüz konturuyla kırpılı (deri üstünde %28 görünmüyordu). Noktalar 3 px. Gözler ×1,22, çene −%6, iki göz merkezli radyal şişme. Oklar nötr mürekkep %45, ödül işareti yok.
-8. **Işık (S6):** Kamera SPEC'teki 0,42 yerine ~0,28 ölçeğe çekiliyor ("yüzün tamamı" 660 px'lik kutuya ancak böyle sığıyor). Parlama blur'u 10 birim.
-9. **S7:** Pembe pencere telefon ekranına dönüşüyor (clip-path + viewBox). Telefon gövdesi aşağıdan kayarak değil, ekran otururken çevresinde beliriyor (0,45 sn). Kayarak gelen gövde ayrı bir nesne gibi okunuyordu.
-10. **"33 ms" durum yazısı 28 değil 30 px** (`text_below_floor` sınırı 28,08 px). Saç üstünde okunmadığı için adaçayı bir durum çubuğu bandına kondu.
-11. **Bitiş kartı:** `brand/final/wordmark.svg` (dış hatlı, font gerektirmez), 520 px genişlikte, y 1110. "Kaynaklar açıklamada" 30 px, y 1256.
-12. **Döngü:** S1 telefonu y 616'da, son kare telefonu y 420'de (SPEC'teki gibi). Döngü konumda birebir değil, yalnızca konu olarak kuruluyor.
+1. **Altyazı yüzün üstünde:** Hap burun ucu / üst dudak hizasında (y 1230–1330). Gözler ve ağız açık kalıyor. Telefon sahnelerinde ekran yüzü aşağı alındı (gözler y 1342) ki hap gözleri kapatmasın.
+2. **Kapak metni:** "Bir kare için / 33 ms". Konuşmanın tamamı artık altyazıda.
+3. **B2 hesap satırı** "Hesap, ölçüm değil / 1000 ÷ 30 ≈ 33 ms" biçiminde (C-1 korunuyor).
+4. **Esnetme alt başlığı** TR "(warp)", EN "(points shift)".
+5. **Kaynak etiketleri** her bilim adımında görünüyor (MediaPipe, Tomasi & Manduchi, Schaefer vd. + US 10152778). Ten rengi `#8A5A3E` hiçbir karede değişmiyor (ışık ayrı katman). Yargılayan dil yok.
+6. **Müzik yok** (önceki karar sürüyor). 4 SFX yeni saate kaydı.
 
 ## 5. En zayıf an ve zaman olsa ne değişirdi
 
-- **S2'nin alt yarısı** (y 1090–1920 boş mürekkep, 4 sn): altyazı dışında hareket yok. Craft ölçümü `dead_stretch` vermedi, ama göz için durgun. İyileştirme: resmi y 420–1130'a büyütmek ya da piksel ızgaranın hücre hücre "çözülmesini" göstermek.
-- **S6 parlama elipsleri:** Yumuşatılmış hâlde bile "makyaj lekesi" gibi okunabilir. Daha sıcak ve daha düşük opaklık (0,25) denenebilir. SPEC 0,35 diyor.
-- Kaynak satırları 30 px. Telefonda okunuyor, ama küçük.
+- **S3 kaynak satırı** ("Kaynak: Google MediaPipe Face Landmarker", 32 px) nokta bulutunun üst kenarına değiyor. Okunuyor ama kalabalık. Altına yarı saydam mürekkep bir şerit konabilir.
+- **Bitiş kartı:** telefon küçülünce ortada boşluk kalıyor (y 820–960). Kart sade ama alt yarı yine telefonla dolu.
+- **EN B9b** TR'den 0,67 sn geç başlıyor. Kapanış başlığı EN'de de "Real" kelimesinde geliyor, sorun yok. Ama EN'de B8 ile B9a arasındaki nefes kısa.
+- Seam-gate ile sayısal hız eşleşmesi doğrulanmalı.
 
 ## 6. Müşterinin karar vermesi gerekenler
 
-1. **Tempo:** +12 % kabul mü? Değilse +8 % ve yaklaşık 38,7 sn'lik video, ya da MediaPipe'sız yedek cümle.
-2. **Telaffuz:** "Midiya Payp" ve "bilateral" dinlenmeli (ajan sesi duyamaz).
-3. **Güvenli alan:** Kanal kuralı (168–1330) mı, CLI'nin daha sıkı Shorts bandı (288–1248) mı?
-4. **Müzik:** Yok (SPEC'teki varsayım). İstenirse 70–90 BPM, konuşma altında 0,14.
-5. **Yayın sesi:** Azure AI Speech hesabı ve koşul kaydı (O-1). edge-tts taslağı yayınlanamaz.
-6. Onaydan sonra teslim render'ı: `render --quality delivery -o ../teslim/001.mp4` (henüz çalıştırılmadı).
+1. **Dinleme:** "Midiya Payp" mi, "MediaPipe" mi? (alternatif alım B4 için `ses/el-test/` altında hazır), "bilateral", kapanış tonu.
+2. **Süre 44,6 sn** (doğal tempo). Kısaltmak istenirse speed 1,08 ile yaklaşık 41 sn olur.
+3. **Güvenli alan:** kanal kuralı mı, CLI'nin daha sıkı Shorts bandı mı?
+4. **EN sloganı** "Look behind the mirror." onaylanmalı. TR'de slogan yok, istenirse `T["tr"]["slogan"]`.
+5. **Beyan:** açıklamaya "Seslendirme: kanal sahibinin AI ses klonu (izinli)" eklenmeli. Bu, ACIKLAMA.md'de güncellenmedi.
+6. Onaydan sonra teslim render'ı iki kez (`build.py --lang tr` → `render --quality delivery -o ../teslim/001-tr.mp4`, sonra `--lang en`). Henüz çalıştırılmadı.
