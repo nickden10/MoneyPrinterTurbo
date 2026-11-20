@@ -54,24 +54,34 @@
 **Kişilik:** Zeki arkadaş · samimi · eleştirel ama yargılamayan · zarif.
 **Marka vaadi:** "Seçim senin, ama arkasını bil."
 
-### Renk token'ları (revize: **toz pembe ana renk**)
+### Renk token'ları (final: palet 05 · Toz Pembe & Adaçayı)
+Açık ve ferah sistem: keten zemin, toz pembe kahraman yüzey, koyu renk yalnızca metin olarak az miktarda.
 | Token | Hex | Kullanım | Kontrast |
 |---|---|---|---|
-| `--plum` | `#1C1424` | Video zemini (koyu) | — |
-| `--toz-pembe` | `#E8B4B8` | **ANA MARKA RENGİ**: logo, aktif kelime, vurgu | 9.9:1 (erik üstü) ✅ |
-| `--toz-pembe-acik` | `#F6E1E3` | Açık zemin (açık logo, kapak varyantı) | — |
-| `--ink` | `#F7EFF3` | Koyu zeminde metin | 15.8:1 ✅ |
-| `--berry` | `#8E3B5A` | Açık zeminde vurgu metni | 5.8:1 (açık pembe üstü) ✅ |
-| `--gold` | `#E9C46A` | Dönem/tarih etiketi | 10.7:1 ✅ |
-| `--mint` | `#7FC8C2` | "Gerçek/filtresiz" vurgusu | 9.3:1 ✅ |
-| `--muted` | `#A89BB0` | Kaynak, eksen | 6.8:1 ✅ |
+| `--toz-pembe` | `#F2D3D1` | **Kahraman renk**: avatar, kapak, büyük yüzeyler | mürekkep metin üstünde 8.55:1 ✅ |
+| `--keten` | `#F8F4EC` | Ana zemin (video, bitiş kartı) | mürekkep metin üstünde 10.90:1 ✅ |
+| `--adacayi` | `#BCC5B0` | İkincil yüzey (bant, kart) | mürekkep metin üstünde 6.69:1 ✅ |
+| `--murekkep` | `#2C3A31` | Yaprak mürekkebi: **tüm metin ve logo** | keten 10.90 · toz pembe 8.55 · adaçayı 6.69 ✅ |
+| `--koyu-adacayi` | `#4D6A55` | Vurgu: keten üstünde metin, çizgi, grafik | keten 5.46:1 ✅ · toz pembe 4.28:1 (yalnız çizgi/grafik, ≥3) |
+| `--caption-text` | `#F8F4EC` | Altyazı metni (hap üstünde) | 8.63:1 (keten sahne) · 8.95:1 (toz pembe sahne) ✅ |
+| `--caption-active` | `#F2D3D1` | Altyazı aktif kelime | 6.77:1 (keten sahne) · 7.02:1 (toz pembe sahne) ✅ |
+| `--caption-pill` | `rgba(44,58,49,.92)` | Altyazı hapı (mürekkep %92) | sahneye karşı 8.63 (keten) · 7.02 (toz pembe) |
 
-- ❌ **Beyaz metin toz pembe zemin üstünde yasak** (1.8:1). Toz pembe zeminde metin her zaman `--plum` olur.
-- Tek kaynak: `channels/ayna-arkasi/brand/brand.css`.
+- ❌ Toz pembe zeminde metin `--koyu-adacayi` olmaz (4.28:1). Toz pembe ve adaçayı zeminde metin her zaman `--murekkep`.
+- ❌ Açık (keten) logo adaçayı zeminde kullanılmaz (1.63:1). Açık logo yalnızca mürekkep (10.90:1) ve koyu adaçayı (5.46:1) zeminde.
+- Degrade, gölge, parıltı, süs yok. Oranlar WCAG 2.x ile hesaplandı: `brand/final/src/contrast.py`, `brand/final/src/build/checks.json`.
+- Tek kaynak: `channels/ayna-arkasi/brand/brand.css`. Final varlıklar: `channels/ayna-arkasi/brand/final/`.
 
 ### Tipografi
-- Başlık: **Charm Bold** 96px (OFL, Türkçe ✅). Yalnızca dönem adı ve başlık kartında, en fazla 4 kelime.
-- Altyazı/gövde: Be Vietnam Pro Bold 72px / Medium 40px.
+| Rol | Font | Ayar |
+|---|---|---|
+| Logo (konturlu SVG) | Fraunces | wght 600 · opsz 144 · **SOFT 100** · WONK 0, elle ayarlanmış çift aralıkları |
+| Avatar / filigran "A" | Fraunces | wght 640 · opsz 72 · SOFT 100 (küçük boyutta ince çizgiler kaybolmasın diye) |
+| Başlık kartı | Fraunces (`.ayna-display`) | 600 · SOFT 100 · opsz 144, en fazla 6 kelime |
+| Altyazı | Be Vietnam Pro Bold | 72px, koyu hap içinde |
+| Gövde, slogan, etiket | Be Vietnam Pro Medium | 40px |
+
+- Charm artık kullanılmaz (yerini Fraunces SOFT aldı).
 
 ### Görsel kurallar
 - Yüzler **illüstrasyon** (çizgi portre, siluet) ya da **kamu malı tarihî eser** olarak gösterilir. Gerçek kişinin fotoğrafı ve AI ile üretilmiş yüz kullanılmaz (G-02, K-06).
@@ -119,5 +129,5 @@ Be Vietnam Pro: başlık Bold 84px, madde adı Bold 96px, INCI listesi Medium 36
 ## Marka koruma ve denetim
 1. **Token tek kaynaktan gelir:** HyperFrames kompozisyonları renkleri CSS değişkenlerinden okur, kodda serbest hex yazılmaz.
 2. **Haftalık denetim:** Son 7 videonun ilk kareleri yan yana konur. Renk, font ve güvenli alan sapmasıyla birlikte **ton denetimi** de yapılır: B/C'de yargılayıcı kelime var mı (G-01), A'da tempo kurala uyuyor mu (F-05)?
-3. **Kanallar arası ayrım:** A krem/geometrik, B koyu erik/zarif, C açık/laboratuvar. Paletler karıştırılmaz. A'nın çocuk paleti B/C'de **asla** kullanılmaz (çocuk-yetişkin kitle karışmasın).
+3. **Kanallar arası ayrım:** A krem/geometrik, B keten-toz pembe/adaçayı (zarif, editoryal), C açık/laboratuvar. Paletler karıştırılmaz. A'nın çocuk paleti B/C'de **asla** kullanılmaz (çocuk-yetişkin kitle karışmasın).
 4. **Çakışma kontrolü (K-14):** Adlar açılmadan önce TÜRKPATENT ve YouTube aramasıyla kontrol edilir. Yedek adlar: A → "Merak Kutusu", "Minik Adımlar"; B → "Filtresiz", "Ayna Ayna"; C → "İçindekiler", "Şişenin Arkası".

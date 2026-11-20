@@ -38,8 +38,8 @@ Altyazı zorunludur, çünkü izleyicilerin önemli bir kısmı Shorts'u sessiz 
 | Satır | **en fazla 2 satır**, satırda en fazla 18 karakter |
 | Gruplama | 2–4 kelimelik öbekler, anlam bütünlüğüne göre bölünür ("3,4 milyon" ve "kişi başı" bölünmez) |
 | Konum | Yazı bandının altı: **y ≈ 1140–1320** (1330px altına inmez). Grafik alanının altında |
-| Renk | A: `#2B2D42`, aktif kelime `#E5484D` · B: `#F7EFF3`, aktif kelime `#E8B4B8` (toz pembe) · C: `#1E2A2F`, aktif kelime `#0F7A60` |
-| Kontur/gölge | B: 6px `#000` kontur (%70) · A, C: kontur yok, zemin renginde %90 hap şeklinde arka plan |
+| Renk | A: `#2B2D42`, aktif kelime `#E5484D` · B: `--caption-text` `#F8F4EC`, aktif kelime `--caption-active` `#F2D3D1` (toz pembe) · C: `#1E2A2F`, aktif kelime `#0F7A60` |
+| Kontur/gölge | Kontur ve gölge yok. B: `--caption-pill` `rgba(44,58,49,.92)` (mürekkep %92) koyu hap, köşe 24px. Metin 8.63:1 / aktif 6.77:1 (keten sahne), 8.95:1 / 7.02:1 (toz pembe sahne) · A, C: zemin renginde %90 hap şeklinde arka plan |
 | Animasyon | Öbek girişi: 4 karede %92→%100 ölçek ve opaklık. Aktif kelime renk değiştirir. Zıplama veya sallanma kullanılmaz |
 | Yazım | Rakamlar rakamla yazılır ("SPF 30", "1920'ler"). Vurgu için BÜYÜK HARF yerine renk kullanılır. Emoji yok |
 | Senkron | Kelime zaman damgası seslendirmeden alınır, kayma ±80 ms'yi geçmez |

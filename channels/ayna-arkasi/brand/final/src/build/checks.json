@@ -1,0 +1,140 @@
+{
+ "checks": [
+  {
+   "label": "Logo (koyu) / keten",
+   "fg": "#2C3A31",
+   "bg": "#F8F4EC",
+   "ratio": 10.9,
+   "need": 4.5
+  },
+  {
+   "label": "Logo (koyu) / toz pembe",
+   "fg": "#2C3A31",
+   "bg": "#F2D3D1",
+   "ratio": 8.55,
+   "need": 4.5
+  },
+  {
+   "label": "Logo (koyu) / ada\u00e7ay\u0131",
+   "fg": "#2C3A31",
+   "bg": "#BCC5B0",
+   "ratio": 6.69,
+   "need": 4.5
+  },
+  {
+   "label": "Logo (a\u00e7\u0131k) / m\u00fcrekkep",
+   "fg": "#F8F4EC",
+   "bg": "#2C3A31",
+   "ratio": 10.9,
+   "need": 4.5
+  },
+  {
+   "label": "Logo (a\u00e7\u0131k) / koyu ada\u00e7ay\u0131",
+   "fg": "#F8F4EC",
+   "bg": "#4D6A55",
+   "ratio": 5.46,
+   "need": 4.5
+  },
+  {
+   "label": "Avatar A / toz pembe",
+   "fg": "#2C3A31",
+   "bg": "#F2D3D1",
+   "ratio": 8.55,
+   "need": 4.5
+  },
+  {
+   "label": "Filigran A / m\u00fcrekkep",
+   "fg": "#F2D3D1",
+   "bg": "#2C3A31",
+   "ratio": 8.55,
+   "need": 4.5
+  },
+  {
+   "label": "Slogan / keten",
+   "fg": "#2C3A31",
+   "bg": "#F8F4EC",
+   "ratio": 10.9,
+   "need": 4.5
+  },
+  {
+   "label": "Slogan / toz pembe",
+   "fg": "#2C3A31",
+   "bg": "#F2D3D1",
+   "ratio": 8.55,
+   "need": 4.5
+  },
+  {
+   "label": "Ay\u0131r\u0131c\u0131 \u00e7izgi / keten",
+   "fg": "#4D6A55",
+   "bg": "#F8F4EC",
+   "ratio": 5.46,
+   "need": 3
+  },
+  {
+   "label": "Ay\u0131r\u0131c\u0131 \u00e7izgi / toz pembe",
+   "fg": "#4D6A55",
+   "bg": "#F2D3D1",
+   "ratio": 4.28,
+   "need": 3
+  },
+  {
+   "label": "Altyaz\u0131 metni / hap (#F8F4EC sahne)",
+   "fg": "#F8F4EC",
+   "bg": "#3C4940",
+   "ratio": 8.63,
+   "need": 4.5
+  },
+  {
+   "label": "Altyaz\u0131 aktif kelime / hap (#F8F4EC sahne)",
+   "fg": "#F2D3D1",
+   "bg": "#3C4940",
+   "ratio": 6.77,
+   "need": 4.5
+  },
+  {
+   "label": "Hap / sahne #F8F4EC",
+   "fg": "#3C4940",
+   "bg": "#F8F4EC",
+   "ratio": 8.63,
+   "need": 3
+  },
+  {
+   "label": "Altyaz\u0131 metni / hap (#F2D3D1 sahne)",
+   "fg": "#F8F4EC",
+   "bg": "#3C463E",
+   "ratio": 8.95,
+   "need": 4.5
+  },
+  {
+   "label": "Altyaz\u0131 aktif kelime / hap (#F2D3D1 sahne)",
+   "fg": "#F2D3D1",
+   "bg": "#3C463E",
+   "ratio": 7.02,
+   "need": 4.5
+  },
+  {
+   "label": "Hap / sahne #F2D3D1",
+   "fg": "#3C463E",
+   "bg": "#F2D3D1",
+   "ratio": 7.02,
+   "need": 3
+  }
+ ],
+ "light_on_adacayi": 1.63,
+ "banner_text_box": [
+  790.0000000000001,
+  567.4620328067375,
+  1770.0,
+  872.5379671932626
+ ],
+ "endcard_text_box": [
+  160.00000000000003,
+  514.1775334397535,
+  920.0,
+  1021.8224665602468
+ ],
+ "wordmark_px": [
+  1000,
+  201.22
+ ]
+}

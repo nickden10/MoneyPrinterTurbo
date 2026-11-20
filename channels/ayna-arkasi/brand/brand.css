@@ -1,14 +1,62 @@
-/* Ayna Arkası: tek kaynak marka token'ları. HyperFrames kompozisyonları bu dosyayı kullanır. */
-@font-face{font-family:"Charm";src:url("fonts/Charm-Bold.ttf");font-weight:700}
-@font-face{font-family:"Be Vietnam Pro";src:url("fonts/BeVietnamPro-Bold.ttf");font-weight:700}
-@font-face{font-family:"Be Vietnam Pro";src:url("fonts/BeVietnamPro-Medium.ttf");font-weight:500}
-:root{
-  --plum:#1C1424;        /* zemin (koyu) */
-  --toz-pembe:#E8B4B8;   /* ANA MARKA RENGİ */
-  --toz-pembe-acik:#F6E1E3; /* açık zemin */
-  --ink:#F7EFF3;         /* koyu zeminde metin */
-  --berry:#8E3B5A;       /* açık zeminde vurgu metni */
-  --gold:#E9C46A;        /* dönem/tarih etiketi */
-  --mint:#7FC8C2;        /* "gerçek/filtresiz" vurgusu */
-  --muted:#A89BB0;       /* kaynak, eksen */
+/* Ayna Arkası: tek kaynak marka token'ları (final · 2026-11).
+   Palet 05 "Toz Pembe & Adaçayı" + yazı yönü 06 "Yumuşak çağdaş" (Fraunces SOFT 100).
+   Kontrastlar WCAG 2.x ile hesaplandı: brand/final/src/contrast.py. Yollar brand/ klasörüne göredir. */
+
+/* Fraunces: değişken font (opsz 9–144, wght 100–900, SOFT 0–100, WONK 0–1), iki alt küme.
+   @font-face içindeki font-variation-settings tanımlayıcısını her tarayıcı uygulamaz;
+   bu yüzden aynı ayar aşağıda .ayna-display ve --ayna-display-axes ile de verilir. */
+@font-face{
+  font-family:"Fraunces";font-style:normal;font-weight:100 900;font-display:swap;
+  src:url("fonts/fraunces-latin-full-normal.woff2") format("woff2");
+  font-variation-settings:"SOFT" 100,"WONK" 0,"opsz" 144;
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
+@font-face{
+  font-family:"Fraunces";font-style:normal;font-weight:100 900;font-display:swap;
+  src:url("fonts/fraunces-latin-ext-full-normal.woff2") format("woff2");
+  font-variation-settings:"SOFT" 100,"WONK" 0,"opsz" 144;
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face{font-family:"Be Vietnam Pro";src:url("fonts/BeVietnamPro-Medium.ttf") format("truetype");font-weight:500;font-display:swap}
+@font-face{font-family:"Be Vietnam Pro";src:url("fonts/BeVietnamPro-Bold.ttf") format("truetype");font-weight:700;font-display:swap}
+
+:root{
+  /* Palet */
+  --toz-pembe:#F2D3D1;     /* kahraman renk: avatar, kapak, büyük yüzeyler */
+  --keten:#F8F4EC;         /* ana zemin */
+  --adacayi:#BCC5B0;       /* ikincil yüzey */
+  --murekkep:#2C3A31;      /* yaprak mürekkebi: tüm metin ve logo */
+  --koyu-adacayi:#4D6A55;  /* vurgu: keten üstünde metin (5.46:1), çizgi ve grafik */
+
+  /* Kullanım eşlemeleri */
+  --bg:var(--keten);
+  --text:var(--murekkep);          /* keten 10.90:1 · toz pembe 8.55:1 · adaçayı 6.69:1 */
+  --accent:var(--koyu-adacayi);    /* yalnız keten üstünde metin (5.46:1); toz pembe üstünde yalnız grafik/çizgi (4.28:1) */
+  --on-dark:var(--keten);          /* mürekkep üstünde 10.90:1 · koyu adaçayı üstünde 5.46:1 */
+
+  /* Altyazı (Shorts): koyu hap, keten ve toz pembe sahnede aynı okunur */
+  --caption-text:#F8F4EC;              /* hap üstünde 8.63:1 (keten sahne) · 8.95:1 (toz pembe sahne) */
+  --caption-active:#F2D3D1;            /* hap üstünde 6.77:1 (keten sahne) · 7.02:1 (toz pembe sahne) */
+  --caption-pill:rgba(44,58,49,.92);   /* --murekkep %92; sahneye karşı 8.63:1 (keten) · 7.02:1 (toz pembe) */
+  --caption-pill-radius:24px;
+  --caption-pill-padding:14px 30px 18px;
+  --caption-size:72px;
+
+  /* Yazı */
+  --font-display:"Fraunces",Georgia,serif;
+  --font-body:"Be Vietnam Pro",system-ui,sans-serif;
+  --ayna-display-axes:"SOFT" 100,"WONK" 0,"opsz" 144;
+  --ayna-display-weight:600;
+}
+
+.ayna-display{
+  font-family:var(--font-display);font-weight:var(--ayna-display-weight);
+  font-variation-settings:var(--ayna-display-axes);letter-spacing:-.006em;
+}
+.ayna-body{font-family:var(--font-body);font-weight:500}
+.ayna-caption{
+  font-family:var(--font-body);font-weight:700;font-size:var(--caption-size);line-height:1.18;
+  color:var(--caption-text);background:var(--caption-pill);border-radius:var(--caption-pill-radius);
+  padding:var(--caption-pill-padding);-webkit-box-decoration-break:clone;box-decoration-break:clone;
+}
+.ayna-caption .active{color:var(--caption-active)}
