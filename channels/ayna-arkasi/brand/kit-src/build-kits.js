@@ -112,8 +112,9 @@ function bannerHtml(m) {
   const content = `<div style="position:absolute;left:${SX}px;top:${SY}px;width:${SW}px;height:${SH}px;display:flex;align-items:center;justify-content:center;gap:68px">
     ${mk.svg}
     <div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:6px">
-      ${wordmark(900)}
-      <div class="slogan" style="font-size:46px;margin-top:22px;margin-left:6px">${SLOGAN}</div>
+      ${wordmark(820)}
+      <div class="slogan" style="font-size:40px;margin-top:18px;margin-left:6px;letter-spacing:0.18em" lang="en">BEHIND THE MIRROR</div>
+      <div class="slogan" style="font-size:34px;margin-top:14px;margin-left:6px;opacity:.85">${SLOGAN} &nbsp;·&nbsp; Look behind the mirror.</div>
     </div></div>`;
   return page(deco + content, W, H, C.krem);
 }
