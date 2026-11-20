@@ -152,7 +152,7 @@
       hair() +
       `<path d="M150 392 L152 470 Q200 492 248 470 L250 392 Z" fill="${C.SKIN}" stroke="${C.LINE}" stroke-width="${lw}"/>` +
       `<ellipse class="${p}-shd" cx="200" cy="410" rx="46" ry="14" fill="${C.FRECKLE}" opacity=".3"/>` +
-      `<path d="M40 520 Q60 456 152 448 Q200 476 248 448 Q340 456 360 520 Z" fill="${C.SHIRT}" stroke="${C.LINE}" stroke-width="${lw}"/>` +
+      `<path d="M28 660 L40 520 Q60 456 152 448 Q200 476 248 448 Q340 456 360 520 L372 660 Z" fill="${C.SHIRT}" stroke="${C.LINE}" stroke-width="${lw}"/>` +
       `<ellipse cx="84" cy="240" rx="16" ry="30" fill="${C.SKIN}" stroke="${C.LINE}" stroke-width="${lw}"/>` +
       `<ellipse cx="316" cy="240" rx="16" ry="30" fill="${C.SKIN}" stroke="${C.LINE}" stroke-width="${lw}"/>` +
       `<path id="${p}-face" d="${P.face}" fill="${C.SKIN}" stroke="${C.LINE}" stroke-width="${lw}"/>` +

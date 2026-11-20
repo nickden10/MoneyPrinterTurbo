@@ -66,6 +66,7 @@ function circleMark(m, { D, R, sw, av, ground }) {
 }
 
 const css = `
+@font-face { font-family: 'FR'; src: url('file:///home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/brand/fonts/fraunces-latin-full-normal.woff2'); font-weight: 100 900; }
 @font-face { font-family: 'BVP'; src: url('file://${FONT}'); font-weight: 500; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { color: ${C.murekkep}; font-family: 'BVP', sans-serif; font-weight: 500; position: relative; }
@@ -112,9 +113,8 @@ function bannerHtml(m) {
   const content = `<div style="position:absolute;left:${SX}px;top:${SY}px;width:${SW}px;height:${SH}px;display:flex;align-items:center;justify-content:center;gap:68px">
     ${mk.svg}
     <div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:6px">
-      ${wordmark(820)}
-      <div class="slogan" style="font-size:40px;margin-top:18px;margin-left:6px;letter-spacing:0.18em" lang="en">BEHIND THE MIRROR</div>
-      <div class="slogan" style="font-size:34px;margin-top:14px;margin-left:6px;opacity:.85">${SLOGAN} &nbsp;·&nbsp; Look behind the mirror.</div>
+      <div lang="en" style="font-family:'FR';font-weight:600;font-size:158px;line-height:1;letter-spacing:-0.012em;color:${C.murekkep};font-variation-settings:'SOFT' 100,'WONK' 0,'opsz' 144;white-space:nowrap">Behind the Mirror</div>
+      <div class="slogan" lang="en" style="font-size:42px;margin-top:28px;margin-left:6px">The history, tech and marketing behind beauty.</div>
     </div></div>`;
   return page(deco + content, W, H, C.krem);
 }

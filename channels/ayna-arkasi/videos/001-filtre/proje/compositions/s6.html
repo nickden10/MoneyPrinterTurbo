@@ -71,7 +71,7 @@
         cIn("#s6-title .w, #s6-src p", 0);
         // the scaffolding clears and the camera pulls back to the whole face as the light lands
         tl.fromTo(["#s6f-pts", "#s6f-grid", "#s6f-arrows"], { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 0.2);
-        tl.fromTo(cam, { x: 50, y: 130, w: 300, h: 377.778 }, { ...{ x: -20, y: -10, w: 440, h: 554.074 }, duration: 0.9, ease: "power2.inOut", onUpdate: () => A.cam("s6f", cam, 1080) }, 0.2);
+        tl.fromTo(cam, { x: 50, y: 130, w: 300, h: 377.778 }, { ...{ x: -20, y: 10, w: 440, h: 554.074 }, duration: 0.9, ease: "power2.inOut", onUpdate: () => A.cam("s6f", cam, 1080) }, 0.2);
         const L = { hi: 0, sh: 0.3 };
         tl.fromTo(L, { hi: 0 }, { hi: 0.35, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s6f", { hi: L.hi }) }, 0.559);
         tl.fromTo(L, { sh: 0.3 }, { sh: 0.08, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s6f", { sh: L.sh }) }, 1.43);

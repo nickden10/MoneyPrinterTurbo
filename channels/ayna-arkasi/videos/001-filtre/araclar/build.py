@@ -7,7 +7,7 @@ Hand edits made in Studio to the generated files are overwritten by a re-run.
 
 v2 layout (client feedback "too empty, slide-like"): full-bleed hero on the whole 1080x1920 frame,
 kinetic Fraunces headlines and hero numbers in the top band (y 180-640), captions as an overlay
-pill (y 1230-1330), one continuous camera: push into the cheek dot (S1->S2, S3->S4), same-ground
+pill (v4: y 1500-1600, below the chin, never over eyes/nose/mouth), one continuous camera: push into the cheek dot (S1->S2, S3->S4), same-ground
 title cuts riding LEFT (S4->S5->S6), pull back into the phone (S6->S7), inverse zoom on the payoff.
 v1 generator: araclar/_v1/build-v1.py.
 """
@@ -215,12 +215,12 @@ def ws(text, cls="w"):
 # 3.4 px per face unit: face 74 % of frame width, eyes at y 1000, hair fills the top band (dark
 # ground for light type), shirt runs off the bottom edge: full-bleed.
 PX = 3.4
-VB_P = (41.2, -65.1, round(1080 / PX, 3), round(1920 / PX, 3))
+VB_P = (41.2, -48.4, round(1080 / PX, 3), round(1920 / PX, 3))   # v4: face 57 px higher, mouth ends y 1470 (caption below the chin)
 DOT_S = (round((150 - VB_P[0]) * PX, 1), round((284 - VB_P[1]) * PX, 1))   # cheek dot on screen
 VBS = " ".join(map(str, VB_P))
 CAM_CSS = """
       #__P__-cam { position: absolute; inset: 0; z-index: 1; }
-      #__P__-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 660px; z-index: 5; pointer-events: none;
+      #__P__-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 600px; z-index: 5; pointer-events: none;
         background: linear-gradient(180deg, rgba(44,58,49,0.94) 0%, rgba(44,58,49,0.9) 68%, rgba(44,58,49,0) 100%); }"""
 # v3: blonde hair under the type band -> an ink scrim keeps the light type readable (contrast)
 SCRIM = '    <div id="__P__-scrim" data-layout-ignore></div>'
@@ -238,7 +238,7 @@ def s1():
       #s1-g1 { top: 176px; } #s1-g2 { top: 176px; } #s1-g3 { top: 150px; }
       #s1-g1 .kick, #s1-g2 .kick, #s1-g3 .kick { color: var(--keten); }
       #s1-g3 .note { color: var(--keten); margin-bottom: 4px; }
-      #s1-ret { position: absolute; left: 190px; top: 690px; width: 700px; height: 960px; z-index: 3; }
+      #s1-ret { position: absolute; left: 190px; top: 640px; width: 700px; height: 940px; z-index: 3; }
       #s1-scan { position: absolute; left: 140px; top: 640px; width: 800px; height: 6px; border-radius: 3px; z-index: 4;
         background: var(--toz-pembe); box-shadow: 0 0 24px 6px rgba(242, 211, 209, 0.55); opacity: 0; }
       #s1-shutter { position: absolute; left: 485px; top: 1745px; width: 110px; height: 110px; border-radius: 50%;
@@ -384,7 +384,7 @@ BOX_CSS = """
       #root .bsrc { top: 470px; color: var(--murekkep); }"""
 VB4 = (70, 165, 260, round(260 * BOX_H / 1080, 3))       # both cheeks, eyes to lips: 4.15 px/u
 VB5 = (50, 130, 300, round(300 * BOX_H / 1080, 3))       # eyes, cheeks and jaw: 3.6 px/u (bottom 508 < shirt end 520)
-VB6 = (-20, -10, 440, round(440 * BOX_H / 1080, 3))      # the whole face: 2.45 px/u
+VB6 = (-20, 10, 440, round(440 * BOX_H / 1080, 3))       # the whole face: 2.45 px/u; v4: mouth ends y 1475
 
 
 def vbs(v):
@@ -521,7 +521,7 @@ def s6():
 PH = dict(l=160, t=620, w=760, h=1240, r=90, inset=20)
 SCR = dict(l=PH["l"] + PH["inset"], t=PH["t"] + PH["inset"], w=PH["w"] - 2 * PH["inset"], h=PH["h"] - 2 * PH["inset"], r=70)
 SPX = 2.2                                                       # face units -> screen px
-VB_SCR = (36.4, -90, round(SCR["w"] / SPX, 3), round(SCR["h"] / SPX, 3))   # eyes at y 1342, under the caption pill
+VB_SCR = (36.4, 2.2, round(SCR["w"] / SPX, 3), round(SCR["h"] / SPX, 3))   # v4: eyes y 1139, mouth ends y 1480, caption over neck/shirt
 
 
 def full_vb(vb, box_top, box_left=0, box_w=1080):
@@ -767,7 +767,7 @@ def captions():
   <div id="root" data-composition-id="altyazi" data-width="1080" data-height="1920">
     <style>{FONTS}
       #root {{ position: absolute; inset: 0; pointer-events: none; }}
-      #root .grp {{ position: absolute; left: 60px; width: 880px; top: 1160px; height: 170px; display: flex; align-items: flex-end; justify-content: center; text-align: center; }}
+      #root .grp {{ position: absolute; left: 60px; width: 880px; top: 1430px; height: 170px; display: flex; align-items: flex-end; justify-content: center; text-align: center; }}
       #root .pill {{ display: inline-block; white-space: nowrap; font: 700 72px/1.18 "Be Vietnam Pro", sans-serif; color: #F8F4EC;
         background: rgba(44, 58, 49, 0.92); border-radius: 24px; padding: 14px 30px 18px; transform-origin: 50% 100%;
         box-shadow: 0 10px 30px rgba(15, 21, 17, 0.25); }}

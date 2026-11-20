@@ -73,15 +73,15 @@
           tl.fromTo(el, { opacity: 0.35 }, { opacity: 1, duration: 0.12, ease: "none", immediateRender: false }, at);
           at += gap; gap *= 0.84; }); };
 
-        document.getElementById("s7-svgwrap").innerHTML = A.face({ id: "s7f", viewBox: "-20.0 -238.148 440.0 782.222", w: 1080, h: 1920, bg: C.adacayi,
+        document.getElementById("s7-svgwrap").innerHTML = A.face({ id: "s7f", viewBox: "-20.0 -218.148 440.0 782.222", w: 1080, h: 1920, bg: C.adacayi,
           dot: { px: 1, ring: C.murekkep } });
         A.apply("s7f", { tex: 0, eye: 1, jaw: 1, hi: 0.35, sh: 0.08 });
         document.getElementById("s7-fps").textContent = window.AYNA_DATA.FPS;
         const svg = document.getElementById("s7f-svg");
-        const cam = { x: -20.0, y: -238.148, w: 440.0, h: 782.222 };
+        const cam = { x: -20.0, y: -218.148, w: 440.0, h: 782.222 };
         A.cam("s7f", cam, 1080);
         // pull back: the toz pembe window shrinks into the phone screen and the phone forms around it
-        tl.fromTo(cam, { x: -20.0, y: -238.148, w: 440.0, h: 782.222 }, { ...{ x: -45.418, y: -380.909, w: 490.91, h: 872.728 }, duration: 1.0, ease: "power3.out", onUpdate: () => A.cam("s7f", cam, 1080) }, 0);
+        tl.fromTo(cam, { x: -20.0, y: -218.148, w: 440.0, h: 782.222 }, { ...{ x: -45.418, y: -288.709, w: 490.91, h: 872.728 }, duration: 1.0, ease: "power3.out", onUpdate: () => A.cam("s7f", cam, 1080) }, 0);
         tl.fromTo(svg, { clipPath: "inset(560px 0px 0px 0px round 0px)" }, { clipPath: "inset(640px 180px 80px 180px round 70px)", duration: 1.0, ease: "power3.out" }, 0);
                 tl.fromTo("#s7-phone", { opacity: 0, scale: 1.1 }, { opacity: 1, scale: 1, duration: 0.5, ease: "power3.out", transformOrigin: "50% 50%" }, 0.45);
         tl.fromTo("#s7-ui", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 0.85);
