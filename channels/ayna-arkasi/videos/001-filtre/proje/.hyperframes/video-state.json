@@ -432,8 +432,8 @@
   },
   "checks": {
     "latest": {
-      "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
-      "id": "f107d953-4307-4a1a-9d4c-bc0e88e7fa48"
+      "revision": "20f04759-1b02-48cd-a433-fc8e5b30fecc",
+      "id": "78080d68-4565-4554-a476-990a83fc056c"
     },
     "revisions": {
       "5b808756-c7fb-4d2e-b67a-f52016c29b04": [
@@ -581,6 +581,43 @@
           "contentHash": "2b98587603a022fe813e5450a113b60f8c267e4ea3522d5bfaa5ddf1b355d8bd",
           "revision": "d1d2cd85-8333-4c04-8c48-b8fdab1fcd06",
           "inputFingerprint": "c81e941a8384704984cc8155f7cc296e972f9b0fd54dfa8cf5b295ac8d889fd0",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "20f04759-1b02-48cd-a433-fc8e5b30fecc": [
+        {
+          "id": "78080d68-4565-4554-a476-990a83fc056c",
+          "scope": "project",
+          "report": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/.hyperframes/artifacts/checks/78080d68-4565-4554-a476-990a83fc056c.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "safeZones": [
+                "tiktok",
+                "reels",
+                "shorts"
+              ],
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1795170749782,
+          "contentHash": "ef8a9e389566d3c6fb04817e35e48197a877694b32a0aead222e422fb3c6634c",
+          "revision": "20f04759-1b02-48cd-a433-fc8e5b30fecc",
+          "inputFingerprint": "a59d51103674127680834acd3b5599ba1aafbcf46751f7dd9be77445fcb51edc",
           "inputScope": "local-project-files",
           "attribution": "recorded-revision"
         }
