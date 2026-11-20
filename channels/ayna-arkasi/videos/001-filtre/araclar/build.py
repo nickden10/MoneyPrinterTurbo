@@ -219,7 +219,11 @@ VB_P = (41.2, -65.1, round(1080 / PX, 3), round(1920 / PX, 3))
 DOT_S = (round((150 - VB_P[0]) * PX, 1), round((284 - VB_P[1]) * PX, 1))   # cheek dot on screen
 VBS = " ".join(map(str, VB_P))
 CAM_CSS = """
-      #__P__-cam { position: absolute; inset: 0; z-index: 1; }"""
+      #__P__-cam { position: absolute; inset: 0; z-index: 1; }
+      #__P__-scrim { position: absolute; left: 0; top: 0; width: 1080px; height: 660px; z-index: 5; pointer-events: none;
+        background: linear-gradient(180deg, rgba(44,58,49,0.94) 0%, rgba(44,58,49,0.9) 68%, rgba(44,58,49,0) 100%); }"""
+# v3: blonde hair under the type band -> an ink scrim keeps the light type readable (contrast)
+SCRIM = '    <div id="__P__-scrim" data-layout-ignore></div>'
 
 
 def s1():
@@ -247,6 +251,7 @@ def s1():
            f'<path d="M692 850 V952 H590" {br}/><path d="M110 952 H8 V850" {br}/></svg>')
     body = "\n".join([
         '    <div id="s1-cam"></div>',
+        SCRIM.replace("__P__", sid),
         ret,
         '    <div id="s1-scan" data-layout-ignore></div>',
         f'    <div id="s1-strip" data-layout-ignore>{cells}</div>',
@@ -280,8 +285,8 @@ def s1():
         // the dive: the camera pushes into the cheek dot; type and UI blur away with it
         tl.to("#s1-cam", {{ scale: 7, duration: 0.77, ease: "power3.in", transformOrigin: O }}, {t_dive});
         tl.to("#s1-cam", {{ filter: "blur(18px)", duration: 0.25, ease: "power2.in" }}, {r2(D - 0.25)});
-        tl.to(["#s1-g3", "#s1-ret", "#s1-strip", "#s1-shutter"], {{ scale: 1.2, filter: "blur(10px)", duration: 0.25, ease: "power3.in", transformOrigin: O }}, {t_dive});
-        tl.to(["#s1-g3", "#s1-ret", "#s1-strip", "#s1-shutter"], {{ opacity: 0, duration: 0.25, ease: "none" }}, {t_dive});
+        tl.to(["#s1-g3", "#s1-ret", "#s1-strip", "#s1-shutter", "#s1-scrim"], {{ scale: 1.2, filter: "blur(10px)", duration: 0.25, ease: "power3.in", transformOrigin: O }}, {t_dive});
+        tl.to(["#s1-g3", "#s1-ret", "#s1-strip", "#s1-shutter", "#s1-scrim"], {{ opacity: 0, duration: 0.25, ease: "none" }}, {t_dive});
 """
     v = [var("k1", "Kanca üst satır", T["k1"]), var("k2", "B2 üst satır", T["k2"]),
          var("u2", "B2 birim", T["u2"]), var("calc", "Hesap notu", T["calc"])]
@@ -299,6 +304,7 @@ def s2():
       #s2-t .big { font-size: 190px; }"""
     body = "\n".join([
         '    <div id="s2-cam"><div id="s2-px"></div><div id="s2-smooth"></div></div>',
+        SCRIM.replace("__P__", sid),
         clip("s2-t", 0, D, f'<p class="fr kick">{ws(T["s2k"])}</p><p class="fr big acc"><span class="w" data-var-text="t2">{T["s2t"]}</span></p>', "tx"),
     ])
     script = f"""
@@ -334,6 +340,7 @@ def s3():
       #root #s3-src { top: 548px; color: var(--adacayi); }"""
     body = "\n".join([
         '    <div id="s3-cam"></div>',
+        SCRIM.replace("__P__", sid),
         clip("s3-head", 0, D, f'<p class="fr hero acc"><span class="n" id="s3-n">0</span><span class="u" data-var-text="unit">{T["unit"]}</span></p>', "tx"),
         clip("s3-sub", t_sub, D - t_sub, f'<p class="note"><span id="s3-sub-t" data-var-text="sub">{T["sub"].format(F=468, I=10)}</span></p>', "tx"),
         clip("s3-src", t_src, D - t_src, f'<p class="src"><span id="s3-src-t" data-var-text="src">{h(T["src3"])}</span></p>', "tx"),
@@ -360,8 +367,8 @@ def s3():
         const O = "{DOT_S[0]}px {DOT_S[1]}px";
         tl.to("#s3-cam", {{ scale: 4, duration: 0.6, ease: "power3.in", transformOrigin: O }}, {r2(D - 0.6)});
         tl.to("#s3-cam", {{ filter: "blur(18px)", duration: 0.25, ease: "power2.in" }}, {r2(D - 0.25)});
-        tl.to(["#s3-head", "#s3-sub", "#s3-src"], {{ scale: 1.2, filter: "blur(10px)", duration: 0.25, ease: "power3.in", transformOrigin: O }}, {r2(D - 0.25)});
-        tl.to(["#s3-head", "#s3-sub", "#s3-src"], {{ opacity: 0, duration: 0.23, ease: "none" }}, {r2(D - 0.25)});
+        tl.to(["#s3-head", "#s3-sub", "#s3-src", "#s3-scrim"], {{ scale: 1.2, filter: "blur(10px)", duration: 0.25, ease: "power3.in", transformOrigin: O }}, {r2(D - 0.25)});
+        tl.to(["#s3-head", "#s3-sub", "#s3-src", "#s3-scrim"], {{ opacity: 0, duration: 0.23, ease: "none" }}, {r2(D - 0.25)});
 """
     v = [var("unit", "Sayaç birimi", T["unit"]), var("sub", "Alt satır", T["sub"].format(F=468, I=10)),
          var("src", "Kaynak", T["src3"])]
@@ -373,7 +380,7 @@ BOX_T, BOX_H = 560, 1360
 BOX_CSS = """
       #__P__-box { position: absolute; left: 0; top: 560px; width: 1080px; height: 1360px; overflow: hidden; z-index: 1; }
       #root .bandt { top: 176px; }
-      #root .bandt .sub { color: var(--koyu-adacayi); }
+      #root .bandt .sub { color: var(--murekkep); opacity: 0.86; }
       #root .bsrc { top: 470px; color: var(--murekkep); }"""
 VB4 = (70, 165, 260, round(260 * BOX_H / 1080, 3))       # both cheeks, eyes to lips: 4.15 px/u
 VB5 = (50, 130, 300, round(300 * BOX_H / 1080, 3))       # eyes, cheeks and jaw: 3.6 px/u (bottom 508 < shirt end 520)
@@ -415,7 +422,7 @@ def s4():
     ])
     script = f"""
         const box = document.getElementById("s4-box");
-        box.insertAdjacentHTML("afterbegin", A.face({{ id: "s4f", viewBox: "{' '.join(map(str, VB4a))}", w: 1080, h: {BOX_H}, bg: C.toz,
+        box.insertAdjacentHTML("afterbegin", A.face({{ id: "s4f", viewBox: "{' '.join(map(str, VB4a))}", w: 1080, h: {BOX_H}, bg: C.adacayi,
           lineW: 3, dot: {{ px: {px:.4f}, ring: C.murekkep }} }}));
         const cam = {vbs(VB4a)};
         A.cam("s4f", cam, 1080);
@@ -440,7 +447,7 @@ def s4():
     v = [var("t1", "Başlık", T["t4"]), var("t2", "Alt başlık", T["t4b"]),
          var("labL", "Etiket sol", T["labL"]), var("labR", "Etiket sağ", T["labR"]),
          var("src", "Kaynak", T["src4"])]
-    return scene(sid, "var(--toz-pembe)", "var(--murekkep)", "var(--koyu-adacayi)", css, body, script, v)
+    return scene(sid, "var(--adacayi)", "var(--murekkep)", "var(--koyu-adacayi)", css, body, script, v)
 
 
 def s5():
@@ -457,7 +464,7 @@ def s5():
         '    <div id="s5-box"></div>',
     ])
     script = f"""
-        document.getElementById("s5-box").innerHTML = A.face({{ id: "s5f", viewBox: "{' '.join(map(str, VB4))}", w: 1080, h: {BOX_H}, bg: C.toz,
+        document.getElementById("s5-box").innerHTML = A.face({{ id: "s5f", viewBox: "{' '.join(map(str, VB4))}", w: 1080, h: {BOX_H}, bg: C.adacayi,
           lineW: 3, dot: {{ px: {1080 / VB4[2]:.4f}, ring: C.murekkep }}, grid: true, arrows: {{ px: {px5:.4f} }},
           points: {{ r: {4 / px5:.3f}, fill: C.murekkep }} }});
         A.apply("s5f", {{ tex: 0 }});
@@ -475,7 +482,7 @@ def s5():
         cOut("#s5-title .w, #s5-src p", {D});
 """
     v = [var("t1", "Başlık", T["t5"]), var("t2", "Alt başlık", T["t5b"]), var("src", "Kaynak", T["src5"])]
-    return scene(sid, "var(--toz-pembe)", "var(--murekkep)", "var(--koyu-adacayi)", css, body, script, v)
+    return scene(sid, "var(--adacayi)", "var(--murekkep)", "var(--koyu-adacayi)", css, body, script, v)
 
 
 def s6():
@@ -490,7 +497,7 @@ def s6():
         '    <div id="s6-box"></div>',
     ])
     script = f"""
-        document.getElementById("s6-box").innerHTML = A.face({{ id: "s6f", viewBox: "{' '.join(map(str, VB5))}", w: 1080, h: {BOX_H}, bg: C.toz,
+        document.getElementById("s6-box").innerHTML = A.face({{ id: "s6f", viewBox: "{' '.join(map(str, VB5))}", w: 1080, h: {BOX_H}, bg: C.adacayi,
           lineW: 3, dot: {{ px: {px5:.4f}, ring: C.murekkep }}, grid: true, arrows: {{ px: {px5:.4f} }},
           points: {{ r: {4 / px5:.3f}, fill: C.murekkep }} }});
         A.apply("s6f", {{ tex: 0, eye: 1, jaw: 1 }});
@@ -507,7 +514,7 @@ def s6():
         cOut("#s6-title .w, #s6-src p", {D});
 """
     v = [var("t1", "Başlık", T["t6"]), var("t2", "Alt başlık", T["t6b"]), var("src", "Kaynak", T["src6"])]
-    return scene(sid, "var(--toz-pembe)", "var(--murekkep)", "var(--koyu-adacayi)", css, body, script, v)
+    return scene(sid, "var(--adacayi)", "var(--murekkep)", "var(--koyu-adacayi)", css, body, script, v)
 
 
 # ---------------------------------------------------------------- S7/S8 the phone again (keten), big
@@ -564,7 +571,7 @@ def s7():
              f'<p class="fr hero acc"><span class="n w" id="s7-fps">30</span><span class="u w" data-var-text="u">{T["u7"]}</span></p>', "tx g"),
     ])
     script = f"""
-        document.getElementById("s7-svgwrap").innerHTML = A.face({{ id: "s7f", viewBox: "{' '.join(map(str, VB7a))}", w: 1080, h: 1920, bg: C.toz,
+        document.getElementById("s7-svgwrap").innerHTML = A.face({{ id: "s7f", viewBox: "{' '.join(map(str, VB7a))}", w: 1080, h: 1920, bg: C.adacayi,
           dot: {{ px: 1, ring: C.murekkep }} }});
         A.apply("s7f", {{ tex: 0, eye: 1, jaw: 1, hi: 0.35, sh: 0.08 }});
         document.getElementById("s7-fps").textContent = window.AYNA_DATA.FPS;
@@ -574,8 +581,7 @@ def s7():
         // pull back: the toz pembe window shrinks into the phone screen and the phone forms around it
         tl.fromTo(cam, {vbs(VB7a)}, {{ ...{vbs(VB7b)}, duration: {land}, ease: "power3.out", onUpdate: () => A.cam("s7f", cam, 1080) }}, 0);
         tl.fromTo(svg, {{ clipPath: "{CLIP_A}" }}, {{ clipPath: "{CLIP_B}", duration: {land}, ease: "power3.out" }}, 0);
-        tl.fromTo("#s7f-bg", {{ attr: {{ fill: C.toz }} }}, {{ attr: {{ fill: C.adacayi }}, duration: {land}, ease: "power2.inOut" }}, 0);
-        tl.fromTo("#s7-phone", {{ opacity: 0, scale: 1.1 }}, {{ opacity: 1, scale: 1, duration: 0.5, ease: "power3.out", transformOrigin: "50% 50%" }}, 0.45);
+                tl.fromTo("#s7-phone", {{ opacity: 0, scale: 1.1 }}, {{ opacity: 1, scale: 1, duration: 0.5, ease: "power3.out", transformOrigin: "50% 50%" }}, 0.45);
         tl.fromTo("#s7-ui", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.2, ease: "power2.out" }}, {land - 0.15});
         wf("#s7-g .kick .w", {t_title});
         wf("#s7-g .hero .w", {t_kez}, 90);

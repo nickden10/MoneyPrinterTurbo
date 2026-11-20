@@ -1,0 +1,62 @@
+[
+ {
+  "beat": "B1",
+  "speech_start": 0.2,
+  "speech_end": 4.496,
+  "speech_dur": 4.296
+ },
+ {
+  "beat": "B2",
+  "speech_start": 5.356,
+  "speech_end": 9.223,
+  "speech_dur": 3.867
+ },
+ {
+  "beat": "B3",
+  "speech_start": 10.221,
+  "speech_end": 12.067,
+  "speech_dur": 1.846
+ },
+ {
+  "beat": "B4",
+  "speech_start": 12.543,
+  "speech_end": 18.232,
+  "speech_dur": 5.689
+ },
+ {
+  "beat": "B5",
+  "speech_start": 18.87,
+  "speech_end": 26.011,
+  "speech_dur": 7.141
+ },
+ {
+  "beat": "B6",
+  "speech_start": 26.928,
+  "speech_end": 31.584,
+  "speech_dur": 4.656
+ },
+ {
+  "beat": "B7",
+  "speech_start": 32.628,
+  "speech_end": 34.903,
+  "speech_dur": 2.275
+ },
+ {
+  "beat": "B8",
+  "speech_start": 35.751,
+  "speech_end": 39.222,
+  "speech_dur": 3.471
+ },
+ {
+  "beat": "B9a",
+  "speech_start": 39.422,
+  "speech_end": 42.011,
+  "speech_dur": 2.589
+ },
+ {
+  "beat": "B9b",
+  "speech_start": 42.211,
+  "speech_end": 44.196,
+  "speech_dur": 1.985
+ }
+]

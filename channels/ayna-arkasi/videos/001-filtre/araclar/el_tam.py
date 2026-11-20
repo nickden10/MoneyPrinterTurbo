@@ -17,7 +17,10 @@ SETTINGS = {"stability": float(os.environ.get("EL_STAB", "0.38")), "similarity_b
             "speed": float(os.environ.get("EL_SPEED", "1.0"))}
 # MediaPipe is written normally now (client revision); the phonetic spelling sounded robotic
 BEATS = [(b, t.replace("Midiya Payp", "MediaPipe")) for b, t in (BEATS_TR if LANG == "tr" else BEATS_EN)]
-TEXT = " ".join(t for _, t in BEATS)
+# EL_JOIN: what goes between beats, e.g. ' <break time="0.35s" /> ' (v2 break tag: a breath between
+# sentences without restarting the read). Default: a plain space.
+JOIN = os.environ.get("EL_JOIN", " ")
+TEXT = JOIN.join(t for _, t in BEATS)
 PUNCT = set(".,:;!?…")
 
 os.makedirs(OUT, exist_ok=True)
@@ -38,22 +41,26 @@ json.dump(al, open(f"{OUT}/{TAKE}.align.json", "w"), ensure_ascii=False)
 os.remove(f"{OUT}/{TAKE}.resp.json")
 
 ch, st, en = al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]
-assert "".join(ch) == TEXT, "alignment text differs from the request"
-# beat of every character position
-bounds, pos = [], 0
-for b, t in BEATS:
-    bounds.append((pos, pos + len(t), b)); pos += len(t) + 1
-beat_of = lambda i: next(b for a, z, b in bounds if a <= i < z + 1)
-words, cur = [], None
-for i, (c, s, e) in enumerate(zip(ch, st, en)):
+# words from characters; anything inside <...> (break tags) is skipped; beats by expected word counts
+words, cur, tag = [], None, False
+for i, (c, s_, e) in enumerate(zip(ch, st, en)):
+    if c == "<": tag = True
+    if tag:
+        if c == ">": tag = False
+        if cur: words.append(cur); cur = None
+        continue
     if c.isspace() or c in PUNCT:
         if cur: words.append(cur); cur = None
         continue
     if cur is None:
-        cur = {"beat": beat_of(i), "text": c, "start": s, "end": e, "c0": i}
+        cur = {"text": c, "start": s_, "end": e, "c0": i}
     else:
         cur["text"] += c; cur["end"] = e
 if cur: words.append(cur)
+exp = [(b, tok.strip(".,:;!?…")) for b, t in BEATS for tok in t.split()]
+assert [x for _, x in exp] == [w_["text"] for w_ in words], "alignment words differ from the script"
+for w_, (b, _) in zip(words, exp):
+    w_["beat"] = b
 # keep the 89-word Turkish schema: MediaPipe is split at its "P" (character time), like "Midiya Payp" was
 if LANG == "tr":
     out = []

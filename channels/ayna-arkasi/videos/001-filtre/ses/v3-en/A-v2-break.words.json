@@ -1,0 +1,638 @@
+[
+ {
+  "text": "A",
+  "start": 0.0,
+  "end": 0.058,
+  "beat": "B1"
+ },
+ {
+  "text": "live",
+  "start": 0.174,
+  "end": 0.36,
+  "beat": "B1"
+ },
+ {
+  "text": "filter",
+  "start": 0.406,
+  "end": 0.929,
+  "beat": "B1"
+ },
+ {
+  "text": "has",
+  "start": 1.022,
+  "end": 1.242,
+  "beat": "B1"
+ },
+ {
+  "text": "less",
+  "start": 1.358,
+  "end": 1.579,
+  "beat": "B1"
+ },
+ {
+  "text": "than",
+  "start": 1.614,
+  "end": 1.753,
+  "beat": "B1"
+ },
+ {
+  "text": "thirty-three",
+  "start": 1.834,
+  "end": 2.368,
+  "beat": "B1"
+ },
+ {
+  "text": "milliseconds",
+  "start": 2.403,
+  "end": 3.019,
+  "beat": "B1"
+ },
+ {
+  "text": "to",
+  "start": 3.053,
+  "end": 3.123,
+  "beat": "B1"
+ },
+ {
+  "text": "finish",
+  "start": 3.204,
+  "end": 3.553,
+  "beat": "B1"
+ },
+ {
+  "text": "one",
+  "start": 3.634,
+  "end": 3.855,
+  "beat": "B1"
+ },
+ {
+  "text": "frame",
+  "start": 3.913,
+  "end": 4.296,
+  "beat": "B1"
+ },
+ {
+  "text": "Thirty",
+  "start": 4.748,
+  "end": 5.062,
+  "beat": "B2"
+ },
+ {
+  "text": "frames",
+  "start": 5.108,
+  "end": 5.375,
+  "beat": "B2"
+ },
+ {
+  "text": "a",
+  "start": 5.41,
+  "end": 5.433,
+  "beat": "B2"
+ },
+ {
+  "text": "second",
+  "start": 5.526,
+  "end": 5.933,
+  "beat": "B2"
+ },
+ {
+  "text": "means",
+  "start": 6.014,
+  "end": 6.316,
+  "beat": "B2"
+ },
+ {
+  "text": "about",
+  "start": 6.385,
+  "end": 6.711,
+  "beat": "B2"
+ },
+ {
+  "text": "thirty-three",
+  "start": 6.745,
+  "end": 7.198,
+  "beat": "B2"
+ },
+ {
+  "text": "milliseconds",
+  "start": 7.233,
+  "end": 7.86,
+  "beat": "B2"
+ },
+ {
+  "text": "per",
+  "start": 7.953,
+  "end": 8.127,
+  "beat": "B2"
+ },
+ {
+  "text": "frame",
+  "start": 8.197,
+  "end": 8.615,
+  "beat": "B2"
+ },
+ {
+  "text": "Look",
+  "start": 9.044,
+  "end": 9.288,
+  "beat": "B3"
+ },
+ {
+  "text": "closer",
+  "start": 9.334,
+  "end": 9.961,
+  "beat": "B3"
+ },
+ {
+  "text": "pixels",
+  "start": 10.066,
+  "end": 10.89,
+  "beat": "B3"
+ },
+ {
+  "text": "First",
+  "start": 11.355,
+  "end": 11.714,
+  "beat": "B4"
+ },
+ {
+  "text": "a",
+  "start": 11.773,
+  "end": 11.807,
+  "beat": "B4"
+ },
+ {
+  "text": "face",
+  "start": 11.923,
+  "end": 12.26,
+  "beat": "B4"
+ },
+ {
+  "text": "model",
+  "start": 12.341,
+  "end": 12.632,
+  "beat": "B4"
+ },
+ {
+  "text": "for",
+  "start": 12.678,
+  "end": 12.794,
+  "beat": "B4"
+ },
+ {
+  "text": "example",
+  "start": 12.829,
+  "end": 13.444,
+  "beat": "B4"
+ },
+ {
+  "text": "MediaPipe",
+  "start": 13.514,
+  "end": 14.28,
+  "beat": "B4"
+ },
+ {
+  "text": "marks",
+  "start": 14.396,
+  "end": 14.721,
+  "beat": "B4"
+ },
+ {
+  "text": "four",
+  "start": 14.838,
+  "end": 15.047,
+  "beat": "B4"
+ },
+ {
+  "text": "hundred",
+  "start": 15.105,
+  "end": 15.419,
+  "beat": "B4"
+ },
+ {
+  "text": "seventy-eight",
+  "start": 15.488,
+  "end": 16.08,
+  "beat": "B4"
+ },
+ {
+  "text": "points",
+  "start": 16.138,
+  "end": 16.417,
+  "beat": "B4"
+ },
+ {
+  "text": "on",
+  "start": 16.463,
+  "end": 16.545,
+  "beat": "B4"
+ },
+ {
+  "text": "the",
+  "start": 16.58,
+  "end": 16.649,
+  "beat": "B4"
+ },
+ {
+  "text": "face",
+  "start": 16.719,
+  "end": 17.044,
+  "beat": "B4"
+ },
+ {
+  "text": "Then",
+  "start": 17.833,
+  "end": 18.042,
+  "beat": "B5"
+ },
+ {
+  "text": "a",
+  "start": 18.1,
+  "end": 18.124,
+  "beat": "B5"
+ },
+ {
+  "text": "filter",
+  "start": 18.217,
+  "end": 18.797,
+  "beat": "B5"
+ },
+ {
+  "text": "like",
+  "start": 18.878,
+  "end": 19.052,
+  "beat": "B5"
+ },
+ {
+  "text": "a",
+  "start": 19.076,
+  "end": 19.099,
+  "beat": "B5"
+ },
+ {
+  "text": "bilateral",
+  "start": 19.18,
+  "end": 19.784,
+  "beat": "B5"
+ },
+ {
+  "text": "filter",
+  "start": 19.854,
+  "end": 20.295,
+  "beat": "B5"
+ },
+ {
+  "text": "scans",
+  "start": 20.364,
+  "end": 20.771,
+  "beat": "B5"
+ },
+ {
+  "text": "the",
+  "start": 20.794,
+  "end": 20.864,
+  "beat": "B5"
+ },
+ {
+  "text": "skin",
+  "start": 20.91,
+  "end": 21.293,
+  "beat": "B5"
+ },
+ {
+  "text": "edges",
+  "start": 21.398,
+  "end": 21.746,
+  "beat": "B5"
+ },
+ {
+  "text": "stay",
+  "start": 21.769,
+  "end": 22.129,
+  "beat": "B5"
+ },
+ {
+  "text": "texture",
+  "start": 22.199,
+  "end": 22.663,
+  "beat": "B5"
+ },
+ {
+  "text": "is",
+  "start": 22.686,
+  "end": 22.756,
+  "beat": "B5"
+ },
+ {
+  "text": "wiped",
+  "start": 22.837,
+  "end": 23.151,
+  "beat": "B5"
+ },
+ {
+  "text": "Pores",
+  "start": 23.22,
+  "end": 23.638,
+  "beat": "B5"
+ },
+ {
+  "text": "freckles",
+  "start": 23.72,
+  "end": 24.161,
+  "beat": "B5"
+ },
+ {
+  "text": "fine",
+  "start": 24.23,
+  "end": 24.532,
+  "beat": "B5"
+ },
+ {
+  "text": "hairs",
+  "start": 24.602,
+  "end": 24.974,
+  "beat": "B5"
+ },
+ {
+  "text": "Next",
+  "start": 25.461,
+  "end": 25.798,
+  "beat": "B6"
+ },
+ {
+  "text": "the",
+  "start": 25.844,
+  "end": 25.926,
+  "beat": "B6"
+ },
+ {
+  "text": "points",
+  "start": 25.984,
+  "end": 26.274,
+  "beat": "B6"
+ },
+ {
+  "text": "are",
+  "start": 26.332,
+  "end": 26.46,
+  "beat": "B6"
+ },
+ {
+  "text": "shifted",
+  "start": 26.506,
+  "end": 27.028,
+  "beat": "B6"
+ },
+ {
+  "text": "and",
+  "start": 27.098,
+  "end": 27.203,
+  "beat": "B6"
+ },
+ {
+  "text": "the",
+  "start": 27.249,
+  "end": 27.319,
+  "beat": "B6"
+ },
+ {
+  "text": "image",
+  "start": 27.388,
+  "end": 27.737,
+  "beat": "B6"
+ },
+ {
+  "text": "stretches",
+  "start": 27.783,
+  "end": 28.34,
+  "beat": "B6"
+ },
+ {
+  "text": "eyes",
+  "start": 28.457,
+  "end": 28.712,
+  "beat": "B6"
+ },
+ {
+  "text": "grow",
+  "start": 28.805,
+  "end": 29.083,
+  "beat": "B6"
+ },
+ {
+  "text": "the",
+  "start": 29.165,
+  "end": 29.258,
+  "beat": "B6"
+ },
+ {
+  "text": "jaw",
+  "start": 29.328,
+  "end": 29.548,
+  "beat": "B6"
+ },
+ {
+  "text": "narrows",
+  "start": 29.63,
+  "end": 30.117,
+  "beat": "B6"
+ },
+ {
+  "text": "Last",
+  "start": 30.582,
+  "end": 30.86,
+  "beat": "B7"
+ },
+ {
+  "text": "light",
+  "start": 30.941,
+  "end": 31.15,
+  "beat": "B7"
+ },
+ {
+  "text": "is",
+  "start": 31.197,
+  "end": 31.278,
+  "beat": "B7"
+ },
+ {
+  "text": "added",
+  "start": 31.371,
+  "end": 31.719,
+  "beat": "B7"
+ },
+ {
+  "text": "and",
+  "start": 31.789,
+  "end": 31.917,
+  "beat": "B7"
+ },
+ {
+  "text": "shadows",
+  "start": 31.963,
+  "end": 32.323,
+  "beat": "B7"
+ },
+ {
+  "text": "soften",
+  "start": 32.358,
+  "end": 32.857,
+  "beat": "B7"
+ },
+ {
+  "text": "It",
+  "start": 33.438,
+  "end": 33.6,
+  "beat": "B8"
+ },
+ {
+  "text": "does",
+  "start": 33.67,
+  "end": 33.89,
+  "beat": "B8"
+ },
+ {
+  "text": "this",
+  "start": 33.96,
+  "end": 34.134,
+  "beat": "B8"
+ },
+ {
+  "text": "thirty",
+  "start": 34.192,
+  "end": 34.494,
+  "beat": "B8"
+ },
+ {
+  "text": "times",
+  "start": 34.552,
+  "end": 34.796,
+  "beat": "B8"
+ },
+ {
+  "text": "a",
+  "start": 34.831,
+  "end": 34.854,
+  "beat": "B8"
+ },
+ {
+  "text": "second",
+  "start": 34.924,
+  "end": 35.365,
+  "beat": "B8"
+ },
+ {
+  "text": "fresh",
+  "start": 35.504,
+  "end": 35.876,
+  "beat": "B8"
+ },
+ {
+  "text": "on",
+  "start": 35.957,
+  "end": 36.119,
+  "beat": "B8"
+ },
+ {
+  "text": "every",
+  "start": 36.212,
+  "end": 36.456,
+  "beat": "B8"
+ },
+ {
+  "text": "frame",
+  "start": 36.526,
+  "end": 36.909,
+  "beat": "B8"
+ },
+ {
+  "text": "The",
+  "start": 37.362,
+  "end": 37.489,
+  "beat": "B9a"
+ },
+ {
+  "text": "face",
+  "start": 37.548,
+  "end": 37.803,
+  "beat": "B9a"
+ },
+ {
+  "text": "in",
+  "start": 37.838,
+  "end": 37.896,
+  "beat": "B9a"
+ },
+ {
+  "text": "the",
+  "start": 37.931,
+  "end": 38.0,
+  "beat": "B9a"
+ },
+ {
+  "text": "filter",
+  "start": 38.07,
+  "end": 38.465,
+  "beat": "B9a"
+ },
+ {
+  "text": "is",
+  "start": 38.523,
+  "end": 38.627,
+  "beat": "B9a"
+ },
+ {
+  "text": "a",
+  "start": 38.674,
+  "end": 38.697,
+  "beat": "B9a"
+ },
+ {
+  "text": "calculated",
+  "start": 38.767,
+  "end": 39.394,
+  "beat": "B9a"
+ },
+ {
+  "text": "face",
+  "start": 39.463,
+  "end": 39.951,
+  "beat": "B9a"
+ },
+ {
+  "text": "Real",
+  "start": 40.427,
+  "end": 40.682,
+  "beat": "B9b"
+ },
+ {
+  "text": "skin",
+  "start": 40.74,
+  "end": 41.007,
+  "beat": "B9b"
+ },
+ {
+  "text": "has",
+  "start": 41.077,
+  "end": 41.228,
+  "beat": "B9b"
+ },
+ {
+  "text": "texture",
+  "start": 41.309,
+  "end": 41.843,
+  "beat": "B9b"
+ },
+ {
+  "text": "It",
+  "start": 41.913,
+  "end": 42.029,
+  "beat": "B9b"
+ },
+ {
+  "text": "should",
+  "start": 42.087,
+  "end": 42.412,
+  "beat": "B9b"
+ }
+]

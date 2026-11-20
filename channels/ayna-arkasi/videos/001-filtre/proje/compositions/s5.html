@@ -1,5 +1,5 @@
 <template id="s5-template">
-  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920" data-composition-variables='[{"id": "t1", "type": "string", "label": "Başlık", "default": "Esnetme"}, {"id": "t2", "type": "string", "label": "Alt başlık", "default": "(warp)"}, {"id": "src", "type": "string", "label": "Kaynak", "default": "Kaynak: Schaefer vd. 2006 · US 10152778"}]'>
+  <div id="root" data-composition-id="s5" data-width="1080" data-height="1920" data-composition-variables='[{"id": "t1", "type": "string", "label": "Başlık", "default": "Warping"}, {"id": "t2", "type": "string", "label": "Alt başlık", "default": "(points shift)"}, {"id": "src", "type": "string", "label": "Kaynak", "default": "Source: Schaefer et al. 2006 · US 10152778"}]'>
     <style>
       @font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: block;
         src: url("assets/fonts/fraunces-latin-full-normal.woff2") format("woff2");
@@ -9,7 +9,7 @@
         unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
       @font-face { font-family: "Be Vietnam Pro"; font-weight: 500; font-display: block; src: url("assets/fonts/BeVietnamPro-Medium.ttf") format("truetype"); }
       @font-face { font-family: "Be Vietnam Pro"; font-weight: 700; font-display: block; src: url("assets/fonts/BeVietnamPro-Bold.ttf") format("truetype"); }
-      #root { position: absolute; inset: 0; overflow: hidden; background: var(--toz-pembe);
+      #root { position: absolute; inset: 0; overflow: hidden; background: var(--adacayi);
         --toz-pembe: #F2D3D1; --keten: #F8F4EC; --adacayi: #BCC5B0; --murekkep: #2C3A31; --koyu-adacayi: #4D6A55; }
       #root .tx { position: absolute; left: 60px; width: 880px; margin: 0; z-index: 6; color: var(--murekkep); }
       #root .tx .w { display: inline-block; }
@@ -25,11 +25,11 @@
       #root .acc { color: var(--koyu-adacayi); }
       #s5-box { position: absolute; left: 0; top: 560px; width: 1080px; height: 1360px; overflow: hidden; z-index: 1; }
       #root .bandt { top: 176px; }
-      #root .bandt .sub { color: var(--koyu-adacayi); }
+      #root .bandt .sub { color: var(--murekkep); opacity: 0.86; }
       #root .bsrc { top: 470px; color: var(--murekkep); }
     </style>
-    <div id="s5-title" class="clip tx bandt" data-start="0" data-duration="5.078"><p class="fr big"><span class="w" data-var-text="t1">Esnetme</span></p><p class="fr sub"><span class="w" data-var-text="t2">(warp)</span></p></div>
-    <div id="s5-src" class="clip tx bsrc" data-start="0" data-duration="5.078"><p class="src"><span data-var-text="src">Kaynak: Schaefer vd. 2006 · US 10152778</span></p></div>
+    <div id="s5-title" class="clip tx bandt" data-start="0" data-duration="6.236"><p class="fr big"><span class="w" data-var-text="t1">Warping</span></p><p class="fr sub"><span class="w" data-var-text="t2">(points shift)</span></p></div>
+    <div id="s5-src" class="clip tx bsrc" data-start="0" data-duration="6.236"><p class="src"><span data-var-text="src">Source: Schaefer et al. 2006 · US 10152778</span></p></div>
     <div id="s5-box"></div>
     <script>
       (function () {
@@ -61,7 +61,7 @@
           tl.fromTo(el, { opacity: 0.35 }, { opacity: 1, duration: 0.12, ease: "none", immediateRender: false }, at);
           at += gap; gap *= 0.84; }); };
 
-        document.getElementById("s5-box").innerHTML = A.face({ id: "s5f", viewBox: "70 165 260 327.407", w: 1080, h: 1360, bg: C.toz,
+        document.getElementById("s5-box").innerHTML = A.face({ id: "s5f", viewBox: "70 165 260 327.407", w: 1080, h: 1360, bg: C.adacayi,
           lineW: 3, dot: { px: 4.1538, ring: C.murekkep }, grid: true, arrows: { px: 3.6000 },
           points: { r: 1.111, fill: C.murekkep } });
         A.apply("s5f", { tex: 0 });
@@ -70,13 +70,13 @@
         tl.fromTo(cam, { x: 70, y: 165, w: 260, h: 327.407 }, { ...{ x: 50, y: 130, w: 300, h: 377.778 }, duration: 0.9, ease: "power2.inOut", onUpdate: () => A.cam("s5f", cam, 1080) }, 0.1);
         cIn("#s5-title .w, #s5-src p", 0);
         const pts = Q("#s5f-pts circle"), N = pts.length;
-        pts.forEach((c, i) => tl.fromTo(c, { scale: 0 }, { scale: 1, duration: 0.133, ease: "back.out(1.4)", transformOrigin: "50% 50%" }, 1.133 + (0.4 * i) / (N - 1)));
-        tl.fromTo("#s5f-gcr", { attr: { height: 0 } }, { attr: { height: 190 }, duration: 0.6, ease: "power2.inOut" }, 1.994);
-        tl.fromTo("#s5f-arrows", { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "power2.out" }, 3.48);
+        pts.forEach((c, i) => tl.fromTo(c, { scale: 0 }, { scale: 1, duration: 0.133, ease: "back.out(1.4)", transformOrigin: "50% 50%" }, 1.119 + (0.4 * i) / (N - 1)));
+        tl.fromTo("#s5f-gcr", { attr: { height: 0 } }, { attr: { height: 190 }, duration: 0.6, ease: "power2.inOut" }, 2.223);
+        tl.fromTo("#s5f-arrows", { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "power2.out" }, 3.64);
         const k = { eye: 0, jaw: 0 };
-        tl.fromTo(k, { eye: 0 }, { eye: 1, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s5f", { eye: k.eye }) }, 3.48);
-        tl.fromTo(k, { jaw: 0 }, { jaw: 1, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s5f", { jaw: k.jaw }) }, 4.169);
-        cOut("#s5-title .w, #s5-src p", 5.078);
+        tl.fromTo(k, { eye: 0 }, { eye: 1, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s5f", { eye: k.eye }) }, 3.64);
+        tl.fromTo(k, { jaw: 0 }, { jaw: 1, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s5f", { jaw: k.jaw }) }, 4.515);
+        cOut("#s5-title .w, #s5-src p", 6.236);
 
         window.__timelines["s5"] = tl;
       })();

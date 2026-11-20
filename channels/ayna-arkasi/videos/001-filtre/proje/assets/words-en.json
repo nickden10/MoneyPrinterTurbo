@@ -3,742 +3,742 @@
   "beat": "B1",
   "text": "A",
   "start": 0.2,
-  "end": 0.281,
+  "end": 0.258,
   "id": "w0"
  },
  {
   "beat": "B1",
   "text": "live",
   "start": 0.374,
-  "end": 0.572,
+  "end": 0.56,
   "id": "w1"
  },
  {
   "beat": "B1",
   "text": "filter",
-  "start": 0.618,
-  "end": 0.931,
+  "start": 0.606,
+  "end": 1.129,
   "id": "w2"
  },
  {
   "beat": "B1",
   "text": "has",
-  "start": 0.978,
-  "end": 1.106,
+  "start": 1.222,
+  "end": 1.442,
   "id": "w3"
  },
  {
   "beat": "B1",
   "text": "less",
-  "start": 1.198,
-  "end": 1.407,
+  "start": 1.558,
+  "end": 1.779,
   "id": "w4"
  },
  {
   "beat": "B1",
   "text": "than",
-  "start": 1.431,
-  "end": 1.582,
+  "start": 1.814,
+  "end": 1.953,
   "id": "w5"
  },
  {
   "beat": "B1",
   "text": "thirty-three",
-  "start": 1.628,
-  "end": 2.116,
+  "start": 2.034,
+  "end": 2.568,
   "id": "w6"
  },
  {
   "beat": "B1",
   "text": "milliseconds",
-  "start": 2.162,
-  "end": 2.766,
+  "start": 2.603,
+  "end": 3.219,
   "id": "w7"
  },
  {
   "beat": "B1",
   "text": "to",
-  "start": 2.824,
-  "end": 2.905,
+  "start": 3.253,
+  "end": 3.323,
   "id": "w8"
  },
  {
   "beat": "B1",
   "text": "finish",
-  "start": 2.975,
-  "end": 3.277,
+  "start": 3.404,
+  "end": 3.753,
   "id": "w9"
  },
  {
   "beat": "B1",
   "text": "one",
-  "start": 3.358,
-  "end": 3.532,
+  "start": 3.834,
+  "end": 4.055,
   "id": "w10"
  },
  {
   "beat": "B1",
   "text": "frame",
-  "start": 3.59,
-  "end": 3.915,
+  "start": 4.113,
+  "end": 4.496,
   "id": "w11"
  },
  {
   "beat": "B2",
   "text": "Thirty",
-  "start": 5.264,
-  "end": 5.507,
+  "start": 5.356,
+  "end": 5.67,
   "id": "w12"
  },
  {
   "beat": "B2",
   "text": "frames",
-  "start": 5.576,
-  "end": 5.82,
+  "start": 5.716,
+  "end": 5.983,
   "id": "w13"
  },
  {
   "beat": "B2",
   "text": "a",
-  "start": 5.867,
-  "end": 5.89,
+  "start": 6.018,
+  "end": 6.041,
   "id": "w14"
  },
  {
   "beat": "B2",
   "text": "second",
-  "start": 5.948,
-  "end": 6.273,
+  "start": 6.134,
+  "end": 6.541,
   "id": "w15"
  },
  {
   "beat": "B2",
   "text": "means",
-  "start": 6.366,
-  "end": 6.668,
+  "start": 6.622,
+  "end": 6.924,
   "id": "w16"
  },
  {
   "beat": "B2",
   "text": "about",
-  "start": 6.714,
-  "end": 7.016,
+  "start": 6.993,
+  "end": 7.319,
   "id": "w17"
  },
  {
   "beat": "B2",
   "text": "thirty-three",
-  "start": 7.074,
-  "end": 7.562,
+  "start": 7.353,
+  "end": 7.806,
   "id": "w18"
  },
  {
   "beat": "B2",
   "text": "milliseconds",
-  "start": 7.596,
-  "end": 8.235,
+  "start": 7.841,
+  "end": 8.468,
   "id": "w19"
  },
  {
   "beat": "B2",
   "text": "per",
-  "start": 8.293,
-  "end": 8.467,
+  "start": 8.561,
+  "end": 8.735,
   "id": "w20"
  },
  {
   "beat": "B2",
   "text": "frame",
-  "start": 8.537,
-  "end": 8.781,
+  "start": 8.805,
+  "end": 9.223,
   "id": "w21"
  },
  {
   "beat": "B3",
   "text": "Look",
-  "start": 10.24,
-  "end": 10.484,
+  "start": 10.221,
+  "end": 10.465,
   "id": "w22"
  },
  {
   "beat": "B3",
   "text": "closer",
-  "start": 10.507,
-  "end": 10.913,
+  "start": 10.511,
+  "end": 11.138,
   "id": "w23"
  },
  {
   "beat": "B3",
   "text": "pixels",
-  "start": 10.995,
-  "end": 11.529,
+  "start": 11.243,
+  "end": 12.067,
   "id": "w24"
  },
  {
   "beat": "B4",
   "text": "First",
-  "start": 12.53,
-  "end": 12.878,
+  "start": 12.543,
+  "end": 12.902,
   "id": "w25"
  },
  {
   "beat": "B4",
   "text": "a",
-  "start": 12.925,
-  "end": 12.948,
+  "start": 12.961,
+  "end": 12.995,
   "id": "w26"
  },
  {
   "beat": "B4",
   "text": "face",
-  "start": 13.018,
-  "end": 13.25,
+  "start": 13.111,
+  "end": 13.448,
   "id": "w27"
  },
  {
   "beat": "B4",
   "text": "model",
-  "start": 13.296,
-  "end": 13.563,
+  "start": 13.529,
+  "end": 13.82,
   "id": "w28"
  },
  {
   "beat": "B4",
   "text": "for",
-  "start": 13.621,
-  "end": 13.749,
+  "start": 13.866,
+  "end": 13.982,
   "id": "w29"
  },
  {
   "beat": "B4",
   "text": "example",
-  "start": 13.784,
-  "end": 14.225,
+  "start": 14.017,
+  "end": 14.632,
   "id": "w30"
  },
  {
   "beat": "B4",
   "text": "MediaPipe",
-  "start": 14.26,
-  "end": 14.875,
+  "start": 14.702,
+  "end": 15.468,
   "id": "w31"
  },
  {
   "beat": "B4",
   "text": "marks",
-  "start": 14.956,
-  "end": 15.293,
+  "start": 15.584,
+  "end": 15.909,
   "id": "w32"
  },
  {
   "beat": "B4",
   "text": "four",
-  "start": 15.363,
-  "end": 15.549,
+  "start": 16.026,
+  "end": 16.235,
   "id": "w33"
  },
  {
   "beat": "B4",
   "text": "hundred",
-  "start": 15.607,
-  "end": 15.909,
+  "start": 16.293,
+  "end": 16.607,
   "id": "w34"
  },
  {
   "beat": "B4",
   "text": "seventy-eight",
-  "start": 15.967,
-  "end": 16.547,
+  "start": 16.676,
+  "end": 17.268,
   "id": "w35"
  },
  {
   "beat": "B4",
   "text": "points",
-  "start": 16.605,
-  "end": 16.895,
+  "start": 17.326,
+  "end": 17.605,
   "id": "w36"
  },
  {
   "beat": "B4",
   "text": "on",
-  "start": 16.953,
-  "end": 17.035,
+  "start": 17.651,
+  "end": 17.733,
   "id": "w37"
  },
  {
   "beat": "B4",
   "text": "the",
-  "start": 17.081,
-  "end": 17.151,
+  "start": 17.768,
+  "end": 17.837,
   "id": "w38"
  },
  {
   "beat": "B4",
   "text": "face",
-  "start": 17.22,
-  "end": 17.546,
+  "start": 17.907,
+  "end": 18.232,
   "id": "w39"
  },
  {
   "beat": "B5",
   "text": "Then",
-  "start": 19.125,
-  "end": 19.322,
+  "start": 18.87,
+  "end": 19.079,
   "id": "w40"
  },
  {
   "beat": "B5",
   "text": "a",
-  "start": 19.38,
-  "end": 19.404,
+  "start": 19.137,
+  "end": 19.161,
   "id": "w41"
  },
  {
   "beat": "B5",
   "text": "filter",
-  "start": 19.462,
-  "end": 19.752,
+  "start": 19.254,
+  "end": 19.834,
   "id": "w42"
  },
  {
   "beat": "B5",
   "text": "like",
-  "start": 19.81,
-  "end": 19.984,
+  "start": 19.915,
+  "end": 20.089,
   "id": "w43"
  },
  {
   "beat": "B5",
   "text": "a",
-  "start": 20.007,
-  "end": 20.031,
+  "start": 20.113,
+  "end": 20.136,
   "id": "w44"
  },
  {
   "beat": "B5",
   "text": "bilateral",
-  "start": 20.089,
-  "end": 20.599,
+  "start": 20.217,
+  "end": 20.821,
   "id": "w45"
  },
  {
   "beat": "B5",
   "text": "filter",
-  "start": 20.658,
-  "end": 20.971,
+  "start": 20.891,
+  "end": 21.332,
   "id": "w46"
  },
  {
   "beat": "B5",
   "text": "scans",
-  "start": 21.017,
-  "end": 21.343,
+  "start": 21.401,
+  "end": 21.808,
   "id": "w47"
  },
  {
   "beat": "B5",
   "text": "the",
-  "start": 21.377,
-  "end": 21.459,
+  "start": 21.831,
+  "end": 21.901,
   "id": "w48"
  },
  {
   "beat": "B5",
   "text": "skin",
-  "start": 21.505,
-  "end": 21.853,
+  "start": 21.947,
+  "end": 22.33,
   "id": "w49"
  },
  {
   "beat": "B5",
   "text": "edges",
-  "start": 22.306,
-  "end": 22.62,
+  "start": 22.435,
+  "end": 22.783,
   "id": "w50"
  },
  {
   "beat": "B5",
   "text": "stay",
-  "start": 22.643,
-  "end": 22.933,
+  "start": 22.806,
+  "end": 23.166,
   "id": "w51"
  },
  {
   "beat": "B5",
   "text": "texture",
-  "start": 22.991,
-  "end": 23.363,
+  "start": 23.236,
+  "end": 23.7,
   "id": "w52"
  },
  {
   "beat": "B5",
   "text": "is",
-  "start": 23.386,
-  "end": 23.444,
+  "start": 23.723,
+  "end": 23.793,
   "id": "w53"
  },
  {
   "beat": "B5",
   "text": "wiped",
-  "start": 23.525,
-  "end": 23.85,
+  "start": 23.874,
+  "end": 24.188,
   "id": "w54"
  },
  {
   "beat": "B5",
   "text": "Pores",
-  "start": 23.943,
-  "end": 24.338,
+  "start": 24.257,
+  "end": 24.675,
   "id": "w55"
  },
  {
   "beat": "B5",
   "text": "freckles",
-  "start": 24.419,
-  "end": 24.918,
+  "start": 24.757,
+  "end": 25.198,
   "id": "w56"
  },
  {
   "beat": "B5",
   "text": "fine",
-  "start": 24.988,
-  "end": 25.243,
+  "start": 25.267,
+  "end": 25.569,
   "id": "w57"
  },
  {
   "beat": "B5",
   "text": "hairs",
-  "start": 25.29,
-  "end": 25.615,
+  "start": 25.639,
+  "end": 26.011,
   "id": "w58"
  },
  {
   "beat": "B6",
   "text": "Next",
-  "start": 27.082,
-  "end": 27.384,
+  "start": 26.928,
+  "end": 27.265,
   "id": "w59"
  },
  {
   "beat": "B6",
   "text": "the",
-  "start": 27.43,
-  "end": 27.512,
+  "start": 27.311,
+  "end": 27.393,
   "id": "w60"
  },
  {
   "beat": "B6",
   "text": "points",
-  "start": 27.581,
-  "end": 27.871,
+  "start": 27.451,
+  "end": 27.741,
   "id": "w61"
  },
  {
   "beat": "B6",
   "text": "are",
-  "start": 27.918,
-  "end": 28.022,
+  "start": 27.799,
+  "end": 27.927,
   "id": "w62"
  },
  {
   "beat": "B6",
   "text": "shifted",
-  "start": 28.057,
-  "end": 28.464,
+  "start": 27.973,
+  "end": 28.495,
   "id": "w63"
  },
  {
   "beat": "B6",
   "text": "and",
-  "start": 28.51,
-  "end": 28.591,
+  "start": 28.565,
+  "end": 28.67,
   "id": "w64"
  },
  {
   "beat": "B6",
   "text": "the",
-  "start": 28.638,
-  "end": 28.707,
+  "start": 28.716,
+  "end": 28.786,
   "id": "w65"
  },
  {
   "beat": "B6",
   "text": "image",
-  "start": 28.777,
-  "end": 29.091,
+  "start": 28.855,
+  "end": 29.204,
   "id": "w66"
  },
  {
   "beat": "B6",
   "text": "stretches",
-  "start": 29.125,
-  "end": 29.671,
+  "start": 29.25,
+  "end": 29.807,
   "id": "w67"
  },
  {
   "beat": "B6",
   "text": "eyes",
-  "start": 29.764,
-  "end": 30.019,
+  "start": 29.924,
+  "end": 30.179,
   "id": "w68"
  },
  {
   "beat": "B6",
   "text": "grow",
-  "start": 30.101,
-  "end": 30.321,
+  "start": 30.272,
+  "end": 30.55,
   "id": "w69"
  },
  {
   "beat": "B6",
   "text": "the",
-  "start": 30.391,
-  "end": 30.472,
+  "start": 30.632,
+  "end": 30.725,
   "id": "w70"
  },
  {
   "beat": "B6",
   "text": "jaw",
-  "start": 30.542,
-  "end": 30.739,
+  "start": 30.795,
+  "end": 31.015,
   "id": "w71"
  },
  {
   "beat": "B6",
   "text": "narrows",
-  "start": 30.809,
-  "end": 31.227,
+  "start": 31.097,
+  "end": 31.584,
   "id": "w72"
  },
  {
   "beat": "B7",
   "text": "Last",
-  "start": 31.644,
-  "end": 31.957,
+  "start": 32.628,
+  "end": 32.906,
   "id": "w73"
  },
  {
   "beat": "B7",
   "text": "light",
-  "start": 32.016,
-  "end": 32.178,
+  "start": 32.987,
+  "end": 33.196,
   "id": "w74"
  },
  {
   "beat": "B7",
   "text": "is",
-  "start": 32.248,
-  "end": 32.341,
+  "start": 33.243,
+  "end": 33.324,
   "id": "w75"
  },
  {
   "beat": "B7",
   "text": "added",
-  "start": 32.41,
-  "end": 32.724,
+  "start": 33.417,
+  "end": 33.765,
   "id": "w76"
  },
  {
   "beat": "B7",
   "text": "and",
-  "start": 32.77,
-  "end": 32.863,
+  "start": 33.835,
+  "end": 33.963,
   "id": "w77"
  },
  {
   "beat": "B7",
   "text": "shadows",
-  "start": 32.909,
-  "end": 33.269,
+  "start": 34.009,
+  "end": 34.369,
   "id": "w78"
  },
  {
   "beat": "B7",
   "text": "soften",
-  "start": 33.304,
-  "end": 33.745,
+  "start": 34.404,
+  "end": 34.903,
   "id": "w79"
  },
  {
   "beat": "B8",
   "text": "It",
-  "start": 34.582,
-  "end": 34.733,
+  "start": 35.751,
+  "end": 35.913,
   "id": "w80"
  },
  {
   "beat": "B8",
   "text": "does",
-  "start": 34.791,
-  "end": 34.965,
+  "start": 35.983,
+  "end": 36.203,
   "id": "w81"
  },
  {
   "beat": "B8",
   "text": "this",
-  "start": 35.0,
-  "end": 35.151,
+  "start": 36.273,
+  "end": 36.447,
   "id": "w82"
  },
  {
   "beat": "B8",
   "text": "thirty",
-  "start": 35.197,
-  "end": 35.499,
+  "start": 36.505,
+  "end": 36.807,
   "id": "w83"
  },
  {
   "beat": "B8",
   "text": "times",
-  "start": 35.546,
-  "end": 35.789,
+  "start": 36.865,
+  "end": 37.109,
   "id": "w84"
  },
  {
   "beat": "B8",
   "text": "a",
-  "start": 35.836,
-  "end": 35.871,
+  "start": 37.144,
+  "end": 37.167,
   "id": "w85"
  },
  {
   "beat": "B8",
   "text": "second",
-  "start": 35.952,
-  "end": 36.312,
+  "start": 37.237,
+  "end": 37.678,
   "id": "w86"
  },
  {
   "beat": "B8",
   "text": "fresh",
-  "start": 36.37,
-  "end": 36.625,
+  "start": 37.817,
+  "end": 38.189,
   "id": "w87"
  },
  {
   "beat": "B8",
   "text": "on",
-  "start": 36.672,
-  "end": 36.741,
+  "start": 38.27,
+  "end": 38.432,
   "id": "w88"
  },
  {
   "beat": "B8",
   "text": "every",
-  "start": 36.834,
-  "end": 37.09,
+  "start": 38.525,
+  "end": 38.769,
   "id": "w89"
  },
  {
   "beat": "B8",
   "text": "frame",
-  "start": 37.159,
-  "end": 37.519,
+  "start": 38.839,
+  "end": 39.222,
   "id": "w90"
  },
  {
   "beat": "B9a",
   "text": "The",
-  "start": 37.971,
-  "end": 38.122,
+  "start": 39.422,
+  "end": 39.549,
   "id": "w91"
  },
  {
   "beat": "B9a",
   "text": "face",
-  "start": 38.215,
-  "end": 38.517,
+  "start": 39.608,
+  "end": 39.863,
   "id": "w92"
  },
  {
   "beat": "B9a",
   "text": "in",
-  "start": 38.551,
-  "end": 38.633,
+  "start": 39.898,
+  "end": 39.956,
   "id": "w93"
  },
  {
   "beat": "B9a",
   "text": "the",
-  "start": 38.679,
-  "end": 38.749,
+  "start": 39.991,
+  "end": 40.06,
   "id": "w94"
  },
  {
   "beat": "B9a",
   "text": "filter",
-  "start": 38.819,
-  "end": 39.202,
+  "start": 40.13,
+  "end": 40.525,
   "id": "w95"
  },
  {
   "beat": "B9a",
   "text": "is",
-  "start": 39.26,
-  "end": 39.364,
+  "start": 40.583,
+  "end": 40.687,
   "id": "w96"
  },
  {
   "beat": "B9a",
   "text": "a",
-  "start": 39.411,
-  "end": 39.445,
+  "start": 40.734,
+  "end": 40.757,
   "id": "w97"
  },
  {
   "beat": "B9a",
   "text": "calculated",
-  "start": 39.492,
-  "end": 40.119,
+  "start": 40.827,
+  "end": 41.454,
   "id": "w98"
  },
  {
   "beat": "B9a",
   "text": "face",
-  "start": 40.177,
-  "end": 40.56,
+  "start": 41.523,
+  "end": 42.011,
   "id": "w99"
  },
  {
   "beat": "B9b",
   "text": "Real",
-  "start": 41.073,
-  "end": 41.305,
+  "start": 42.211,
+  "end": 42.466,
   "id": "w100"
  },
  {
   "beat": "B9b",
   "text": "skin",
-  "start": 41.363,
-  "end": 41.595,
+  "start": 42.524,
+  "end": 42.791,
   "id": "w101"
  },
  {
   "beat": "B9b",
   "text": "has",
-  "start": 41.653,
-  "end": 41.77,
+  "start": 42.861,
+  "end": 43.012,
   "id": "w102"
  },
  {
   "beat": "B9b",
   "text": "texture",
-  "start": 41.839,
-  "end": 42.292,
+  "start": 43.093,
+  "end": 43.627,
   "id": "w103"
  },
  {
   "beat": "B9b",
   "text": "It",
-  "start": 42.35,
-  "end": 42.443,
+  "start": 43.697,
+  "end": 43.813,
   "id": "w104"
  },
  {
   "beat": "B9b",
   "text": "should",
-  "start": 42.501,
-  "end": 42.78,
+  "start": 43.871,
+  "end": 44.196,
   "id": "w105"
  }
 ]

@@ -1,14 +1,17 @@
 // Ayna Arkası · 001 · shared drawing library for every scene.
-// Line-art portrait from storyboards/C/src/face.js (illustration, not a real person), re-coloured
+// Line-art portrait from storyboards/C/src/face.js (illustration, not a real person; v3: blonde, fair skin), re-coloured
 // to the final brand palette, split into named parts so the filter steps (smoothing, warp, light)
 // can be driven as a pure function of timeline time. Face coordinates: viewBox 0 0 400 500.
 (function () {
   "use strict";
   const C = {
     toz: "#F2D3D1", keten: "#F8F4EC", adacayi: "#BCC5B0", murekkep: "#2C3A31", koyu: "#4D6A55",
-    // portrait colours are locked (SPEC §1.1, G-03): skin never changes in any frame
-    SKIN: "#8A5A3E", LINE: "#2B1A16", HAIR: "#22161B", LIPU: "#6B3832", LIPL: "#7A443C",
-    EYE: "#F3E6DE", FRECKLE: "#5A3523", FUZZ: "#4A2C20", PORE: "#B98263", SHIRT: "#4D6A55",
+    // portrait colours are locked (SPEC §1.1, G-03): skin never changes in any frame.
+    // v3 (client revision): fair skin, warm golden blonde loose waves; the dark ink outline keeps the
+    // face separate from light grounds. Texture stays visible: freckles, pores, fine (peach) hairs.
+    SKIN: "#EDC6A6", LINE: "#3A2418", HAIR: "#D9AE62", HAIRD: "#A8783A", HAIRL: "#ECCB86", BROW: "#8F6234",
+    IRIS: "#5B7C8A", LIPU: "#B66F66", LIPL: "#C98479",
+    EYE: "#FBF3EC", FRECKLE: "#A9623D", FUZZ: "#B68757", PORE: "#C9906F", SHIRT: "#4D6A55", HI: "#FFF6EC",
   };
   const P = {
     face: "M200 72 C292 72 322 150 318 232 C315 322 280 398 200 420 C120 398 85 322 82 232 C78 150 108 72 200 72 Z",
@@ -69,18 +72,23 @@
     return s;
   }
   function hair() {
-    const r = rng(3); let s = "";
-    for (let i = 0; i < 70; i++) { const a = Math.PI * (0.92 + r() * 1.16), R = 150 + r() * 36;
-      s += `<circle cx="${f1(200 + Math.cos(a) * R * 1.05)}" cy="${f1(190 + Math.sin(a) * R * 0.95)}" r="${f1(26 + r() * 18)}"/>`; }
-    for (let i = 0; i < 26; i++) { const side = i % 2 ? 1 : -1;
-      s += `<circle cx="${f1(200 + side * (120 + r() * 40))}" cy="${f1(200 + r() * 170)}" r="${f1(22 + r() * 14)}"/>`; }
-    return `<g fill="${C.HAIR}">${s}</g>`;
+    // back mass: loose waves from the crown to the shoulders, behind the face and neck
+    const back = "M200 44 C296 40 350 112 350 214 C350 290 338 352 352 410 Q362 440 344 462 Q318 476 292 462 " +
+      "Q300 420 296 360 L296 214 Q200 168 104 214 L104 360 Q100 420 108 462 Q82 476 56 462 Q38 440 48 410 " +
+      "C62 352 50 290 50 214 C50 112 104 48 200 44 Z";
+    let s = `<path d="${back}" fill="${C.HAIR}" stroke="${C.HAIRD}" stroke-width="3" stroke-linejoin="round"/>`;
+    const strands = ["M78 150 Q58 230 70 300 Q80 360 64 430", "M92 196 Q78 270 88 340 Q96 400 84 452",
+      "M322 150 Q342 230 330 300 Q320 360 336 430", "M308 196 Q322 270 312 340 Q304 400 316 452",
+      "M62 250 Q54 300 60 350", "M338 250 Q346 300 340 350", "M120 70 Q84 100 70 160", "M280 70 Q316 100 330 160"];
+    s += strands.map((d) => `<path d="${d}" stroke="${C.HAIRD}" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".85"/>`).join("");
+    s += `<path d="M70 210 Q62 260 72 300 M330 210 Q338 260 328 300" stroke="${C.HAIRL}" stroke-width="5" fill="none" stroke-linecap="round" opacity=".8"/>`;
+    return s;
   }
   function curls() {
-    const r = rng(11); let s = "";
-    for (let i = 0; i < 40; i++) { const a = Math.PI * (0.95 + r() * 1.1), R = 165 + r() * 30;
-      s += `<path d="M${f1(200 + Math.cos(a) * R)} ${f1(190 + Math.sin(a) * R * 0.9)} a7 7 0 1 1 9 4" stroke="#4A3540" stroke-width="2" fill="none"/>`; }
-    return s;
+    // front: the parting and a few strands over the hair cap (no curls: loose waves)
+    return `<path d="M196 74 Q170 96 150 112 M204 74 Q232 96 252 110 M176 82 Q140 100 116 140 M226 82 Q262 100 286 140" ` +
+      `stroke="${C.HAIRD}" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".85"/>` +
+      `<path d="M190 80 Q160 98 136 126 M212 80 Q246 98 270 126" stroke="${C.HAIRL}" stroke-width="4" fill="none" stroke-linecap="round" opacity=".75"/>`;
   }
 
   // ---- 478 landmark points (SPEC §2): contour, brows, eyes+lids, iris, nose, lips, fill ----
@@ -138,7 +146,7 @@
     const bg = o.bg ? `<rect id="${p}-bg" x="-2000" y="-2000" width="4400" height="4500" fill="${o.bg}"/>` : "";
     const eye = (side, path, lid, [cx, cy]) =>
       `<g id="${p}-eye${side}"><path d="${path}" fill="${C.EYE}" stroke="${C.LINE}" stroke-width="${lw}"/>` +
-      `<circle cx="${cx}" cy="${cy}" r="10" fill="${C.LINE}"/><circle cx="${cx + 3}" cy="${cy - 3}" r="2.6" fill="${C.EYE}"/>` +
+      `<circle cx="${cx}" cy="${cy}" r="10" fill="${C.IRIS}" stroke="${C.LINE}" stroke-width="1.6"/><circle cx="${cx}" cy="${cy}" r="4.6" fill="${C.LINE}"/><circle cx="${cx + 3}" cy="${cy - 3}" r="2.6" fill="${C.EYE}"/>` +
       `<path d="${lid}" ${st} stroke-width="2" opacity=".7"/></g>`;
     let body =
       hair() +
@@ -151,13 +159,13 @@
       `<g clip-path="url(#${p}-fc)">` +
       `<g clip-path="url(#${p}-tc)"><g id="${p}-tex">${texture(7)}</g></g>` +
       `<ellipse class="${p}-shd" cx="200" cy="324" rx="24" ry="6" fill="${C.FRECKLE}" opacity=".3"/>` +
-      `<g id="${p}-hi" opacity="0" fill="${C.keten}" filter="url(#${p}-blur)">` +
+      `<g id="${p}-hi" opacity="0" fill="${C.HI}" filter="url(#${p}-blur)">` +
       `<ellipse cx="200" cy="140" rx="60" ry="25"/><ellipse cx="146" cy="268" rx="45" ry="20"/>` +
       `<ellipse cx="254" cy="268" rx="45" ry="20"/><ellipse cx="210" cy="262" rx="10" ry="35"/></g></g>` +
-      `<path d="M100 156 Q112 76 200 72 Q288 76 300 156 Q284 120 248 110 Q226 126 202 114 Q176 128 154 112 Q118 124 100 156 Z" fill="${C.HAIR}"/>` +
+      `<path d="M100 156 Q112 76 200 72 Q288 76 300 156 Q284 120 248 110 Q226 126 202 114 Q176 128 154 112 Q118 124 100 156 Z" fill="${C.HAIR}" stroke="${C.HAIRD}" stroke-width="2.4" stroke-linejoin="round"/>` +
       curls() +
-      `<path d="${P.browL}" ${st} stroke-width="9"/><path d="${P.browR}" ${st} stroke-width="9"/>` +
-      `<path d="M130 192 l4 -6 M142 186 l4 -7 M156 182 l3 -7 M170 182 l3 -6 M230 182 l-3 -6 M244 182 l-3 -7 M258 186 l-4 -7 M270 192 l-4 -6" stroke="${C.LINE}" stroke-width="2" stroke-linecap="round"/>` +
+      `<path d="${P.browL}" stroke="${C.BROW}" stroke-linecap="round" fill="none" stroke-width="9"/><path d="${P.browR}" stroke="${C.BROW}" stroke-linecap="round" fill="none" stroke-width="9"/>` +
+      `<path d="M130 192 l4 -6 M142 186 l4 -7 M156 182 l3 -7 M170 182 l3 -6 M230 182 l-3 -6 M244 182 l-3 -7 M258 186 l-4 -7 M270 192 l-4 -6" stroke="${C.BROW}" stroke-width="2" stroke-linecap="round"/>` +
       eye("L", P.eyeL, P.lidL, EYES[0]) + eye("R", P.eyeR, P.lidR, EYES[1]) +
       `<path d="${P.nose}" ${st} stroke-width="3"/><path d="${P.nostril}" ${st} stroke-width="3.4"/>` +
       `<path d="${P.lipU}" fill="${C.LIPU}" stroke="${C.LINE}" stroke-width="3"/><path d="${P.lipL}" fill="${C.LIPL}" stroke="${C.LINE}" stroke-width="3"/>` +
