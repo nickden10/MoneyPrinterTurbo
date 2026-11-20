@@ -1,16 +1,30 @@
-# REVIEW · 001 · v2 · "Bir selfie'nin 33 milisaniyesi" (TR + EN)
+# REVIEW · 001 · v3 · "Bir selfie'nin 33 milisaniyesi" (TR + EN)
 
 Durum: **iki dilde taslak önizleme hazır, teslim render'ı YAPILMADI** (müşteri onayı bekleniyor).
 
 | Dosya | Ne |
 |---|---|
-| `../onizleme/001-taslak-v2-tr.mp4` | TR, draft, 1080×1920, 30 fps, **44,633 sn** (1339 kare), AAC 48 kHz stereo |
-| `../onizleme/001-taslak-v2-en.mp4` | EN, aynı resim, EN ses + EN yazılar + EN altyazı, 44,633 sn |
-| `../onizleme/001-ses-en.m4a` | YouTube çok dilli ses izi (EN miks), 44,633 sn, TR videoya hizalı |
-| `../onizleme/001-tr.srt`, `../onizleme/001-en.srt` | Kelime saatlerinden altyazı |
-| `../onizleme/kareler-v2.png` (TR), `kareler-v2-en.png` (EN) | 8 kare: 0 · 6,5 · 11,6 · 17,5 · 24,5 · 29 · 36 · 43,5 sn |
+| `../onizleme/001-taslak-v3-tr.mp4` | TR, draft, 1080×1920, 30 fps, **46,400 sn** (1392 kare), AAC 48 kHz stereo |
+| `../onizleme/001-taslak-v3-en.mp4` | EN, aynı resim, EN ses + yazılar + altyazı, 46,400 sn |
+| `../onizleme/001-ses-en.m4a` | YouTube çok dilli ses izi (EN miks), 46,400 sn, TR videoya hizalı (v3 için yeniden yapıldı) |
+| `../onizleme/001-tr.srt`, `001-en.srt` | Kelime saatlerinden, v3 sesine göre |
+| `../onizleme/kareler-v3.png` (TR), `kareler-v3-en.png` | 8 kare: 0 · 6,5 · 11,6 · 17,6 · 24,5 · 29 · 37 · 45 sn |
 
-v1 (edge-tts sesi, eski düzen): `../onizleme/001-taslak.mp4`, `kareler.png`, üretici `../araclar/_v1/build-v1.py`.
+v2 dosyaları (`001-taslak-v2-*.mp4`, `kareler-v2*.png`) ve v1 (`001-taslak.mp4`) karşılaştırma için duruyor.
+
+## 0. v3 müşteri revizyonu (v2'nin üstüne)
+
+1. **Daha doğal ses:** Metin dil başına tek istekle okundu (`eleven_multilingual_v2`, stability 0,38 · similarity 0,85 · style 0,35 · speaker boost · speed 1,0). Vuruş arasına 0,35 sn break etiketi kondu. "MediaPipe" normal yazıldı. TR'de 3 alım denendi (v2 araları yapışık, v3 yavaş ve hizalaması 0,3 sn kayık), C seçildi. EN tek alım. Ayrıntı: `../SES-NOTLARI.md` §2. Konuşma 44,3 sn → **video 46,40 sn** (≤ 55). Bütün sahne/altyazı saatleri `build.py` ile yeni kelime saatine kaydı.
+2. **Karakter:** Sarışın (sıcak altın sarısı, omuza inen dalgalı saç, koyu sarı tel çizgileri), açık ten `#EDC6A6`, mavi-gri göz, açık kahve kaşlar (`assets/lib/ayna.js`, eski çizim `assets/_v2/ayna-v2.js`). Doku duruyor: çiller `#A9623D`, gözenekler, açık renk ince tüyler. Ten rengi her karede sabit, açma adımı yok. Işık ayrı katman (`#FFF6EC`). İdealleştirme ya da cinselleştirme yok: aynı çizgi üslubu, aynı yüz geometrisi, sade gömlek.
+3. **Kontrast:** Koyu mürekkep dış çizgi (`#3A2418`) korunuyor. Açık ten toz pembe zeminde soluyordu, bu yüzden S4–S6 zemini **adaçayı** yapıldı (toz pembe artık sayılarda ve altyazının aktif kelimesinde). S1–S3'te açık renk büyük yazılar sarı saçın üstüne düştüğü için üst banda mürekkep bir geçiş perdesi (scrim, 0–660 px) eklendi. Telefon ekranı adaçayı, bitiş keten. Hepsi dış çizgiyle ayrışıyor.
+
+**v3 ölçümleri:** `lint` 0 hata, 3 uyarı (yoğun iz). `check --json` iki dilde **ok: true**. Kontrast TR 29/29, EN 24/27: 3 uyarı EN altyazı öbeği "texture is wiped." (23,2 sn), tek örnek, hap giriş geçişinin ortası (opaklık animasyonu). Craft, motion, runtime ve audio temiz. ffprobe iki video 46,400 sn = kök `data-duration`. Miks TR −14,0 LUFS / −2,5 dBTP, EN −14,0 LUFS / −2,5 dBTP. Kare 0, sahne ortaları ve bitiş iki dilde görüldü.
+
+**v3 açık notları:** S7/S8 telefonunda altyazı hapının alt kenarı gözlerin üst kenarına değiyor (P2: `VB_SCR` y −90 → −110 ile çözülür, render gerektirir). S1'de scrim alnın üst kısmını hafif koyulaştırıyor. Ses kulakla dinlenmedi (MediaPipe, bilateral).
+
+---
+
+(Aşağısı v2 notları, düzen ve iki dil yapısı aynen geçerli. Sayılar v2'ye ait.)
 
 ## 1. Ne değişti
 

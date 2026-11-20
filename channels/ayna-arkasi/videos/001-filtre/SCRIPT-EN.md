@@ -2,7 +2,7 @@
 
 Translation of `SENARYO.md` §1–§2 for foreign viewers. Same beats, same facts, same tone (calm, curious, no judgment words: no "flaw", "fix", "perfect", "fake"). Spoken by the client's own ElevenLabs voice clone ("deno tr", `oZLkvX3OQ4An5lUhNiUt`), `eleven_multilingual_v2`. Voice text lives in `araclar/metin.py` (`BEATS_EN`).
 
-**Timing rule:** one picture serves both languages. Every English beat starts at the Turkish beat start (`ses/el/beats.json`) or 0.15 s after the previous English beat if that one runs long. The English track ends at 42.78 s and the video at 44.63 s, so it never runs past the picture.
+**Timing rule:** one picture serves both languages. Every English beat starts at the Turkish beat start (`ses/el/beats.json`) or 0.15 s after the previous English beat if that one runs long. v3: the whole English text is read in ONE request, then cut in the breaths between beats; the English track ends at 44.20 s and the video at 46.40 s, so it never runs past the picture.
 
 ## Narration (plain)
 
@@ -16,7 +16,7 @@ Translation of `SENARYO.md` §1–§2 for foreign viewers. Same beats, same fact
 | B2 | Arithmetic | 30 frames a second means about 33 milliseconds per frame. | Thirty frames … thirty-three … | 10 | 5.26 | 5.26 |
 | B3 | Dive 1 | Look closer: pixels. | same | 3 | 10.24 | 10.24 |
 | B4 | 478 points | First, a face model, for example MediaPipe, marks 478 points on the face. | … four hundred seventy-eight points … | 15 | 12.53 | 12.53 |
-| B5 | Smoothing | Then a filter like a bilateral filter scans the skin: edges stay, texture is wiped. Pores, freckles, fine hairs. | same (read at speed 1.1) | 19 | 19.13 | 19.13 |
+| B5 | Smoothing | Then a filter like a bilateral filter scans the skin: edges stay, texture is wiped. Pores, freckles, fine hairs. | same | 19 | 19.13 | 19.13 |
 | B6 | Warp | Next, the points are shifted and the image stretches: eyes grow, the jaw narrows. | same | 14 | 27.08 | 27.08 |
 | B7 | Light | Last, light is added and shadows soften. | same | 7 | 31.64 | 31.64 |
 | B8 | Pull back | It does this 30 times a second, fresh on every frame. | … thirty times … | 11 | 34.58 | 34.58 |
@@ -24,7 +24,7 @@ Translation of `SENARYO.md` §1–§2 for foreign viewers. Same beats, same fact
 | B9b | Channel line | Real skin has texture. It should. | same | 6 | 41.07 | 40.41 |
 | End | End card | "Ayna Arkası" wordmark · "Look behind the mirror." · "Sources in the description" | (silent) | | | |
 
-Total: 106 words.
+Total: 106 words. The start columns above are the v2 takes; the v3 times (one continuous read, speed 1.0) are in `SES-NOTLARI.md` §4. In v3 the Turkish voice also says "MediaPipe" as written.
 
 ## Translation notes
 

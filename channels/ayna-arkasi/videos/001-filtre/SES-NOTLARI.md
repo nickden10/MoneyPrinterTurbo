@@ -1,79 +1,76 @@
-# 001 · Ses notları (v2: müşterinin kendi sesi, TR + EN)
+# 001 · Ses notları (v3: tek parça okuma, müşterinin kendi sesi, TR + EN)
 
-> **Ses = müşterinin kendi ElevenLabs ses klonu** ("deno tr", voice_id `oZLkvX3OQ4An5lUhNiUt`, kategori: cloned, Türkçe). AI ses klonu, sahibinin izniyle kullanılıyor. Açıklamadaki beyan bunu söylemeli: "Seslendirme: kanal sahibinin AI ses klonu." edge-tts taslağı artık kullanılmıyor. Eski dosyalar `proje/assets/_eski-edge/` ve `ses/parcalar/` altında duruyor (silinmedi).
+> **Ses = müşterinin kendi ElevenLabs ses klonu** ("deno tr", voice_id `oZLkvX3OQ4An5lUhNiUt`, cloned, Türkçe). AI ses klonu, sahibinin izniyle. Açıklamaya şu beyan girmeli: "Seslendirme: kanal sahibinin AI ses klonu."
+> Önceki sürümler silinmedi: v1 edge-tts → `proje/assets/_eski-edge/`, `ses/parcalar/` · v2 vuruş vuruş ElevenLabs → `proje/assets/_v2/`, `ses/el/`, `ses/el-en/`.
 
 Hazırlayan: Voice AI Integration Engineer rolü · Tarih: 2026-11-20
 
-## 1. Ayarlar
+## 1. Neden değişti (müşteri: "sesim yapay geliyor")
 
-| Ayar | Değer |
-|---|---|
-| Ses | "deno tr" · `oZLkvX3OQ4An5lUhNiUt` (başka ses kullanılmadı) |
-| Model | `eleven_multilingual_v2` (v3'e gerek kalmadı: sayılar ve "bilateral" hizalamada düzgün) |
-| Uç nokta | `POST /v1/text-to-speech/{voice_id}/with-timestamps?output_format=mp3_44100_128` (ses + karakter hizalaması) |
-| voice_settings | stability 0,5 · similarity_boost 0,8 · style 0,2 · use_speaker_boost açık · **speed 1,0** (EN B5: 1,1) |
-| Tutarlılık | `seed` 1001. Her vuruşta `previous_text` / `next_text` verildi (vuruşlar arası tonlama kopmasın diye) |
-| Üretim | Vuruş başına bir istek, B1…B9b: `araclar/el_parcalar.py` (metin `araclar/metin.py`) → `ses/el/` (TR), `ses/el-en/` (EN) |
-| Kelime saatleri | Karakter hizalaması → kelime (boşluk ve noktalama böler; noktalamanın süresi kelimeye katılmaz). İlk kelime 0,00'a sabit geldiği için ilk sese kırpıldı |
-| Birleştirme | `araclar/ses_birlestir.py`: her parçanın sessizliği kırpıldı (öncesi 30 ms, sonrası 120 ms pay), SENARYO'daki nefes aralarıyla dizildi. 48 kHz, mono, 16 bit |
-| Ses yüksekliği | ffmpeg `loudnorm` iki geçiş, hedef −14 LUFS / −1,5 dBTP |
-| Kredi | TR 1 tam alım (+ B4 için 1 deneme) · EN 1 tam alım (+ B5 yeniden). 401/402/kota hatası yok |
+v2'de her vuruş ayrı istekle üretilmişti. Her cümle "soğuk" başlıyordu, tonlama vuruşlar arasında kopuyordu. Ayrıca stability 0,5 yüksekti ve "Midiya Payp" fonetik yazımı robotik duruyordu. v3'te:
+- **Bütün metin dil başına TEK istekle** okundu (`araclar/el_tam.py`). Vuruşlar arasına v2'nin `<break time="0,35s" />` etiketi kondu: okuma yeniden başlamıyor, cümle aralarında nefes alınıyor.
+- **"MediaPipe" normal yazıldı.** Hizalamada sorun görünmedi (aşağıda).
+- Vuruş ve kelime saatleri sonradan karakter hizalamasından çıkarıldı.
 
-**Tempo kararı ("ses saattir"):** Müşterinin doğal temposu korundu (speed 1,0, hızlandırma yok). Konuşma 0,20–42,73 sn. Video bu yüzden **44,63 sn** (1339 kare): son cümle ≥ 2 sn tutuluyor, bitiş kartı onun altında geliyor. Hedef aralık 33–45 sn, sınır 59 sn: ikisine de uyuyor.
+## 2. Alımlar (TR: 3 / 3 hak, EN: 1 / 3 hak). 401/402/kota hatası yok
 
-## 2. Çıktılar
+| Alım | Model | Ayarlar | Konuşma | Tempo | Vuruş araları | Sonuç |
+|---|---|---|---|---|---|---|
+| TR A | `eleven_multilingual_v2` | stab 0,38 · sim 0,85 · style 0,35 · speed 1,0 · boost | 41,0 sn | 130 k/dk | 0,07–0,56 sn. B1→B2, B4→B5 ve B5→B6 arası yalnızca 0,07 sn | ✗ Cümleler birbirine yapışıyor, nefes yok |
+| TR B | `eleven_v3` | stab 0,5 ("Natural") · sim 0,85 · style 0,35 | 50,6 sn | 105 k/dk | 0,30–0,52 sn | ✗ Yavaş (video ≈ 52,7 sn). **Hizalama sese göre ≈ 0,3 sn erken**: sessizlik algılamayla karşılaştırıldı (ör. "Yakından" hizalamada 9,88, seste 10,17). Altyazı kayardı |
+| **TR C ✅** | `eleven_multilingual_v2` + vuruş arası `<break time="0.35s" />` | stab 0,38 · sim 0,85 · style 0,35 · speed 1,0 · boost | **44,3 sn** | 120 k/dk | **0,44–0,81 sn** (doğal nefes) | **Seçildi.** Cümle içi en uzun ara 0,33 sn ("silinir." → "Gözenekler"), acele edilmiş kelime yok. Hizalama sessizliklerle ±0,05 sn tutuyor |
+| **EN A ✅** | aynı (v2 + break) | aynı | 42,4 sn | 150 k/dk | 0,43–0,79 sn | Seçildi (tek alım yetti) |
+
+**Kazanan: `eleven_multilingual_v2`, stability 0,38 · similarity_boost 0,85 · style 0,35 · use_speaker_boost açık · speed 1,0, tek istek, vuruş arası 0,35 sn break etiketi, seed 1001.**
+
+## 3. Çıktılar ve süre
 
 | Dosya | İçerik |
 |---|---|
-| `proje/assets/voice.wav` | TR, 43,54 sn, ölçülen −14,7 LUFS / −1,5 dBTP (yalnız ses) |
-| `proje/assets/words.json` | TR, 89 kelime, eski şemanın aynısı (`beat, text, start, end, id`), sıra SENARYO §2 ile birebir |
-| `proje/assets/voice-en.wav` | EN, 43,61 sn, −14,8 LUFS / −1,5 dBTP |
-| `proje/assets/words-en.json` | EN, 106 kelime |
-| `ses/el/beats.json`, `ses/el-en/beats.json` | Vuruş başı/sonu |
-| `onizleme/001-ses-en.m4a` | YouTube çok dilli ses izi: EN miks (ses + aynı 4 SFX), AAC 48 kHz stereo, **44,633 sn = TR videonun süresi**, TR zaman çizelgesine hizalı |
-| `onizleme/001-tr.srt`, `onizleme/001-en.srt` | Kelime saatlerinden altyazı (35'er öbek, B1 ve B9b dahil) |
+| `proje/assets/voice.wav` | TR, 44,97 sn, 48 kHz mono. Okuma bütün bırakıldı, yalnızca konuşma 0,20 sn'de başlasın diye kaydırıldı. −14,6 LUFS / −1,5 dBTP |
+| `proje/assets/words.json` | TR, 89 kelime, aynı şema. "MediaPipe" karakter saatinde "Media" + "Pipe" olarak bölündü (89'luk sıra korunsun diye) |
+| `proje/assets/voice-en.wav`, `words-en.json` | EN, 106 kelime. Okuma vuruş aralarındaki nefesin ortasından kesildi, her vuruş TR vuruşunun başına kondu. Vuruş içine dokunulmadı. −14,8 LUFS |
+| `ses/v3-tr/`, `ses/v3-en/` | Bütün alımlar (mp3, ham hizalama, istek, kelimeler) + `beats.json` |
+| `onizleme/001-ses-en.m4a` | YouTube çok dilli ses izi: EN miks (ses + aynı 4 SFX), AAC 48 kHz, **46,400 sn = TR video**, TR zaman çizelgesine hizalı |
+| `onizleme/001-tr.srt`, `001-en.srt` | 35'er öbek, kelime saatlerinden |
 
-**Miks (render edilmiş dosyada ölçüldü):** TR **−14,0 LUFS**, gerçek tepe −2,9 dBTP, LRA 2,6 LU · EN **−14,0 LUFS**, tepe −2,3 dBTP. Kazanç: TR 0,767, EN 0,776 (mono ses stereo'ya açılınca yükseliyor; ilk v2 render −14,3 ölçüldü, +0,3 dB düzeltildi).
+**Süre:** Konuşma 0,20–44,28 sn ("da"). **Video 46,40 sn** (1392 kare): son cümle ≥ 2 sn, bitiş kartı altında. Sınır 55 sn. EN konuşma 44,20 sn'de biter.
+**Miks (render'da ölçüldü):** TR −14,0 LUFS / −2,5 dBTP · EN −14,0 LUFS / −2,5 dBTP (kazanç TR 0,758, EN 0,776).
 
-## 3. Vuruş süreleri (TR, video saati)
+## 4. Vuruşlar (TR, video saati) ve EN yerleşimi
 
-| Vuruş | Başlangıç (sn) | Bitiş (sn) | Sonraki ara (sn) |
-|---|---|---|---|
-| B1 Kanca | 0,20 | 4,96 | 0,30 |
-| B2 Hesap | 5,26 | 9,94 | 0,30 |
-| B3 Dalış | 10,24 | 12,33 | 0,20 |
-| B4 478 nokta | 12,53 | 18,83 | 0,30 |
-| B5 Yumuşatma | 19,13 | 26,83 | 0,25 |
-| B6 Esnetme | 27,08 | 31,44 | 0,20 |
-| B7 Işık | 31,64 | 34,28 | 0,30 |
-| B8 Geri çekilme | 34,58 | 37,40 | 0,35 |
-| B9a Ödül | 37,75 | 40,11 | 0,30 |
-| B9b Kanal cümlesi | 40,41 | 43,04 (son kelime "da" 42,73'te biter) | — |
-
-Bitiş değerleri parçanın kuyruğunu (nefes/sönüm) içeriyor. Anahtar kelimeler (kesmeler bunlara bağlı, `araclar/build.py`): "Saniyede" 5,26 · "Yakından" 10,24 · "Önce" 12,53 · "Midiya Payp" 14,32 · "nokta" 17,28 · "Sonra" 19,12 · "doku" 23,12 · "noktalar" 27,64 · "ışık" 32,09 · "otuz kez" 35,35 · "hesaplanmış" 38,83 · "Gerçek" 40,41 · "doku" 41,23.
-
-**EN yerleşimi:** Her EN vuruşu TR vuruşunun başladığı anda başlar (uzun gelen vuruş varsa bir öncekinin bitişinden 0,15 sn sonra). B9a 0,22 sn, B9b 0,67 sn geç başlıyor (B8 ve B9a İngilizcede biraz uzun). Sahne içi açılışlar ve altyazılar EN kelimelerine bağlanıyor, sahne kesmeleri TR saatinde kalıyor. EN konuşma 42,78 sn'de biter, video 44,63 sn.
-
-## 4. Telaffuz (hizalamaya göre; **kulakla dinlenmedi**)
-
-| Öğe | Karar | Hizalamada görülen |
+| Vuruş | TR başı–sonu (sn) | EN başı–sonu (sn) |
 |---|---|---|
-| MediaPipe (TR) | **"Midiya Payp" yazımı kullanıldı** | İki biçim de denendi (B4). "Midiya" 0,32 sn + "Payp" 0,34 sn, ardından virgüle rağmen yalnızca 0,09 sn ara: akıcı. "MediaPipe" tek kelime 0,84 sn ve arkasından 0,30 sn duraklama getirdi (vuruş 0,5 sn uzadı), ortasında da 0,10 sn sessizlik var ("Media … Pipe"). Fonetik yazımda da "Midiya" ile "Payp" arasında 0,10 sn sessizlik var: iki ayrı kelime gibi duyulabilir. ⚠️ Dinlenmeli |
-| MediaPipe (EN) | Özgün yazım | 0,62 sn, doğal |
-| 33 → "otuz üç milisaniyeden" | ✅ | "otuz" 2,51 · "üç" 2,90 · "milisaniyeden" 3,10: tek nefes, ayrı duraklama yok |
-| 478 → "dört yüz yetmiş sekiz" | ✅ | 15,98–17,21, dört kelime eşit tempoda; "yüzde" yok ("yüzün üstünde") |
-| bilateral | ⚠️ dinlenmeli | 0,62 sn, komşularla aynı tempo. Vurgunun "-ral"a kayıp kaymadığı hizalamadan anlaşılmaz |
-| EN sayılar | ✅ | "thirty-three" 0,49 sn, "four hundred seventy-eight" 1,19 sn |
-| "Yakından bak" davet tonu, "vardır" vurgusu, "olmalı da" yumuşaklığı | ⚠️ | SSML yok. Ton müşterinin klonundan geliyor. Dinleyip gerekirse yalnızca o vuruş yeniden üretilmeli (`python3 araclar/el_parcalar.py ses/el B9b`) |
+| B1 | 0,20–4,66 | 0,20–4,50 |
+| B2 | 5,36–9,59 | 5,36–9,22 |
+| B3 | 10,22–12,02 | 10,22–12,07 |
+| B4 | 12,54–18,39 | 12,54–18,23 |
+| B5 | 18,87–26,31 | 18,87–26,01 |
+| B6 | 26,93–32,06 | 26,93–31,58 |
+| B7 | 32,63–35,17 | 32,63–34,90 |
+| B8 | 35,75–38,74 | 35,75–39,22 |
+| B9a | 39,18–41,34 | 39,42–42,01 (B8 İngilizcede 0,25 sn uzun) |
+| B9b | 42,15–44,47 | 42,21–44,20 |
 
-## 5. Yeniden üretmek
+Anahtar kelimeler (kesmeler bunlara bağlı): "Saniyede" 5,36 · "Yakından" 10,22 · "Önce" 12,54 · "MediaPipe" 14,32 · "nokta" 17,20 · "Sonra" 18,87 · "doku" 22,70 · "noktalar" 27,51 · "ışık" 33,13 · "otuz kez" 36,53 · "hesaplanmış" 40,13 · "Gerçek" 42,15 · "doku" 43,04.
+
+## 5. Telaffuz (hizalamaya göre; **kulakla dinlenmedi**)
+
+| Öğe | Durum |
+|---|---|
+| MediaPipe (TR, normal yazım) | 14,32–15,00 (0,69 sn). Ortasında sessizlik yok, ardından virgül için 0,06 sn. Komşu kelimelerle aynı tempoda ✅. Türkçe sesin İngilizce "midiəpaɪp" mi, harf harf mi okuduğunu hizalama göstermez: ⚠️ dinlenmeli |
+| 33 / 30 / 478 | "otuz üç milisaniyeden" tek nefes. "dört yüz yetmiş sekiz" eşit tempoda ✅ |
+| bilateral | 19,24–19,88 (0,64 sn), tempo düzgün. Vurgu ⚠️ dinlenmeli |
+| EN sayılar, MediaPipe | düzgün ✅ |
+
+## 6. Yeniden üretmek
 
 ```bash
-python3 araclar/el_parcalar.py ses/el                    # TR (Midiya Payp)
-python3 araclar/el_parcalar.py ses/el-en --lang en       # EN (B5 speed 1.1)
-python3 araclar/ses_birlestir.py ses/el <tmp>/voice-raw.wav proje/assets/words.json ses/el/beats.json char
-python3 araclar/ses_birlestir.py ses/el-en <tmp>/voice-en-raw.wav proje/assets/words-en.json ses/el-en/beats.json char ses/el/beats.json
-# loudnorm iki geçiş -> proje/assets/voice.wav / voice-en.wav
-python3 araclar/build.py --lang tr     # ya da --lang en
+EL_JOIN=' <break time="0.35s" /> ' python3 araclar/el_tam.py tr ses/v3-tr C-v2-break
+EL_JOIN=' <break time="0.35s" /> ' python3 araclar/el_tam.py en ses/v3-en A-v2-break
+python3 araclar/ses_tam.py ses/v3-tr/C-v2-break.mp3 ses/v3-tr/C-v2-break.words.json <tmp>/tr.wav proje/assets/words.json ses/v3-tr/beats.json
+python3 araclar/ses_tam.py ses/v3-en/A-v2-break.mp3 ses/v3-en/A-v2-break.words.json <tmp>/en.wav proje/assets/words-en.json ses/v3-en/beats.json ses/v3-tr/beats.json
+# loudnorm iki geçiş (−14 LUFS / −1,5 dBTP) -> proje/assets/voice.wav, voice-en.wav
+python3 araclar/build.py --lang tr   # ya da en
 python3 araclar/srt.py onizleme
 ```
