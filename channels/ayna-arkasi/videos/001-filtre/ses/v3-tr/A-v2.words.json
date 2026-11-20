@@ -1,0 +1,536 @@
+[
+ {
+  "beat": "B1",
+  "text": "Canlı",
+  "start": 0.0,
+  "end": 0.499
+ },
+ {
+  "beat": "B1",
+  "text": "filtrenin",
+  "start": 0.546,
+  "end": 1.068
+ },
+ {
+  "beat": "B1",
+  "text": "bir",
+  "start": 1.138,
+  "end": 1.231
+ },
+ {
+  "beat": "B1",
+  "text": "kareyi",
+  "start": 1.265,
+  "end": 1.556
+ },
+ {
+  "beat": "B1",
+  "text": "bitirmek",
+  "start": 1.602,
+  "end": 2.078
+ },
+ {
+  "beat": "B1",
+  "text": "için",
+  "start": 2.113,
+  "end": 2.438
+ },
+ {
+  "beat": "B1",
+  "text": "otuz",
+  "start": 2.531,
+  "end": 2.844
+ },
+ {
+  "beat": "B1",
+  "text": "üç",
+  "start": 2.926,
+  "end": 3.193
+ },
+ {
+  "beat": "B1",
+  "text": "milisaniyeden",
+  "start": 3.32,
+  "end": 4.133
+ },
+ {
+  "beat": "B1",
+  "text": "az",
+  "start": 4.214,
+  "end": 4.354
+ },
+ {
+  "beat": "B1",
+  "text": "vakti",
+  "start": 4.435,
+  "end": 4.748
+ },
+ {
+  "beat": "B1",
+  "text": "var",
+  "start": 4.783,
+  "end": 4.969
+ },
+ {
+  "beat": "B2",
+  "text": "Saniyede",
+  "start": 5.039,
+  "end": 5.573
+ },
+ {
+  "beat": "B2",
+  "text": "otuz",
+  "start": 5.619,
+  "end": 5.909
+ },
+ {
+  "beat": "B2",
+  "text": "kare",
+  "start": 5.991,
+  "end": 6.339
+ },
+ {
+  "beat": "B2",
+  "text": "kare",
+  "start": 6.664,
+  "end": 6.885
+ },
+ {
+  "beat": "B2",
+  "text": "başına",
+  "start": 6.931,
+  "end": 7.233
+ },
+ {
+  "beat": "B2",
+  "text": "yaklaşık",
+  "start": 7.268,
+  "end": 7.697
+ },
+ {
+  "beat": "B2",
+  "text": "otuz",
+  "start": 7.767,
+  "end": 8.011
+ },
+ {
+  "beat": "B2",
+  "text": "üç",
+  "start": 8.081,
+  "end": 8.208
+ },
+ {
+  "beat": "B2",
+  "text": "milisaniye",
+  "start": 8.301,
+  "end": 9.021
+ },
+ {
+  "beat": "B2",
+  "text": "demek",
+  "start": 9.079,
+  "end": 9.427
+ },
+ {
+  "beat": "B3",
+  "text": "Yakından",
+  "start": 9.694,
+  "end": 10.182
+ },
+ {
+  "beat": "B3",
+  "text": "bak",
+  "start": 10.24,
+  "end": 10.449
+ },
+ {
+  "beat": "B3",
+  "text": "pikseller",
+  "start": 10.542,
+  "end": 11.378
+ },
+ {
+  "beat": "B4",
+  "text": "Önce",
+  "start": 11.935,
+  "end": 12.202
+ },
+ {
+  "beat": "B4",
+  "text": "bir",
+  "start": 12.249,
+  "end": 12.365
+ },
+ {
+  "beat": "B4",
+  "text": "yüz",
+  "start": 12.411,
+  "end": 12.597
+ },
+ {
+  "beat": "B4",
+  "text": "modeli",
+  "start": 12.666,
+  "end": 13.201
+ },
+ {
+  "beat": "B4",
+  "text": "örneğin",
+  "start": 13.305,
+  "end": 13.688
+ },
+ {
+  "beat": "B4",
+  "text": "Media",
+  "start": 13.769,
+  "end": 14.141
+ },
+ {
+  "beat": "B4",
+  "text": "Pipe",
+  "start": 14.141,
+  "end": 14.454
+ },
+ {
+  "beat": "B4",
+  "text": "yüzün",
+  "start": 14.512,
+  "end": 14.768
+ },
+ {
+  "beat": "B4",
+  "text": "üstünde",
+  "start": 14.814,
+  "end": 15.128
+ },
+ {
+  "beat": "B4",
+  "text": "dört",
+  "start": 15.174,
+  "end": 15.418
+ },
+ {
+  "beat": "B4",
+  "text": "yüz",
+  "start": 15.476,
+  "end": 15.604
+ },
+ {
+  "beat": "B4",
+  "text": "yetmiş",
+  "start": 15.65,
+  "end": 15.998
+ },
+ {
+  "beat": "B4",
+  "text": "sekiz",
+  "start": 16.091,
+  "end": 16.382
+ },
+ {
+  "beat": "B4",
+  "text": "nokta",
+  "start": 16.451,
+  "end": 16.776
+ },
+ {
+  "beat": "B4",
+  "text": "işaretler",
+  "start": 16.8,
+  "end": 17.554
+ },
+ {
+  "beat": "B5",
+  "text": "Sonra",
+  "start": 17.624,
+  "end": 18.146
+ },
+ {
+  "beat": "B5",
+  "text": "bilateral",
+  "start": 18.262,
+  "end": 18.878
+ },
+ {
+  "beat": "B5",
+  "text": "gibi",
+  "start": 18.947,
+  "end": 19.156
+ },
+ {
+  "beat": "B5",
+  "text": "bir",
+  "start": 19.203,
+  "end": 19.331
+ },
+ {
+  "beat": "B5",
+  "text": "filtre",
+  "start": 19.4,
+  "end": 19.923
+ },
+ {
+  "beat": "B5",
+  "text": "cildi",
+  "start": 20.248,
+  "end": 20.631
+ },
+ {
+  "beat": "B5",
+  "text": "tarar",
+  "start": 20.689,
+  "end": 21.002
+ },
+ {
+  "beat": "B5",
+  "text": "kenarlar",
+  "start": 21.084,
+  "end": 21.664
+ },
+ {
+  "beat": "B5",
+  "text": "kalır",
+  "start": 21.734,
+  "end": 22.012
+ },
+ {
+  "beat": "B5",
+  "text": "doku",
+  "start": 22.071,
+  "end": 22.326
+ },
+ {
+  "beat": "B5",
+  "text": "silinir",
+  "start": 22.384,
+  "end": 22.767
+ },
+ {
+  "beat": "B5",
+  "text": "Gözenekler",
+  "start": 22.848,
+  "end": 23.557
+ },
+ {
+  "beat": "B5",
+  "text": "çiller",
+  "start": 23.649,
+  "end": 24.137
+ },
+ {
+  "beat": "B5",
+  "text": "ince",
+  "start": 24.218,
+  "end": 24.485
+ },
+ {
+  "beat": "B5",
+  "text": "tüyler",
+  "start": 24.543,
+  "end": 24.938
+ },
+ {
+  "beat": "B6",
+  "text": "Ardından",
+  "start": 25.019,
+  "end": 25.565
+ },
+ {
+  "beat": "B6",
+  "text": "noktalar",
+  "start": 25.612,
+  "end": 26.122
+ },
+ {
+  "beat": "B6",
+  "text": "kaydırılır",
+  "start": 26.18,
+  "end": 26.796
+ },
+ {
+  "beat": "B6",
+  "text": "görüntü",
+  "start": 27.156,
+  "end": 27.562
+ },
+ {
+  "beat": "B6",
+  "text": "esner",
+  "start": 27.597,
+  "end": 28.038
+ },
+ {
+  "beat": "B6",
+  "text": "gözler",
+  "start": 28.119,
+  "end": 28.572
+ },
+ {
+  "beat": "B6",
+  "text": "büyür",
+  "start": 28.665,
+  "end": 28.92
+ },
+ {
+  "beat": "B6",
+  "text": "çene",
+  "start": 28.967,
+  "end": 29.245
+ },
+ {
+  "beat": "B6",
+  "text": "daralır",
+  "start": 29.304,
+  "end": 29.756
+ },
+ {
+  "beat": "B7",
+  "text": "En",
+  "start": 30.093,
+  "end": 30.244
+ },
+ {
+  "beat": "B7",
+  "text": "son",
+  "start": 30.29,
+  "end": 30.465
+ },
+ {
+  "beat": "B7",
+  "text": "ışık",
+  "start": 30.511,
+  "end": 30.766
+ },
+ {
+  "beat": "B7",
+  "text": "eklenir",
+  "start": 30.824,
+  "end": 31.231
+ },
+ {
+  "beat": "B7",
+  "text": "gölgeler",
+  "start": 31.289,
+  "end": 31.835
+ },
+ {
+  "beat": "B7",
+  "text": "yumuşar",
+  "start": 31.904,
+  "end": 32.415
+ },
+ {
+  "beat": "B8",
+  "text": "Bunu",
+  "start": 32.729,
+  "end": 32.961
+ },
+ {
+  "beat": "B8",
+  "text": "saniyede",
+  "start": 33.007,
+  "end": 33.704
+ },
+ {
+  "beat": "B8",
+  "text": "otuz",
+  "start": 33.785,
+  "end": 34.075
+ },
+ {
+  "beat": "B8",
+  "text": "kez",
+  "start": 34.145,
+  "end": 34.342
+ },
+ {
+  "beat": "B8",
+  "text": "yapar",
+  "start": 34.412,
+  "end": 34.772
+ },
+ {
+  "beat": "B8",
+  "text": "her",
+  "start": 34.842,
+  "end": 35.004
+ },
+ {
+  "beat": "B8",
+  "text": "karede",
+  "start": 35.085,
+  "end": 35.399
+ },
+ {
+  "beat": "B8",
+  "text": "yeniden",
+  "start": 35.457,
+  "end": 35.968
+ },
+ {
+  "beat": "B9a",
+  "text": "Filtredeki",
+  "start": 36.084,
+  "end": 36.792
+ },
+ {
+  "beat": "B9a",
+  "text": "yüz",
+  "start": 36.827,
+  "end": 37.013
+ },
+ {
+  "beat": "B9a",
+  "text": "hesaplanmış",
+  "start": 37.152,
+  "end": 37.895
+ },
+ {
+  "beat": "B9a",
+  "text": "bir",
+  "start": 38.011,
+  "end": 38.139
+ },
+ {
+  "beat": "B9a",
+  "text": "yüz",
+  "start": 38.185,
+  "end": 38.394
+ },
+ {
+  "beat": "B9b",
+  "text": "Gerçek",
+  "start": 38.766,
+  "end": 39.16
+ },
+ {
+  "beat": "B9b",
+  "text": "ciltte",
+  "start": 39.207,
+  "end": 39.486
+ },
+ {
+  "beat": "B9b",
+  "text": "doku",
+  "start": 39.532,
+  "end": 39.811
+ },
+ {
+  "beat": "B9b",
+  "text": "vardır",
+  "start": 39.834,
+  "end": 40.252
+ },
+ {
+  "beat": "B9b",
+  "text": "olmalı",
+  "start": 40.321,
+  "end": 40.763
+ },
+ {
+  "beat": "B9b",
+  "text": "da",
+  "start": 40.821,
+  "end": 41.006
+ }
+]
