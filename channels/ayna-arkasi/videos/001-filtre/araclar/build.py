@@ -238,7 +238,7 @@ def s1():
       #s1-g1 { top: 176px; } #s1-g2 { top: 176px; } #s1-g3 { top: 150px; }
       #s1-g1 .kick, #s1-g2 .kick, #s1-g3 .kick { color: var(--keten); }
       #s1-g3 .note { color: var(--keten); margin-bottom: 4px; }
-      #s1-ret { position: absolute; left: 190px; top: 640px; width: 700px; height: 940px; z-index: 3; }
+      #s1-ret { position: absolute; left: 190px; top: 640px; width: 700px; height: 830px; z-index: 3; }
       #s1-scan { position: absolute; left: 140px; top: 640px; width: 800px; height: 6px; border-radius: 3px; z-index: 4;
         background: var(--toz-pembe); box-shadow: 0 0 24px 6px rgba(242, 211, 209, 0.55); opacity: 0; }
       #s1-shutter { position: absolute; left: 485px; top: 1745px; width: 110px; height: 110px; border-radius: 50%;
@@ -247,8 +247,8 @@ def s1():
       #s1-strip i { flex: 1; height: 56px; border: 3px solid rgba(248, 244, 236, 0.75); border-radius: 6px; box-sizing: border-box; }"""
     cells = "".join(f'<i id="s1-c{i}"></i>' for i in range(30))
     br = 'stroke="#F8F4EC" stroke-width="8" fill="none" stroke-linecap="round"'
-    ret = (f'<svg id="s1-ret" viewBox="0 0 700 960" data-layout-ignore><path d="M8 110 V8 H110" {br}/><path d="M590 8 H692 V110" {br}/>'
-           f'<path d="M692 850 V952 H590" {br}/><path d="M110 952 H8 V850" {br}/></svg>')
+    ret = (f'<svg id="s1-ret" viewBox="0 0 700 830" data-layout-ignore><path d="M8 110 V8 H110" {br}/><path d="M590 8 H692 V110" {br}/>'
+           f'<path d="M692 720 V822 H590" {br}/><path d="M110 822 H8 V720" {br}/></svg>')
     body = "\n".join([
         '    <div id="s1-cam"></div>',
         SCRIM.replace("__P__", sid),

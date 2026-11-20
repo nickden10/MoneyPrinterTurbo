@@ -1,5 +1,5 @@
 <template id="s6-template">
-  <div id="root" data-composition-id="s6" data-width="1080" data-height="1920" data-composition-variables='[{"id": "t1", "type": "string", "label": "Başlık", "default": "Işık"}, {"id": "t2", "type": "string", "label": "Alt başlık", "default": "eklenir"}, {"id": "src", "type": "string", "label": "Kaynak", "default": "Kaynak: US 10152778"}]'>
+  <div id="root" data-composition-id="s6" data-width="1080" data-height="1920" data-composition-variables='[{"id": "t1", "type": "string", "label": "Başlık", "default": "Light"}, {"id": "t2", "type": "string", "label": "Alt başlık", "default": "is added"}, {"id": "src", "type": "string", "label": "Kaynak", "default": "Source: US 10152778"}]'>
     <style>
       @font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: block;
         src: url("assets/fonts/fraunces-latin-full-normal.woff2") format("woff2");
@@ -28,8 +28,8 @@
       #root .bandt .sub { color: var(--murekkep); opacity: 0.86; }
       #root .bsrc { top: 470px; color: var(--murekkep); }
     </style>
-    <div id="s6-title" class="clip tx bandt" data-start="0" data-duration="3.043"><p class="fr big"><span class="w" data-var-text="t1">Işık</span></p><p class="fr sub"><span class="w" data-var-text="t2">eklenir</span></p></div>
-    <div id="s6-src" class="clip tx bsrc" data-start="0" data-duration="3.043"><p class="src"><span data-var-text="src">Kaynak: US 10152778</span></p></div>
+    <div id="s6-title" class="clip tx bandt" data-start="0" data-duration="3.043"><p class="fr big"><span class="w" data-var-text="t1">Light</span></p><p class="fr sub"><span class="w" data-var-text="t2">is added</span></p></div>
+    <div id="s6-src" class="clip tx bsrc" data-start="0" data-duration="3.043"><p class="src"><span data-var-text="src">Source: US 10152778</span></p></div>
     <div id="s6-box"></div>
     <script>
       (function () {
@@ -73,8 +73,8 @@
         tl.fromTo(["#s6f-pts", "#s6f-grid", "#s6f-arrows"], { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 0.2);
         tl.fromTo(cam, { x: 50, y: 130, w: 300, h: 377.778 }, { ...{ x: -20, y: 10, w: 440, h: 554.074 }, duration: 0.9, ease: "power2.inOut", onUpdate: () => A.cam("s6f", cam, 1080) }, 0.2);
         const L = { hi: 0, sh: 0.3 };
-        tl.fromTo(L, { hi: 0 }, { hi: 0.35, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s6f", { hi: L.hi }) }, 0.559);
-        tl.fromTo(L, { sh: 0.3 }, { sh: 0.08, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s6f", { sh: L.sh }) }, 1.43);
+        tl.fromTo(L, { hi: 0 }, { hi: 0.35, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s6f", { hi: L.hi }) }, 0.419);
+        tl.fromTo(L, { sh: 0.3 }, { sh: 0.08, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s6f", { sh: L.sh }) }, 1.441);
         cOut("#s6-title .w, #s6-src p", 3.043);
 
         window.__timelines["s6"] = tl;

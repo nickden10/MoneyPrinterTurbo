@@ -1,5 +1,5 @@
 <template id="s1-template">
-  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920" data-composition-variables='[{"id": "k1", "type": "string", "label": "Kanca üst satır", "default": "Bir kare için"}, {"id": "k2", "type": "string", "label": "B2 üst satır", "default": "Saniyede"}, {"id": "u2", "type": "string", "label": "B2 birim", "default": "kare"}, {"id": "calc", "type": "string", "label": "Hesap notu", "default": "Hesap, ölçüm değil"}]'>
+  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920" data-composition-variables='[{"id": "k1", "type": "string", "label": "Kanca üst satır", "default": "Per frame:"}, {"id": "k2", "type": "string", "label": "B2 üst satır", "default": "Per second"}, {"id": "u2", "type": "string", "label": "B2 birim", "default": "frames"}, {"id": "calc", "type": "string", "label": "Hesap notu", "default": "Arithmetic, not a measurement"}]'>
     <style>
       @font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: block;
         src: url("assets/fonts/fraunces-latin-full-normal.woff2") format("woff2");
@@ -29,7 +29,7 @@
       #s1-g1 { top: 176px; } #s1-g2 { top: 176px; } #s1-g3 { top: 150px; }
       #s1-g1 .kick, #s1-g2 .kick, #s1-g3 .kick { color: var(--keten); }
       #s1-g3 .note { color: var(--keten); margin-bottom: 4px; }
-      #s1-ret { position: absolute; left: 190px; top: 640px; width: 700px; height: 940px; z-index: 3; }
+      #s1-ret { position: absolute; left: 190px; top: 640px; width: 700px; height: 830px; z-index: 3; }
       #s1-scan { position: absolute; left: 140px; top: 640px; width: 800px; height: 6px; border-radius: 3px; z-index: 4;
         background: var(--toz-pembe); box-shadow: 0 0 24px 6px rgba(242, 211, 209, 0.55); opacity: 0; }
       #s1-shutter { position: absolute; left: 485px; top: 1745px; width: 110px; height: 110px; border-radius: 50%;
@@ -39,13 +39,13 @@
     </style>
     <div id="s1-cam"></div>
     <div id="s1-scrim" data-layout-ignore></div>
-<svg id="s1-ret" viewBox="0 0 700 960" data-layout-ignore><path d="M8 110 V8 H110" stroke="#F8F4EC" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M590 8 H692 V110" stroke="#F8F4EC" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M692 850 V952 H590" stroke="#F8F4EC" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M110 952 H8 V850" stroke="#F8F4EC" stroke-width="8" fill="none" stroke-linecap="round"/></svg>
+<svg id="s1-ret" viewBox="0 0 700 830" data-layout-ignore><path d="M8 110 V8 H110" stroke="#F8F4EC" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M590 8 H692 V110" stroke="#F8F4EC" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M692 720 V822 H590" stroke="#F8F4EC" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M110 822 H8 V720" stroke="#F8F4EC" stroke-width="8" fill="none" stroke-linecap="round"/></svg>
     <div id="s1-scan" data-layout-ignore></div>
     <div id="s1-strip" data-layout-ignore><i id="s1-c0"></i><i id="s1-c1"></i><i id="s1-c2"></i><i id="s1-c3"></i><i id="s1-c4"></i><i id="s1-c5"></i><i id="s1-c6"></i><i id="s1-c7"></i><i id="s1-c8"></i><i id="s1-c9"></i><i id="s1-c10"></i><i id="s1-c11"></i><i id="s1-c12"></i><i id="s1-c13"></i><i id="s1-c14"></i><i id="s1-c15"></i><i id="s1-c16"></i><i id="s1-c17"></i><i id="s1-c18"></i><i id="s1-c19"></i><i id="s1-c20"></i><i id="s1-c21"></i><i id="s1-c22"></i><i id="s1-c23"></i><i id="s1-c24"></i><i id="s1-c25"></i><i id="s1-c26"></i><i id="s1-c27"></i><i id="s1-c28"></i><i id="s1-c29"></i></div>
     <div id="s1-shutter"></div>
-    <div id="s1-g1" class="clip tx" data-start="0" data-duration="5.356"><p class="fr kick" data-var-text="k1">Bir kare için</p><p class="fr hero acc"><span class="n s1-ms-n">33</span><span class="u">ms</span></p></div>
-    <div id="s1-g2" class="clip tx" data-start="5.156" data-duration="5.005"><p class="fr kick" data-var-text="k2">Saniyede</p><p class="fr hero acc"><span class="n" id="s1-fps">30</span><span class="u" data-var-text="u2">kare</span></p></div>
-    <div id="s1-g3" class="clip tx" data-start="7.803" data-duration="2.358"><p class="note" data-var-text="calc">Hesap, ölçüm değil</p><p class="fr kick">1000 ÷ <span class="s1-fps2">30</span> ≈</p><p class="fr hero acc"><span class="n s1-ms-n">33</span><span class="u">ms</span></p></div>
+    <div id="s1-g1" class="clip tx" data-start="0" data-duration="5.356"><p class="fr kick" data-var-text="k1">Per frame:</p><p class="fr hero acc"><span class="n s1-ms-n">33</span><span class="u">ms</span></p></div>
+    <div id="s1-g2" class="clip tx" data-start="5.156" data-duration="5.005"><p class="fr kick" data-var-text="k2">Per second</p><p class="fr hero acc"><span class="n" id="s1-fps">30</span><span class="u" data-var-text="u2">frames</span></p></div>
+    <div id="s1-g3" class="clip tx" data-start="7.153" data-duration="3.008"><p class="note" data-var-text="calc">Arithmetic, not a measurement</p><p class="fr kick">1000 ÷ <span class="s1-fps2">30</span> ≈</p><p class="fr hero acc"><span class="n s1-ms-n">33</span><span class="u">ms</span></p></div>
     <script>
       (function () {
         const A = window.AYNA, C = A.C;
@@ -85,13 +85,13 @@
         const O = "369.9px 1130.2px";
         // face tracking locks on (pull, settles), then the filter scans the face on "otuz üç milisaniyeden"
         tl.fromTo("#s1-ret", { opacity: 0, scale: 1.18 }, { opacity: 1, scale: 1, duration: 0.45, ease: "power3.out", transformOrigin: "50% 50%" }, 0.4);
-        tl.set("#s1-scan", { opacity: 1 }, 2.395);
-        tl.fromTo("#s1-scan", { y: 0 }, { y: 1010, duration: 1.324, ease: "none", immediateRender: false }, 2.395);
-        tl.set("#s1-scan", { opacity: 0 }, 3.719);
+        tl.set("#s1-scan", { opacity: 1 }, 2.034);
+        tl.fromTo("#s1-scan", { y: 0 }, { y: 1010, duration: 1.185, ease: "none", immediateRender: false }, 2.034);
+        tl.set("#s1-scan", { opacity: 0 }, 3.219);
         // B2: hero numbers swap by zoom-through (push), the 30 frames of one second fill
         zt("#s1-g1", "#s1-g2", 5.356, 1);
-        for (let i = 0; i < 30; i++) tl.fromTo("#s1-c" + i, { backgroundColor: "rgba(242,211,209,0)" }, { backgroundColor: "rgba(242,211,209,1)", duration: 0.033, ease: "none", immediateRender: false }, 5.948 + i / 30);
-        zt("#s1-g2", "#s1-g3", 8.003, 1);
+        for (let i = 0; i < 30; i++) tl.fromTo("#s1-c" + i, { backgroundColor: "rgba(242,211,209,0)" }, { backgroundColor: "rgba(242,211,209,1)", duration: 0.033, ease: "none", immediateRender: false }, 5.716 + i / 30);
+        zt("#s1-g2", "#s1-g3", 7.353, 1);
         // the dive: the camera pushes into the cheek dot; type and UI blur away with it
         tl.to("#s1-cam", { scale: 7, duration: 0.77, ease: "power3.in", transformOrigin: O }, 9.391);
         tl.to("#s1-cam", { filter: "blur(18px)", duration: 0.25, ease: "power2.in" }, 9.911);
