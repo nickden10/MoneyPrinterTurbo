@@ -802,7 +802,7 @@ def index():
     ]
     # mono voice at about -14.7 LUFS opens up in the stereo mix: gain set from the measured draft renders
     # (v2 TR at 0.741 -> -14.3 LUFS, so +0.3 dB; EN voice is 0.1 dB quieter than TR) -> -14.0 LUFS integrated
-    MIX = {"tr": 0.767, "en": 0.776}[LANG]
+    MIX = {"tr": 0.758, "en": 0.776}[LANG]   # v3 voice: TR -14.6, EN -14.8 LUFS before the mix
     vdur = r2(min(TOTAL, VOICE_LEN))
     aud = [f'''      <audio id="voice" class="clip" src="assets/{VOICE_FILE}" data-start="0" data-duration="{vdur}" data-track-index="3" data-volume="{MIX}"></audio>''']
     for sid, src, st, ms, du, vol, note in sfx:
