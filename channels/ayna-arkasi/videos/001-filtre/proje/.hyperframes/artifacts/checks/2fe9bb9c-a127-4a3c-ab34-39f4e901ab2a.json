@@ -1,0 +1,1634 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "This HTML file has 28 timed elements. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/compositions/altyazi.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into smaller .html files and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "This HTML file has 4 timed elements. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/compositions/s4.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into smaller .html files and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "This HTML file has 6 timed elements. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/home/user/harry0703/moneyprinterturbo/channels/ayna-arkasi/videos/001-filtre/proje/compositions/s8.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into smaller .html files and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      }
+    ],
+    "filesScanned": 10
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 29,
+    "infoCount": 11,
+    "findings": [
+      {
+        "selector": "#s1-title > span:nth-of-type(1)",
+        "dataAttributes": {
+          "data-var-text": "hook1"
+        },
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 60,
+          "y": 224,
+          "width": 446.41,
+          "height": 88
+        },
+        "time": 2.083,
+        "rect": {
+          "left": 60,
+          "top": 224,
+          "right": 506.41,
+          "bottom": 312,
+          "width": 446.41,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Canlı filtrenin",
+        "message": "<span> \"Canlı filtrenin\" is outside the safe area: TikTok (left and top edges), Instagram Reels (left and top edges), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 2.083,
+        "lastSeen": 6.25,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          2.083,
+          6.25
+        ]
+      },
+      {
+        "selector": "#s1-title > span:nth-of-type(2)",
+        "dataAttributes": {
+          "data-var-text": "hook2"
+        },
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 60,
+          "y": 304.63,
+          "width": 732.86,
+          "height": 88
+        },
+        "time": 2.083,
+        "rect": {
+          "left": 60,
+          "top": 304.63,
+          "right": 792.86,
+          "bottom": 392.63,
+          "width": 732.86,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "bir kareyi bitirmek için",
+        "message": "<span> \"bir kareyi bitirmek için\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 2.083,
+        "lastSeen": 6.25,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          2.083,
+          6.25
+        ]
+      },
+      {
+        "selector": "span.ln.acc",
+        "dataAttributes": {
+          "data-var-text": "hook3"
+        },
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 60,
+          "y": 385.25,
+          "width": 539.77,
+          "height": 88
+        },
+        "time": 2.083,
+        "rect": {
+          "left": 60,
+          "top": 385.25,
+          "right": 599.77,
+          "bottom": 473.25,
+          "width": 539.77,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "33 milisaniyeden",
+        "message": "<span> \"33 milisaniyeden\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 2.083,
+        "lastSeen": 6.25,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          2.083,
+          6.25
+        ]
+      },
+      {
+        "selector": "#s1-title > span:nth-of-type(4)",
+        "dataAttributes": {
+          "data-var-text": "hook4"
+        },
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 60,
+          "y": 465.88,
+          "width": 381,
+          "height": 88
+        },
+        "time": 2.083,
+        "rect": {
+          "left": 60,
+          "top": 465.88,
+          "right": 441,
+          "bottom": 553.88,
+          "width": 381,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "az vakti var.",
+        "message": "<span> \"az vakti var.\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 2.083,
+        "lastSeen": 6.25,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          2.083,
+          6.25
+        ]
+      },
+      {
+        "selector": "#s1-calc-t",
+        "dataAttributes": {
+          "data-var-text": "calc"
+        },
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": 60,
+          "y": 566,
+          "width": 661.41,
+          "height": 43
+        },
+        "time": 6.25,
+        "rect": {
+          "left": 60,
+          "top": 566,
+          "right": 721.41,
+          "bottom": 609,
+          "width": 661.41,
+          "height": 43
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Hesap: 1000 ÷ 30 ≈ 33 ms (ölçüm değil)",
+        "message": "<span> \"Hesap: 1000 ÷ 30 ≈ 33 ms (ölçüm değil)\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 6.25,
+        "lastSeen": 6.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.25
+        ]
+      },
+      {
+        "selector": "#cp1",
+        "dataAttributes": {},
+        "sourceFile": "compositions/altyazi.html",
+        "bbox": {
+          "x": 128.33,
+          "y": 1213.05,
+          "width": 743.34,
+          "height": 91
+        },
+        "time": 6.25,
+        "rect": {
+          "left": 128.33,
+          "top": 1213.05,
+          "right": 871.67,
+          "bottom": 1304.05,
+          "width": 743.34,
+          "height": 91
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "kare başına yaklaşık",
+        "message": "<span> \"kare başına yaklaşık\" is outside the safe area: TikTok (right and bottom edges), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 6.25,
+        "lastSeen": 6.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          6.25
+        ]
+      },
+      {
+        "selector": "#s2-title > span:nth-of-type(1)",
+        "dataAttributes": {
+          "data-var-text": "t1"
+        },
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 60,
+          "y": 224,
+          "width": 307.81,
+          "height": 88
+        },
+        "time": 10.417,
+        "rect": {
+          "left": 60,
+          "top": 224,
+          "right": 367.81,
+          "bottom": 312,
+          "width": 307.81,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Her selfie",
+        "message": "<span> \"Her selfie\" is outside the safe area: TikTok (left and top edges), Instagram Reels (left and top edges), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 10.417,
+        "lastSeen": 10.417,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.417
+        ]
+      },
+      {
+        "selector": "#s2-title > span:nth-of-type(2)",
+        "dataAttributes": {
+          "data-var-text": "t2"
+        },
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": 60,
+          "y": 304.63,
+          "width": 615.81,
+          "height": 88
+        },
+        "time": 10.417,
+        "rect": {
+          "left": 60,
+          "top": 304.63,
+          "right": 675.81,
+          "bottom": 392.63,
+          "width": 615.81,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "piksellerden oluşur",
+        "message": "<span> \"piksellerden oluşur\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 10.417,
+        "lastSeen": 10.417,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.417
+        ]
+      },
+      {
+        "selector": "#cp5",
+        "dataAttributes": {},
+        "sourceFile": "compositions/altyazi.html",
+        "bbox": {
+          "x": 131.98,
+          "y": 1213.05,
+          "width": 736.02,
+          "height": 91
+        },
+        "time": 10.417,
+        "rect": {
+          "left": 131.98,
+          "top": 1213.05,
+          "right": 868,
+          "bottom": 1304.05,
+          "width": 736.02,
+          "height": 91
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Önce bir yüz modeli,",
+        "message": "<span> \"Önce bir yüz modeli,\" is outside the safe area: TikTok (right and bottom edges), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 10.417,
+        "lastSeen": 10.417,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.417
+        ]
+      },
+      {
+        "selector": "#s3-head > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": 60,
+          "y": 200,
+          "width": 459.95,
+          "height": 207
+        },
+        "time": 14.583,
+        "rect": {
+          "left": 60,
+          "top": 200,
+          "right": 519.95,
+          "bottom": 407,
+          "width": 459.95,
+          "height": 207
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "478 nokta",
+        "message": "<span> \"478 nokta\" is outside the safe area: TikTok (left and top edges), Instagram Reels (left and top edges), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 14.583,
+        "lastSeen": 14.583,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          14.583
+        ]
+      },
+      {
+        "selector": "#s3-sub-t",
+        "dataAttributes": {
+          "data-var-text": "sub"
+        },
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": 60,
+          "y": 404,
+          "width": 399.88,
+          "height": 43
+        },
+        "time": 14.583,
+        "rect": {
+          "left": 60,
+          "top": 404,
+          "right": 459.88,
+          "bottom": 447,
+          "width": 399.88,
+          "height": 43
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "468 yüz + 10 iris noktası",
+        "message": "<span> \"468 yüz + 10 iris noktası\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 14.583,
+        "lastSeen": 14.583,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          14.583
+        ]
+      },
+      {
+        "selector": "#s3-src > span:nth-of-type(1)",
+        "dataAttributes": {
+          "data-var-text": "src"
+        },
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": 60,
+          "y": 1106,
+          "width": 663.97,
+          "height": 38
+        },
+        "time": 14.583,
+        "rect": {
+          "left": 60,
+          "top": 1106,
+          "right": 723.97,
+          "bottom": 1144,
+          "width": 663.97,
+          "height": 38
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Kaynak: Google MediaPipe Face Landmarker",
+        "message": "<span> \"Kaynak: Google MediaPipe Face Landmarker\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 14.583,
+        "lastSeen": 14.583,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          14.583
+        ]
+      },
+      {
+        "selector": "#cp8",
+        "dataAttributes": {},
+        "sourceFile": "compositions/altyazi.html",
+        "bbox": {
+          "x": 141.53,
+          "y": 1213.05,
+          "width": 716.94,
+          "height": 91
+        },
+        "time": 14.583,
+        "rect": {
+          "left": 141.53,
+          "top": 1213.05,
+          "right": 858.47,
+          "bottom": 1304.05,
+          "width": 716.94,
+          "height": 91
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "478 nokta işaretler.",
+        "message": "<span> \"478 nokta işaretler.\" is outside the safe area: TikTok (right and bottom edges), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 14.583,
+        "lastSeen": 14.583,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          14.583
+        ]
+      },
+      {
+        "selector": "#s4-title > span:nth-of-type(1)",
+        "dataAttributes": {
+          "data-var-text": "t1"
+        },
+        "sourceFile": "compositions/s4.html",
+        "bbox": {
+          "x": 60,
+          "y": 224,
+          "width": 386.67,
+          "height": 88
+        },
+        "time": 18.75,
+        "rect": {
+          "left": 60,
+          "top": 224,
+          "right": 446.67,
+          "bottom": 312,
+          "width": 386.67,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Yumuşatma",
+        "message": "<span> \"Yumuşatma\" is outside the safe area: TikTok (left and top edges), Instagram Reels (left and top edges), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 18.75,
+        "lastSeen": 18.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.75
+        ]
+      },
+      {
+        "selector": "#s4-title > span:nth-of-type(2)",
+        "dataAttributes": {
+          "data-var-text": "t2"
+        },
+        "sourceFile": "compositions/s4.html",
+        "bbox": {
+          "x": 60,
+          "y": 304.63,
+          "width": 440.61,
+          "height": 88
+        },
+        "time": 18.75,
+        "rect": {
+          "left": 60,
+          "top": 304.63,
+          "right": 500.61,
+          "bottom": 392.63,
+          "width": 440.61,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "bilateral filtre",
+        "message": "<span> \"bilateral filtre\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 18.75,
+        "lastSeen": 18.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.75
+        ]
+      },
+      {
+        "selector": "#s4-labL",
+        "dataAttributes": {
+          "data-start": "3.122",
+          "data-duration": "3.731"
+        },
+        "sourceFile": "compositions/s4.html",
+        "bbox": {
+          "x": 60,
+          "y": 1064,
+          "width": 222.47,
+          "height": 40
+        },
+        "time": 18.75,
+        "rect": {
+          "left": 60,
+          "top": 1064,
+          "right": 282.47,
+          "bottom": 1104,
+          "width": 222.47,
+          "height": 40
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "← doku silindi",
+        "message": "<div> \"← doku silindi\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 18.75,
+        "lastSeen": 18.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.75
+        ]
+      },
+      {
+        "selector": "#s4-labR",
+        "dataAttributes": {
+          "data-start": "3.222",
+          "data-duration": "3.631"
+        },
+        "sourceFile": "compositions/s4.html",
+        "bbox": {
+          "x": 687.64,
+          "y": 1064,
+          "width": 252.36,
+          "height": 40
+        },
+        "time": 18.75,
+        "rect": {
+          "left": 687.64,
+          "top": 1064,
+          "right": 940,
+          "bottom": 1104,
+          "width": 252.36,
+          "height": 40
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "doku duruyor →",
+        "message": "<div> \"doku duruyor →\" is outside the safe area: TikTok (right edge), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 18.75,
+        "lastSeen": 18.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.75
+        ]
+      },
+      {
+        "selector": "#s4-src > span:nth-of-type(1)",
+        "dataAttributes": {
+          "data-var-text": "src"
+        },
+        "sourceFile": "compositions/s4.html",
+        "bbox": {
+          "x": 60,
+          "y": 1110,
+          "width": 492.58,
+          "height": 38
+        },
+        "time": 18.75,
+        "rect": {
+          "left": 60,
+          "top": 1110,
+          "right": 552.58,
+          "bottom": 1148,
+          "width": 492.58,
+          "height": 38
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Kaynak: Tomasi & Manduchi 1998",
+        "message": "<span> \"Kaynak: Tomasi & Manduchi 1998\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 18.75,
+        "lastSeen": 18.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.75
+        ]
+      },
+      {
+        "selector": "#cp13",
+        "dataAttributes": {},
+        "sourceFile": "compositions/altyazi.html",
+        "bbox": {
+          "x": 290.33,
+          "y": 1213.05,
+          "width": 419.34,
+          "height": 91
+        },
+        "time": 18.75,
+        "rect": {
+          "left": 290.33,
+          "top": 1213.05,
+          "right": 709.67,
+          "bottom": 1304.05,
+          "width": 419.34,
+          "height": 91
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "doku silinir.",
+        "message": "<span> \"doku silinir.\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 18.75,
+        "lastSeen": 18.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.75
+        ]
+      },
+      {
+        "selector": "#s5-title > span:nth-of-type(1)",
+        "dataAttributes": {
+          "data-var-text": "t1"
+        },
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": 60,
+          "y": 224,
+          "width": 507.84,
+          "height": 88
+        },
+        "time": 22.917,
+        "rect": {
+          "left": 60,
+          "top": 224,
+          "right": 567.84,
+          "bottom": 312,
+          "width": 507.84,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Esnetme (warp)",
+        "message": "<span> \"Esnetme (warp)\" is outside the safe area: TikTok (left and top edges), Instagram Reels (left and top edges), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 22.917,
+        "lastSeen": 22.917,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          22.917
+        ]
+      },
+      {
+        "selector": "#s5-src > span:nth-of-type(1)",
+        "dataAttributes": {
+          "data-var-text": "src"
+        },
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": 60,
+          "y": 1106,
+          "width": 610.45,
+          "height": 38
+        },
+        "time": 22.917,
+        "rect": {
+          "left": 60,
+          "top": 1106,
+          "right": 670.45,
+          "bottom": 1144,
+          "width": 610.45,
+          "height": 38
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Kaynak: Schaefer vd. 2006 · US 10152778",
+        "message": "<span> \"Kaynak: Schaefer vd. 2006 · US 10152778\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 22.917,
+        "lastSeen": 22.917,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          22.917
+        ]
+      },
+      {
+        "selector": "#cp17",
+        "dataAttributes": {},
+        "sourceFile": "compositions/altyazi.html",
+        "bbox": {
+          "x": 325.36,
+          "y": 1213.05,
+          "width": 349.28,
+          "height": 91
+        },
+        "time": 22.917,
+        "rect": {
+          "left": 325.36,
+          "top": 1213.05,
+          "right": 674.64,
+          "bottom": 1304.05,
+          "width": 349.28,
+          "height": 91
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "kaydırılır,",
+        "message": "<span> \"kaydırılır,\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 22.917,
+        "lastSeen": 22.917,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          22.917
+        ]
+      },
+      {
+        "selector": "#s6-title > span:nth-of-type(1)",
+        "dataAttributes": {
+          "data-var-text": "t1"
+        },
+        "sourceFile": "compositions/s6.html",
+        "bbox": {
+          "x": 60,
+          "y": 224,
+          "width": 360.02,
+          "height": 88
+        },
+        "time": 27.083,
+        "rect": {
+          "left": 60,
+          "top": 224,
+          "right": 420.02,
+          "bottom": 312,
+          "width": 360.02,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Işık eklenir",
+        "message": "<span> \"Işık eklenir\" is outside the safe area: TikTok (left and top edges), Instagram Reels (left and top edges), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 27.083,
+        "lastSeen": 27.083,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          27.083
+        ]
+      },
+      {
+        "selector": "#s6-src > span:nth-of-type(1)",
+        "dataAttributes": {
+          "data-var-text": "src"
+        },
+        "sourceFile": "compositions/s6.html",
+        "bbox": {
+          "x": 60,
+          "y": 1106,
+          "width": 313.45,
+          "height": 38
+        },
+        "time": 27.083,
+        "rect": {
+          "left": 60,
+          "top": 1106,
+          "right": 373.45,
+          "bottom": 1144,
+          "width": 313.45,
+          "height": 38
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Kaynak: US 10152778",
+        "message": "<span> \"Kaynak: US 10152778\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 27.083,
+        "lastSeen": 27.083,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          27.083
+        ]
+      },
+      {
+        "selector": "#cp21",
+        "dataAttributes": {},
+        "sourceFile": "compositions/altyazi.html",
+        "bbox": {
+          "x": 167.44,
+          "y": 1213.05,
+          "width": 665.11,
+          "height": 91
+        },
+        "time": 27.083,
+        "rect": {
+          "left": 167.44,
+          "top": 1213.05,
+          "right": 832.55,
+          "bottom": 1304.05,
+          "width": 665.11,
+          "height": 91
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "En son ışık eklenir,",
+        "message": "<span> \"En son ışık eklenir,\" is outside the safe area: TikTok (right and bottom edges), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 27.083,
+        "lastSeen": 27.083,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          27.083
+        ]
+      },
+      {
+        "selector": "#s7-title > span:nth-of-type(1)",
+        "dataAttributes": {
+          "data-var-text": "t1"
+        },
+        "sourceFile": "compositions/s7.html",
+        "bbox": {
+          "x": 60,
+          "y": 224,
+          "width": 512.66,
+          "height": 88
+        },
+        "time": 31.25,
+        "rect": {
+          "left": 60,
+          "top": 224,
+          "right": 572.66,
+          "bottom": 312,
+          "width": 512.66,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Saniyede 30 kez",
+        "message": "<span> \"Saniyede 30 kez\" is outside the safe area: TikTok (left and top edges), Instagram Reels (left and top edges), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 31.25,
+        "lastSeen": 31.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          31.25
+        ]
+      },
+      {
+        "selector": "#cp25",
+        "dataAttributes": {},
+        "sourceFile": "compositions/altyazi.html",
+        "bbox": {
+          "x": 143.19,
+          "y": 1213.05,
+          "width": 713.61,
+          "height": 91
+        },
+        "time": 31.25,
+        "rect": {
+          "left": 143.19,
+          "top": 1213.05,
+          "right": 856.8,
+          "bottom": 1304.05,
+          "width": 713.61,
+          "height": 91
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "her karede yeniden.",
+        "message": "<span> \"her karede yeniden.\" is outside the safe area: TikTok (right and bottom edges), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 31.25,
+        "lastSeen": 31.25,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          31.25
+        ]
+      },
+      {
+        "selector": "#s8-titleB > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s8.html",
+        "bbox": {
+          "x": 60,
+          "y": 224,
+          "width": 581.8,
+          "height": 88
+        },
+        "time": 35.417,
+        "rect": {
+          "left": 60,
+          "top": 224,
+          "right": 641.8,
+          "bottom": 312,
+          "width": 581.8,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Gerçek ciltte doku",
+        "message": "<span> \"Gerçek ciltte doku\" is outside the safe area: TikTok (left and top edges), Instagram Reels (left and top edges), YouTube Shorts (top edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 35.417,
+        "lastSeen": 35.417,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          35.417
+        ]
+      },
+      {
+        "selector": "#s8-titleB > span:nth-of-type(2)",
+        "dataAttributes": {
+          "data-var-text": "tB3"
+        },
+        "sourceFile": "compositions/s8.html",
+        "bbox": {
+          "x": 60,
+          "y": 304.63,
+          "width": 540.06,
+          "height": 88
+        },
+        "time": 35.417,
+        "rect": {
+          "left": 60,
+          "top": 304.63,
+          "right": 600.06,
+          "bottom": 392.63,
+          "width": 540.06,
+          "height": 88
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "vardır, olmalı da.",
+        "message": "<span> \"vardır, olmalı da.\" is outside the safe area: TikTok (left edge), Instagram Reels (left edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 35.417,
+        "lastSeen": 35.417,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          35.417
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 2.083,
+        "selector": "#s1-cam",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -17.32,
+          "top": -28.76,
+          "right": 1100.27,
+          "bottom": 1958.05,
+          "width": 1117.58,
+          "height": 1986.82
+        },
+        "containerSelector": "#s1 > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 17.32,
+          "right": 20.27,
+          "top": 28.76,
+          "bottom": 38.05
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": -17.32,
+          "y": -28.76,
+          "width": 1117.58,
+          "height": 1986.82
+        },
+        "firstSeen": 2.083,
+        "lastSeen": 6.25,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          2.083,
+          6.25
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 2.083,
+        "selector": "#s1f-content",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -1389.68,
+          "top": -1178.08,
+          "right": 2472.63,
+          "bottom": 2772.01,
+          "width": 3862.3,
+          "height": 3950.08
+        },
+        "containerSelector": "#s1f-svg",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 392.46,
+          "top": 623.16,
+          "right": 690.49,
+          "bottom": 1132.28,
+          "width": 298.02,
+          "height": 509.12
+        },
+        "overflow": {
+          "left": 1782.14,
+          "right": 1782.14,
+          "top": 1801.24,
+          "bottom": 1639.73
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s1.html",
+        "bbox": {
+          "x": -1389.68,
+          "y": -1178.08,
+          "width": 3862.3,
+          "height": 3950.08
+        },
+        "firstSeen": 2.083,
+        "lastSeen": 6.25,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          2.083,
+          6.25
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 10.417,
+        "selector": "#s2f-content",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -3050.21,
+          "top": -2891.8,
+          "right": 4130.21,
+          "bottom": 4451.8,
+          "width": 7180.42,
+          "height": 7343.61
+        },
+        "containerSelector": "#s2f-svg",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 470,
+          "right": 1080,
+          "bottom": 1090,
+          "width": 1080,
+          "height": 620
+        },
+        "overflow": {
+          "left": 3050.21,
+          "right": 3050.21,
+          "top": 3361.8,
+          "bottom": 3361.8
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": -3050.21,
+          "y": -2891.8,
+          "width": 7180.42,
+          "height": 7343.61
+        },
+        "firstSeen": 10.417,
+        "lastSeen": 10.417,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.417
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 10.417,
+        "selector": "#s2f-pgr",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -439.15,
+          "top": -280.74,
+          "right": 1519.15,
+          "bottom": 1840.74,
+          "width": 1958.3,
+          "height": 2121.49
+        },
+        "containerSelector": "#s2f-svg",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 470,
+          "right": 1080,
+          "bottom": 1090,
+          "width": 1080,
+          "height": 620
+        },
+        "overflow": {
+          "left": 439.15,
+          "right": 439.15,
+          "top": 750.74,
+          "bottom": 750.74
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s2.html",
+        "bbox": {
+          "x": -439.15,
+          "y": -280.74,
+          "width": 1958.3,
+          "height": 2121.49
+        },
+        "firstSeen": 10.417,
+        "lastSeen": 10.417,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          10.417
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 14.583,
+        "selector": "#s3-cam",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -326.01,
+          "top": 209.99,
+          "right": 1522.08,
+          "bottom": 1270.93,
+          "width": 1848.1,
+          "height": 1060.94
+        },
+        "containerSelector": "#s3-pic",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 470,
+          "right": 1080,
+          "bottom": 1090,
+          "width": 1080,
+          "height": 620
+        },
+        "overflow": {
+          "left": 326.01,
+          "right": 442.08,
+          "top": 260.01,
+          "bottom": 180.93
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": -326.01,
+          "y": 209.99,
+          "width": 1848.1,
+          "height": 1060.94
+        },
+        "firstSeen": 14.583,
+        "lastSeen": 14.583,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          14.583
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 14.583,
+        "selector": "#s3f-content",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -5545.53,
+          "top": -5542.73,
+          "right": 6741.6,
+          "bottom": 7023.65,
+          "width": 12287.13,
+          "height": 12566.38
+        },
+        "containerSelector": "#s3f-svg",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": -326.01,
+          "top": 209.99,
+          "right": 1522.08,
+          "bottom": 1270.93,
+          "width": 1848.1,
+          "height": 1060.94
+        },
+        "overflow": {
+          "left": 5219.52,
+          "right": 5219.52,
+          "top": 5752.72,
+          "bottom": 5752.72
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": -5545.53,
+          "y": -5542.73,
+          "width": 12287.13,
+          "height": 12566.38
+        },
+        "firstSeen": 14.583,
+        "lastSeen": 14.583,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          14.583
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 14.583,
+        "selector": "#s3f-pgr",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -1077.48,
+          "top": -1074.69,
+          "right": 2273.55,
+          "bottom": 2555.6,
+          "width": 3351.04,
+          "height": 3630.29
+        },
+        "containerSelector": "#s3f-svg",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": -326.01,
+          "top": 209.99,
+          "right": 1522.08,
+          "bottom": 1270.93,
+          "width": 1848.1,
+          "height": 1060.94
+        },
+        "overflow": {
+          "left": 751.47,
+          "right": 751.47,
+          "top": 1284.68,
+          "bottom": 1284.67
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s3.html",
+        "bbox": {
+          "x": -1077.48,
+          "y": -1074.69,
+          "width": 3351.04,
+          "height": 3630.29
+        },
+        "firstSeen": 14.583,
+        "lastSeen": 14.583,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          14.583
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 18.75,
+        "selector": "#s4f-content",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -12763.64,
+          "top": -13063.2,
+          "right": 14236.36,
+          "bottom": 14550.44,
+          "width": 27000,
+          "height": 27613.64
+        },
+        "containerSelector": "#s4f-svg",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 400,
+          "right": 1080,
+          "bottom": 1060,
+          "width": 1080,
+          "height": 660
+        },
+        "overflow": {
+          "left": 12763.64,
+          "right": 13156.36,
+          "top": 13463.2,
+          "bottom": 13490.44
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s4.html",
+        "bbox": {
+          "x": -12763.64,
+          "y": -13063.2,
+          "width": 27000,
+          "height": 27613.64
+        },
+        "firstSeen": 18.75,
+        "lastSeen": 18.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          18.75
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 22.917,
+        "selector": "#s5f-content",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -7523.91,
+          "top": -7739.33,
+          "right": 8677.93,
+          "bottom": 8830.74,
+          "width": 16201.84,
+          "height": 16570.06
+        },
+        "containerSelector": "#s5f-svg",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 400,
+          "right": 1080,
+          "bottom": 1060,
+          "width": 1080,
+          "height": 660
+        },
+        "overflow": {
+          "left": 7523.91,
+          "right": 7597.93,
+          "top": 8139.33,
+          "bottom": 7770.74
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": -7523.91,
+          "y": -7739.33,
+          "width": 16201.84,
+          "height": 16570.06
+        },
+        "firstSeen": 22.917,
+        "lastSeen": 22.917,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          22.917
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 22.917,
+        "selector": "#s5f-pts",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 135.4,
+          "top": -115.74,
+          "right": 1012.62,
+          "bottom": 1171.68,
+          "width": 877.22,
+          "height": 1287.42
+        },
+        "containerSelector": "#s5f-svg",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 400,
+          "right": 1080,
+          "bottom": 1060,
+          "width": 1080,
+          "height": 660
+        },
+        "overflow": {
+          "top": 515.74,
+          "bottom": 111.68
+        },
+        "dataAttributes": {
+          "data-count": "478"
+        },
+        "sourceFile": "compositions/s5.html",
+        "bbox": {
+          "x": 135.4,
+          "y": -115.74,
+          "width": 877.22,
+          "height": 1287.42
+        },
+        "firstSeen": 22.917,
+        "lastSeen": 22.917,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          22.917
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "info",
+        "time": 27.083,
+        "selector": "#s6f-content",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -3281.05,
+          "top": -3177.89,
+          "right": 4361.05,
+          "bottom": 4637.89,
+          "width": 7642.11,
+          "height": 7815.79
+        },
+        "containerSelector": "#s6f-svg",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 400,
+          "right": 1080,
+          "bottom": 1060,
+          "width": 1080,
+          "height": 660
+        },
+        "overflow": {
+          "left": 3281.05,
+          "right": 3281.05,
+          "top": 3577.89,
+          "bottom": 3577.89
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/s6.html",
+        "bbox": {
+          "x": -3281.05,
+          "y": -3177.89,
+          "width": 7642.11,
+          "height": 7815.79
+        },
+        "firstSeen": 27.083,
+        "lastSeen": 27.083,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          27.083
+        ]
+      }
+    ],
+    "duration": 37.5,
+    "samples": [
+      2.083,
+      6.25,
+      10.417,
+      14.583,
+      18.75,
+      22.917,
+      27.083,
+      31.25,
+      35.417
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 40,
+    "truncated": false,
+    "faceCheck": {
+      "ran": true,
+      "candidates": 0,
+      "faces": 0
+    }
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      2.083,
+      10.417,
+      18.75,
+      27.083,
+      35.417
+    ],
+    "checked": 29,
+    "passed": 29
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 300
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

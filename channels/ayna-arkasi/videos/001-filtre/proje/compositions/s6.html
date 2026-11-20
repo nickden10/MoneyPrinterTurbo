@@ -1,0 +1,51 @@
+<template id="s6-template">
+  <div id="root" data-composition-id="s6" data-width="1080" data-height="1920" data-composition-variables='[{"id": "t1", "type": "string", "label": "Başlık", "default": "Işık eklenir"}, {"id": "src", "type": "string", "label": "Kaynak", "default": "Kaynak: US 10152778"}]'>
+    <style>
+      @font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: block;
+        src: url("assets/fonts/fraunces-latin-full-normal.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+      @font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: block;
+        src: url("assets/fonts/fraunces-latin-ext-full-normal.woff2") format("woff2");
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+      @font-face { font-family: "Be Vietnam Pro"; font-weight: 500; font-display: block; src: url("assets/fonts/BeVietnamPro-Medium.ttf") format("truetype"); }
+      @font-face { font-family: "Be Vietnam Pro"; font-weight: 700; font-display: block; src: url("assets/fonts/BeVietnamPro-Bold.ttf") format("truetype"); }
+      #root { position: absolute; inset: 0; overflow: hidden; background: var(--toz-pembe);
+        --toz-pembe: #F2D3D1; --keten: #F8F4EC; --adacayi: #BCC5B0; --murekkep: #2C3A31; --koyu-adacayi: #4D6A55; }
+      #root .title { position: absolute; left: 60px; top: 228px; width: 880px; margin: 0; z-index: 5;
+        font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 72px; line-height: 1.12;
+        letter-spacing: -0.005em; font-variation-settings: "SOFT" 100, "WONK" 0, "opsz" 72; color: var(--murekkep); }
+      #root .title .ln { display: block; width: fit-content; white-space: nowrap; }
+      #root .acc { color: var(--koyu-adacayi); }
+      #root .src { position: absolute; left: 60px; width: 880px; top: 1106px; margin: 0; z-index: 5;
+        font: 500 30px/1.3 "Be Vietnam Pro", sans-serif; color: var(--murekkep); }
+      #root .src span { display: block; width: fit-content; }
+      #s6-box { position: absolute; left: 0; top: 400px; width: 1080px; height: 660px; overflow: hidden; z-index: 1; }
+    </style>
+    <div id="s6-title" class="clip title" data-start="0.485" data-duration="1.918"><span class="ln" data-var-text="t1">Işık eklenir</span></div>
+    <div id="s6-box"></div>
+    <div id="s6-src" class="clip src" data-start="0.485" data-duration="1.918"><span data-var-text="src">Kaynak: US 10152778</span></div>
+    <script>
+      (function () {
+        const A = window.AYNA, C = A.C;
+        const tl = gsap.timeline({ paused: true });
+        const wipe = (sel, t, d) => tl.fromTo(sel, { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: d || 0.333, ease: "power2.out", stagger: 0.1 }, t);
+
+        document.getElementById("s6-box").innerHTML = A.face({ id: "s6f", viewBox: "43.3 210.4 293.3 179.3", w: 1080, h: 660, bg: C.toz,
+          lineW: 3, dot: { px: 3.6822, ring: C.murekkep }, grid: true, arrows: { px: 3.6822 },
+          points: { r: 0.815, fill: C.murekkep } });
+        A.apply("s6f", { tex: 0, eye: 1, jaw: 1 });
+        document.getElementById("s6f-gcr").setAttribute("height", "190");
+        const cam = { x: 43.3, y: 210.4, w: 293.3, h: 179.3 };
+        A.cam("s6f", cam, 1080);
+        tl.fromTo(["#s6f-pts", "#s6f-grid", "#s6f-arrows"], { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 0);
+        tl.fromTo(cam, { x: 43.3, y: 210.4, w: 293.3, h: 179.3 }, { ...{ x: -111, y: 60, w: 622, h: 380 }, duration: 0.7, ease: "power3.out", onUpdate: () => A.cam("s6f", cam, 1080) }, 0);
+        wipe("#s6-title .ln", 0.485);
+        const L = { hi: 0, sh: 0.3 };
+        tl.fromTo(L, { hi: 0 }, { hi: 0.35, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s6f", { hi: L.hi }) }, 0.485);
+        tl.fromTo(L, { sh: 0.3 }, { sh: 0.08, duration: 0.6, ease: "power2.inOut", onUpdate: () => A.apply("s6f", { sh: L.sh }) }, 1.277);
+
+        window.__timelines["s6"] = tl;
+      })();
+    </script>
+  </div>
+</template>
